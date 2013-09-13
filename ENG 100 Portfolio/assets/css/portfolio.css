@@ -1,0 +1,133 @@
+@charset "utf-8";
+
+html
+{
+    background-color: #FFF5EE;
+}
+
+body
+{
+    width: 376px;
+    height: 376px;
+    position:absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -188px;
+    margin-top: -188px;
+    
+    /*background-color:red;*/
+}
+
+.face
+{
+    display: none;
+    width: 175px;
+    height: 175px;
+
+    border: 6px solid white;
+    box-shadow: 4px 3px 16px rgba(0, 0, 0, .4);
+
+    position: absolute;
+    top: 0; bottom:0; left: 0; right:0;
+    margin: auto;
+
+    -webkit-border-radius: 999px;
+    -moz-border-radius: 999px;
+    border-radius: 999px;
+    behavior: url(PIE.htc);
+}
+
+.arrow img
+{
+    display: none;
+    opacity: .1;
+    
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    margin: auto;
+    
+    border: 3px solid white;
+    border-radius:999px;
+    box-shadow: 4px 3px 16px rgba(0, 0, 0, .4);
+
+}
+
+.up
+{
+    top: 0; bottom: 1; left: 0; right: 0; 
+    top: +35px;
+}
+.right
+{ 
+    top: 0; bottom:0; left: 1; right:0; 
+    right: +35px;
+}
+.down
+{
+    top: 1; bottom:0; left: 0; right:0;
+    bottom: +35px;
+}
+.left
+{ 
+    top: 0; bottom:0; left: 0; right:1; 
+    left: +35px;
+}
+
+.bubbles div
+{
+    display: none;
+
+    width: 250px;
+    height: 100px;
+    position: absolute;
+    margin: auto;
+    
+    font-family: 'Source Sans Pro', sans-serif;
+    text-align: center;
+    font-size: 30px;
+    line-height: 10px;
+
+    border: 5px solid white;
+    border-radius:999px;
+  
+    box-shadow: inset 0px 0px 10px rgba(0,0,0,0.9);
+    box-shadow: 4px 3px 16px rgba(0, 0, 0, .4);
+
+    background-color:#99CD99;
+}
+
+.about
+{
+    top: 0; bottom: 1; left: 0; right: 0;
+    top: -150px;
+}
+.resume
+{
+    top: 0; bottom:0; left: 1; right:0;
+    right: -300px;
+}
+.contact
+{
+    top: 1; bottom:0; left: 0; right:0;
+    bottom: -150px;
+}
+.projects
+{
+    top: 0; bottom:0; left: 0; right:1;
+    left: -300px;
+}
+
+
+
+
+.links
+{
+    color:0x0000FF !important;
+    width: 75px;
+    height: 75px;
+    border: 2px solid white;
+    border-radius: 100px;
+    text-align:center;
+    display:none;
+}
