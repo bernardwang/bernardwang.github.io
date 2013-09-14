@@ -4,18 +4,30 @@ html
 {
     background-color: #FFF5EE;
 }
-
+/*
 body
 {
     width: 376px;
     height: 376px;
-    position:absolute;
+    position: absolute;
     left: 50%;
     top: 50%;
     margin-left: -188px;
     margin-top: -188px;
     
-    /*background-color:red;*/
+    /*background-color:red;
+}*/
+
+.container
+{
+    width: 376px;
+    height: 376px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -188px;
+    margin-top: -188px;
+
 }
 
 .face
@@ -34,7 +46,6 @@ body
     -webkit-border-radius: 999px;
     -moz-border-radius: 999px;
     border-radius: 999px;
-    behavior: url(PIE.htc);
 }
 
 .arrow img
@@ -55,22 +66,22 @@ body
 
 .up
 {
-    top: 0; bottom: 1; left: 0; right: 0; 
+    top: 0; right: 0; bottom: 1; left:0;
     top: +35px;
 }
 .right
 { 
-    top: 0; bottom:0; left: 1; right:0; 
+    top: 0; right: 0; bottom: 0; left:1;
     right: +35px;
 }
 .down
 {
-    top: 1; bottom:0; left: 0; right:0;
+    top: 1; right: 0; bottom: 0; left:0;
     bottom: +35px;
 }
 .left
 { 
-    top: 0; bottom:0; left: 0; right:1; 
+     top: 0; right: 1; bottom: 0; left:0;
     left: +35px;
 }
 
