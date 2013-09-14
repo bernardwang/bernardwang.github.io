@@ -303,3 +303,7 @@ function leftBubbleOpen(){
 		});
 	});	
 }
+
+function upChangeText(){
+	
+}
