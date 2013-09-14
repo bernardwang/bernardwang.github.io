@@ -305,5 +305,16 @@ function leftBubbleOpen(){
 }
 
 function upChangeText(){
+
+}
+function rightChangeText(){
 	
 }
+function bottomChangeText(){
+	
+}
+function leftChangeText(){
+	
+}
+
+
