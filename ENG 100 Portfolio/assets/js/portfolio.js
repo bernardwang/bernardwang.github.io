@@ -1,5 +1,6 @@
 $(document).ready(function(){
-   
+	var clicked = 0;
+
     //face fades in the begining
     $('.face').fadeIn(500);
 
@@ -73,41 +74,50 @@ $(document).ready(function(){
     
     //arrow click animation
     $('.up').click(function(){
+    	clicked = 1;
 		upClick();
+		//clicked = 0;
     });
 	$('.right').click(function(){
+		clicked = 1;
 		rightClick();
+		//clicked = 0;
     });
     $('.down').click(function(){
+    	clicked = 1;
 		downClick();
+		//clicked = 0;
     });
     $('.left').click(function(){
+    	clicked = 1;
 		leftClick();
+		//clicked = 0;
     });
     
     //mouse leave arrow, bubble fades away
     $('.up').mouseleave(function(){	
-		$('.about').delay(200).fadeOut(300);
+    	if(clicked==0){
+			$('.about').fadeOut(300);
+		}	
     });
 	$('.right').mouseleave(function(){
-		$('.resume').delay(200).fadeOut(300);
+		if(clicked==0){
+			$('.resume').fadeOut(300);
+		}	
     });
     $('.down').mouseleave(function(){
-		$('.contact').delay(200).fadeOut(300);
+    	if(clicked==0){
+			$('.contact').fadeOut(300);
+		}
     });
     $('.left').mouseleave(function(){
-		$('.projects').delay(200).fadeOut(300);
+    	if(clicked==0){
+			$('.projects').fadeOut(300);
+		}	
     });
 });
 
 
-/*/reset arrow locations
-function resetArrow(){    
-    $('.up').css({'top':'+20px'});
-    $('.right').css({'right':'+20px'});
-    $('.down').css({'bottom':'+20px'});
-    $('.left').css({'left':'+20px'});
-}*/
 
 //animation of arrow entering when mouse over face
 function arrowEnter(){
@@ -190,6 +200,7 @@ function upClick() {
     },'fast',function(){
 		$('.up').hide();
 		$('.up').css({'top':'+35px'});
+		upBubbleOpen();
     });
 }
 function rightClick(){
@@ -200,6 +211,7 @@ function rightClick(){
     },'fast',function(){
 		$('.right').hide();
 		$('.right').css({'right':'+35px'});
+		rightBubbleOpen();
     });
 }
 function downClick(){
@@ -210,9 +222,11 @@ function downClick(){
     },'fast',function(){
 		$('.down').hide();
 		$('.down').css({'bottom':'+35px'});
+		bottomBubbleOpen();
     });
 }
 function leftClick(){
+	$('.about h1').fadeOut(200);
     $('.left').animate({
 		width:'0px',
 		height:'0px',
@@ -220,17 +234,76 @@ function leftClick(){
     },'fast',function(){
 		$('.left').hide();
 		$('.left').css({'left':'+35px'});
+		leftBubbleOpen();
     });
 }
 
+//bubble opening animations
 function upBubbleOpen(){
-    $('.about').animate({
-		width:'0px',
-		height:'0px',
-		left:'-45px',
-    },'fast',function(){
+	$('.about h1').fadeOut(150);
+	$('.about').css('position','fixed');
+	$('.about').css('top','0px');
 	$('.about').animate({
-
-	});
+		width:'50%',
+		height:'5%',
+	},200,function(){
+		$('.about').css('border-radius','200px');
+		$('.about').animate({
+			top:'4%',
+			height:'80%',
+			width:'95%',
+		},200,function(){	
+		});
+	});	
+}
+function rightBubbleOpen(){
+	$('.resume h1').fadeOut(150);
+	$('.resume').css('position','fixed');
+	$('.resume').css('right','0px');
+	$('.resume').animate({
+		width:'5%',
+		height:'50%',
+	},200,function(){
+		$('.resume').css('border-radius','200px');
+		$('.resume').animate({
+			right:'2.5%',
+			height:'90%',
+			width:'88.6%',
+		},200,function(){	
+		});
+	});	
+}
+function bottomBubbleOpen(){
+	$('.contact h1').fadeOut(150);
+	$('.contact').css('position','fixed');
+	$('.contact').css('bottom','0px');
+	$('.contact').animate({
+		width:'50%',
+		height:'5%',
+	},200,function(){
+		$('.contact').css('border-radius','200px');
+		$('.contact').animate({
+			bottom:'4%',
+			height:'80%',
+			width:'95%',
+		},200,function(){	
+		});
+	});	
+}
+function leftBubbleOpen(){
+	$('.projects h1').fadeOut(150);
+	$('.projects').css('position','fixed');
+	$('.projects').css('left','0px');
+	$('.projects').animate({
+		width:'5%',
+		height:'50%',
+	},200,function(){
+		$('.projects').css('border-radius','200px');
+		$('.projects').animate({
+			left:'2.5%',
+			height:'90%',
+			width:'88.6%',
+		},200,function(){	
+		});
 	});	
 }
