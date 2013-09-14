@@ -1,17 +1,13 @@
 $(document).ready(function(){
+	
+	//toggle for bubble fading away
 	var clicked = 0;
 
     //face fades in the begining
     $('.face').fadeIn(500);
 
     $('container').mouseenter(function() {
-	/*$('div img').hide();
-	$('div img').css({'width':'0px'});
-	$('div img').css({'height':'0px'});
-	$('.up').css({'top':'+187px'});
-	$('.right').css({'right':'+187px'});
-	$('.down').css({'bottom':'+187px'});
-	$('.left').css({'left':'+187px'});*/
+	
     });
 
     //when mouse over face
@@ -247,7 +243,7 @@ function upBubbleOpen(){
 		width:'50%',
 		height:'5%',
 	},200,function(){
-		$('.about').css('border-radius','200px');
+		$('.about').css('border-radius','100px');
 		$('.about').animate({
 			top:'4%',
 			height:'80%',
@@ -264,7 +260,7 @@ function rightBubbleOpen(){
 		width:'5%',
 		height:'50%',
 	},200,function(){
-		$('.resume').css('border-radius','200px');
+		$('.resume').css('border-radius','100px');
 		$('.resume').animate({
 			right:'2.5%',
 			height:'90%',
@@ -281,7 +277,7 @@ function bottomBubbleOpen(){
 		width:'50%',
 		height:'5%',
 	},200,function(){
-		$('.contact').css('border-radius','200px');
+		$('.contact').css('border-radius','100px');
 		$('.contact').animate({
 			bottom:'4%',
 			height:'80%',
@@ -298,7 +294,7 @@ function leftBubbleOpen(){
 		width:'5%',
 		height:'50%',
 	},200,function(){
-		$('.projects').css('border-radius','200px');
+		$('.projects').css('border-radius','100px');
 		$('.projects').animate({
 			left:'2.5%',
 			height:'90%',
