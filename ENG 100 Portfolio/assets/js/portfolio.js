@@ -243,22 +243,21 @@ function leftClick(){
 
 //bubble opening animations
 function upBubbleOpen(){
-
-	$('.about').animate({
+	$('.about').animate({	//delay for arrow to catch up
 		height:'99px',
-	},95,function(){
-		$('.about').animate({
+	},95,function(){	
+		$('.about').animate({	//'pushes' bubble with the arrow
 			top:'-170px',
-		},70,function(){
-			$('.about h1').fadeOut(150);
+		},70,function(){	//removes text and finishes push to the window edge
+			$('.about h1').fadeOut(150);	
 			$('.about').css('position','fixed');
 			$('.about').css('top','0px');
 
-			$('.about').animate({
+			$('.about').animate({	//animates 'squish'
 				width:'50%',
 				height:'5%',
 			},200,function(){
-				$('.about').css('border-radius','100px');
+				$('.about').css('border-radius','100px'); 	//animates bubble expand
 				$('.about').animate({
 				top:'4%',
 				height:'80%',
