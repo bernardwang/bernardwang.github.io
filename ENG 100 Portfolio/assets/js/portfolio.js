@@ -161,7 +161,9 @@ function arrowEnter(){
 
 //animations of arrows enlarging and bubble fading in when mouse over arrows
 function upMouse(){
-    $('.about').fadeIn(200);
+    $('.about').fadeIn(200);	//
+    //$('.aboutPreview').fadeIn(200);	//
+    $('.about p').css('display','none');
     $('.up').animate({
 		width:'50px',
 		height:'50px',
@@ -170,7 +172,8 @@ function upMouse(){
     });
 }
 function rightMouse(){
-    $('.resume').fadeIn(200);
+    $('.resume').fadeIn(200);	//
+    $('.resume a').css('display','none');	//
     $('.right').animate({
 		width:'50px',
 		height:'50px',
@@ -179,7 +182,8 @@ function rightMouse(){
     });
 }
 function downMouse(){  
-    $('.contact').fadeIn(200);
+    $('.contact').fadeIn(200);	//
+    $('.contact p').css('display','none');	//
     $('.down').animate({
 		width:'50px',
 		height:'50px',
@@ -188,7 +192,8 @@ function downMouse(){
     });
 }
 function leftMouse(){
-    $('.projects').fadeIn(200);
+    $('.projects').fadeIn(200);		//
+    $('.projects p').css('display','none');	//
     $('.left').animate({
 		width:'50px',
 		height:'50px',
@@ -230,7 +235,6 @@ function downClick(){
     });
 }
 function leftClick(){
-	$('.about h1').fadeOut(200);
     $('.left').animate({
 		width:'0px',
 		height:'0px',
@@ -263,6 +267,7 @@ function upBubbleOpen(){
 				height:'80%',
 				width:'94%',
 			},200,function(){	
+				upChangeText();
 			});
 		});	
 		})
@@ -289,6 +294,7 @@ function rightBubbleOpen(){
 				height:'90%',
 				width:'88.6%',
 			},200,function(){	
+				rightChangeText();
 			});
 		});	
 		})
@@ -315,6 +321,7 @@ function bottomBubbleOpen(){
 				height:'80%',
 				width:'94%',
 			},200,function(){	
+				bottomChangeText();
 			});
 		});	
 		})
@@ -341,6 +348,7 @@ function leftBubbleOpen(){
 				height:'90%',
 				width:'88.6%',
 			},200,function(){	
+				leftChangeText();
 			});
 		});	
 		})
@@ -348,16 +356,23 @@ function leftBubbleOpen(){
 }
 
 function upChangeText(){
+	$('.about p').fadeIn(150);
+	$('.about p').css('text-align','center');
+	//$('.aboutBody').fadeIn(150);
+	//$('.aboutBody').css('text-align','left');
 
 }
 function rightChangeText(){
-	
+	$('.resume a').fadeIn(150);
+	$('.resume a').css('text-align','center');
 }
 function bottomChangeText(){
-	
+	$('.contact p').fadeIn(150);
+	$('.contact p').css('text-align','center');
 }
 function leftChangeText(){
-	
+	$('.projects p').fadeIn(150);
+	$('.projects p').css('text-align','center');
 }
 
 

@@ -81,9 +81,10 @@ html
     position: absolute;
     margin: auto;
     
-    font-family: 'Source Sans Pro', sans-serif;
+    /*font-family: 'Source Sans Pro', sans-serif;*/
+    font-family: 'Open Sans Condensed', 'Source Sans Pro' sans-serif;
     text-align: center;
-    font-size: 33px;
+    font-size: 35px;
     line-height: 0px;
 
     border: 5px solid white;
@@ -92,40 +93,55 @@ html
     box-shadow: inset 0px 0px 10px rgba(0,0,0,0.9);
     box-shadow: 4px 3px 16px rgba(0, 0, 0, .4);
 
-    background-color:#99CD99;
+    overflow: scroll;
+    /*background-color:#2980b9;*/
 }
 
 .about
 {
     top: 0; bottom: 1; left: 0; right: 0;
     top: -140px;
+    background-color:#d35500;
 }
+/*.aboutText
+{
+    overflow: hidden;
+}
+.aboutBody
+{
+    overflow: scroll;
+    font-size: 40px;
+}*/
 .resume
 {
     top: 0; bottom:0; left: 1; right:0;
     right: -295px;
+    background-color:#007fd3;
 }
 .contact
 {
     top: 1; bottom:0; left: 0; right:0;
     bottom: -140px;
+    background-color:#29b9aa;
 }
 .projects
 {
     top: 0; bottom:0; left: 0; right:1;
     left: -295px;
+    background-color:#27ae60;
 }
 
 
-
-
-.links
+.about p:nth-child(2)
 {
-    color:0x0000FF !important;
-    width: 75px;
-    height: 75px;
-    border: 2px solid white;
-    border-radius: 100px;
-    text-align:center;
-    display:none;
+    font-size: 160px;
 }
+.about p:nth-child(3)
+{
+    font-size: 40px;
+}
+.about p:nth-child(4)
+{
+    font-size: 30px;
+}
+
