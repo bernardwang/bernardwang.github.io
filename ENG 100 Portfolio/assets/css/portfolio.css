@@ -35,6 +35,7 @@ html
     border-radius: 999px;
 }
 
+/*****************************************************************/
 .arrow img
 {
     display: none;
@@ -72,6 +73,8 @@ html
     left: +35px;
 }
 
+/*****************************************************************/
+
 .bubbles div
 {
     display: none;
@@ -82,10 +85,6 @@ html
     margin: auto;
     
     /*font-family: 'Source Sans Pro', sans-serif;*/
-    font-family: 'Open Sans Condensed', 'Source Sans Pro' sans-serif;
-    text-align: center;
-    font-size: 35px;
-    line-height: 0px;
 
     border: 5px solid white;
     border-radius:999px;
@@ -93,7 +92,7 @@ html
     box-shadow: inset 0px 0px 10px rgba(0,0,0,0.9);
     box-shadow: 4px 3px 16px rgba(0, 0, 0, .4);
 
-    overflow: scroll;
+    overflow: auto;
     /*background-color:#2980b9;*/
 }
 
@@ -103,15 +102,7 @@ html
     top: -140px;
     background-color:#d35500;
 }
-/*.aboutText
-{
-    overflow: hidden;
-}
-.aboutBody
-{
-    overflow: scroll;
-    font-size: 40px;
-}*/
+
 .resume
 {
     top: 0; bottom:0; left: 1; right:0;
@@ -131,8 +122,32 @@ html
     background-color:#27ae60;
 }
 
+/*****************************************************************/
 
-.about p:nth-child(2)
+.text
+{
+    position: absolute;
+    margin: auto;
+    display:none;
+
+    font-family: 'Open Sans Condensed', 'Source Sans Pro' sans-serif;
+    text-align: center;
+    font-size: 35px;
+    top: 0; bottom: 1; left: 0; right: 0;
+
+}
+
+.aboutText
+{
+    background-color:#d35500;
+
+    top: 4%;
+    height: 80%;
+    width: 94%;
+    border: 5px solid white;
+}
+
+/*.about p:nth-child(2)
 {
     font-size: 160px;
 }
@@ -143,5 +158,5 @@ html
 .about p:nth-child(4)
 {
     font-size: 30px;
-}
+}*/
 

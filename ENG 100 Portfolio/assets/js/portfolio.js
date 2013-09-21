@@ -161,8 +161,7 @@ function arrowEnter(){
 
 //animations of arrows enlarging and bubble fading in when mouse over arrows
 function upMouse(){
-    $('.about').fadeIn(200);	//
-    //$('.aboutPreview').fadeIn(200);	//
+    $('.about').fadeIn(200);		//
     $('.about p').css('display','none');
     $('.up').animate({
 		width:'50px',
@@ -356,8 +355,8 @@ function leftBubbleOpen(){
 }
 
 function upChangeText(){
-	$('.about p').fadeIn(150);
-	$('.about p').css('text-align','center');
+	$('.text').fadeIn(150);
+	$('.text').css('text-align','center');
 	//$('.aboutBody').fadeIn(150);
 	//$('.aboutBody').css('text-align','left');
 
