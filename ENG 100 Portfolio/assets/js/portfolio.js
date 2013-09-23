@@ -342,7 +342,7 @@ function leftBubbleOpen(){
 
 function upChangeText(){
 	$('.aboutText').fadeIn(100);
-	$('.aboutText').css('text-align','center');
+	$('.aboutText div').css('text-align','center');
 	//$('.aboutBody').fadeIn(150);
 	//$('.aboutBody').css('text-align','left');
 
