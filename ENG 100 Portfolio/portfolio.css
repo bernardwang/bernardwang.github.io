@@ -80,14 +80,14 @@ html
     display: none;
 
     width: 260px;
-    height: 200px;
+    height: 100px;
     position: absolute;
     margin: auto;
 
     color:black;
     font-family: 'Open Sans Condensed', 'Source Sans Pro' sans-serif;
     text-align: center;
-    font-size: 33px;
+    font-size: 35px;
     line-height:0px;
     
     /*font-family: 'Source Sans Pro', sans-serif;*/
@@ -133,6 +133,7 @@ html
 {
     position: fixed;
     margin: auto;
+    color:white;
 
     font-family: 'Open Sans Condensed', 'Source Sans Pro' sans-serif;
     font-size: 35px;
@@ -141,18 +142,20 @@ html
 
 .aboutText
 {
-    /*color:white;*/
-    display:none;
+    display:none;   
     background-color:#d35500;
-    text-align: center;
 
     top: 0; bottom: 1; left: 0; right: 0;   
-    top: 15%;
+    top: 20%;
     height: 60%;
     width: 80%;
     border: 5px solid white;
 }
 
+.aboutBody
+{
+    text-align: center;
+}
 
 /*.about p:nth-child(2)
 {

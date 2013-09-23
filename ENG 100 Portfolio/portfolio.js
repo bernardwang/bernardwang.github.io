@@ -248,6 +248,7 @@ function upBubbleOpen(){
 	$('.about').delay(95).animate({	//'pushes' bubble with the arrow
 		top:'-170px',
 	},70,function(){	//removes text and finishes push to the window edge
+		clearHome();
 		$('.about h1').fadeOut(150);	
 		$('.about').css('position','fixed');
 		$('.about').css('top','0px');
@@ -272,6 +273,7 @@ function rightBubbleOpen(){
 	$('.resume').delay(120).animate({
 		right:'-370px',
 	},50,function(){
+		clearHome();
 		$('.resume h1').fadeOut(150);
 		$('.resume').css('position','fixed');
 		$('.resume').css('right','0px');
@@ -296,6 +298,7 @@ function bottomBubbleOpen(){
 	$('.contact').delay(95).animate({
 		bottom:'-170px',
 	},70,function(){
+		clearHome();
 		$('.contact h1').fadeOut(150);
 		$('.contact').css('position','fixed');
 		$('.contact').css('bottom','0px');
@@ -320,6 +323,7 @@ function leftBubbleOpen(){
 	$('.projects').delay(95).animate({
 		left:'-370px',
 	},50,function(){
+		clearHome();
 		$('.projects h1').fadeOut(150);
 		$('.projects').css('position','fixed');
 		$('.projects').css('left','0px');
@@ -340,23 +344,26 @@ function leftBubbleOpen(){
 	})
 }
 
+function clearHome(){
+	$('.arrow').fadeOut(150);
+}
 function upChangeText(){
-	$('.aboutText').fadeIn(100);
-	$('.aboutText div').css('text-align','center');
+	$('.aboutText').fadeIn(150);
+	$('.aboutText').css('text-align','center');
 	//$('.aboutBody').fadeIn(150);
 	//$('.aboutBody').css('text-align','left');
 
 }
 function rightChangeText(){
-	$('.resume a').fadeIn(100);
+	$('.resume a').fadeIn(150);
 	$('.resume a').css('text-align','center');
 }
 function bottomChangeText(){
-	$('.contact p').fadeIn(100);
+	$('.contact p').fadeIn(150);
 	$('.contact p').css('text-align','center');
 }
 function leftChangeText(){
-	$('.projects p').fadeIn(100);
+	$('.projects p').fadeIn(150);
 	$('.projects p').css('text-align','center');
 }
 
