@@ -84,10 +84,11 @@ html
     position: absolute;
     margin: auto;
 
-    color:white;
+    color:black;
     font-family: 'Open Sans Condensed', 'Source Sans Pro' sans-serif;
     text-align: center;
     font-size: 35px;
+    line-height:0px;
     
     /*font-family: 'Source Sans Pro', sans-serif;*/
 
@@ -128,31 +129,33 @@ html
 }
 
 /*****************************************************************/
-
 .text div
 {
     position: fixed;
     margin: auto;
-
     color:white;
+
     font-family: 'Open Sans Condensed', 'Source Sans Pro' sans-serif;
-    text-align: center;
     font-size: 35px;
 
 }
 
 .aboutText
 {
-    display:none;
+    display:none;   
     background-color:#d35500;
 
     top: 0; bottom: 1; left: 0; right: 0;   
-    top: 15%;
+    top: 20%;
     height: 60%;
     width: 80%;
     border: 5px solid white;
 }
 
+.aboutBody
+{
+    text-align: center;
+}
 
 /*.about p:nth-child(2)
 {
