@@ -346,6 +346,7 @@ function leftBubbleOpen(){
 
 function clearHome(){
 	$('.arrow').fadeOut(150);
+	$('.face').fadeOut(150);
 }
 function upChangeText(){
 	$('.aboutText').fadeIn(150);

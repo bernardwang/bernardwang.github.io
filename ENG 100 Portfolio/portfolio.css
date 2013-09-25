@@ -106,7 +106,9 @@ html
 {
     top: 0; bottom: 1; left: 0; right: 0;
     top: -140px;
-    background-color:#d35500;
+    /*background-color:#d35500;*/
+    background-image:url('img/banner.png');
+    background-size: 100% 100%;
 }
 
 .resume
@@ -133,25 +135,30 @@ html
 {
     position: fixed;
     margin: auto;
-    color:white;
+    color:black;
 
     font-family: 'Open Sans Condensed', 'Source Sans Pro' sans-serif;
-    font-size: 35px;
+    font-size: 70px;
 
 }
 
 .aboutText
 {
     display:none;   
-    background-color:#d35500;
+    /*background-color:#d35500;*/
 
     top: 0; bottom: 1; left: 0; right: 0;   
     top: 20%;
+    left: -10%;
     height: 60%;
-    width: 80%;
+    width: 90%;
     border: 5px solid white;
 }
 
+.aboutText span
+{
+    font-size:100px;
+}
 .aboutBody
 {
     text-align: center;
