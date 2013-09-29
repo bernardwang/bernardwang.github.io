@@ -249,7 +249,7 @@ function upBubbleOpen(){
 		top:'-170px',
 	},70,function(){	//removes text and finishes push to the window edge
 		clearHome();
-		$('.about h1').fadeOut(150);	
+		$('.about').text("");	
 		$('.about').css('position','fixed');
 		$('.about').css('top','0px');
 
@@ -257,7 +257,9 @@ function upBubbleOpen(){
 			width:'50%',
 			height:'5%',
 		},200,function(){
-			$('.about').css('border-radius','100px'); 	//animates bubble expand
+			$('.about').css('border-radius','60px'); 	//animates bubble expand
+			$('.about').css('background-image','url("img/topbanner.png")');
+			$('.about').css('background-color','white');
 			$('.about').animate({
 			top:'4%',
 			height:'80%',
@@ -282,7 +284,7 @@ function rightBubbleOpen(){
 			width:'5%',
 			height:'50%',
 		},200,function(){
-			$('.resume').css('border-radius','100px');
+			$('.resume').css('border-radius','60px');
 			$('.resume').animate({
 			right:'2.5%',
 			height:'90%',
@@ -307,7 +309,7 @@ function bottomBubbleOpen(){
 			width:'50%',
 			height:'5%',
 		},200,function(){
-			$('.contact').css('border-radius','100px');
+			$('.contact').css('border-radius','60px');
 			$('.contact').animate({
 			bottom:'4%',
 			height:'80%',
@@ -332,7 +334,7 @@ function leftBubbleOpen(){
 			width:'5%',
 			height:'50%',
 		},200,function(){
-			$('.projects').css('border-radius','100px');
+			$('.projects').css('border-radius','60px');
 			$('.projects').animate({
 			left:'2.5%',
 			height:'90%',

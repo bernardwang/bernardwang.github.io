@@ -26,7 +26,7 @@ html
     width: 175px;
     height: 175px;
 
-    border: 6px solid white;
+    /*border: 6px solid white;*/
     box-shadow: 4px 3px 16px rgba(0, 0, 0, .3);
 
     position: absolute;
@@ -49,10 +49,9 @@ html
     height: 0px;
     margin: auto;
     
-    border: 3px solid white;
+    /*border: 3px solid white;*/
     border-radius:999px;
     box-shadow: 3px 2px 15px rgba(0, 0, 0, .3);
-
 }
 
 .up
@@ -89,16 +88,13 @@ html
 
     color:black;
     font-family: 'Source Sans Pro','Open Sans Condensed' sans-serif;
-    font-weight: 100;
     text-align: center;
-    font-size: 25px;
-    line-height:0px;
+    line-height: 125px;
 
-    /*border: 5px solid white;*/
     border-radius:999px;
     box-shadow: 3px 2px 15px rgba(0, 0, 0, .175);
 
-    background-color:white;
+    /*background-color:white;
     /*background-color: #F0F0EE;*/
     /*background-color: #EBE9E2;*/
     /*background-color: #F0F0EE;*/
@@ -107,32 +103,41 @@ html
 .about
 {
     top: 0; bottom: 1; left: 0; right: 0;
-    top: -140px;
-    /*background-color:#d35500;*/
-    background-image:url('img/topbanner.png');
+    top: -155px;
+    font-size: 50px;
+
+    background-color:#34dceb;
     background-size: 100% 100%;
 }
 
 .resume
 {
     top: 0; bottom:0; left: 1; right:0;
-    right: -295px;
-    background-color:#007fd3;
+    right: -155px;
+    font-size: 40px;
+
+    background-image: 'img/topbanner.png';
+    background-color:#319be7;
 }
 .contact
 {
     top: 1; bottom:0; left: 0; right:0;
-    bottom: -140px;
-    background-color:#29b9aa;
+    bottom: -155px;
+    font-size: 40px;
+
+    background-color:#6170e5;
 }
 .projects
 {
     top: 0; bottom:0; left: 0; right:1;
-    left: -295px;
-    background-color:#27ae60;
+    left: -155px;
+    font-size: 37px;
+
+    background-color:#9A0066;
 }
 
 /*****************************************************************/
+.text{   overflow: hidden;}
 .text div
 {
     position: fixed;
@@ -145,6 +150,7 @@ html
 
 .aboutText
 {
+    overflow: auto;
     display:none;   
     /*background-color:#d35500;*/
 
