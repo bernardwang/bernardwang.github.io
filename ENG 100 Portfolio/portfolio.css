@@ -38,6 +38,7 @@ html
     border-radius: 999px;
 }
 
+
 /*****************************************************************/
 .arrow img
 {
@@ -76,7 +77,6 @@ html
 }
 
 /*****************************************************************/
-
 .bubbles div
 {
     display: none;
@@ -116,8 +116,8 @@ html
     right: -155px;
     font-size: 40px;
 
-    background-image: 'img/topbanner.png';
     background-color:#319be7;
+    background-size: 100% 100%;
 }
 .contact
 {
@@ -126,6 +126,7 @@ html
     font-size: 40px;
 
     background-color:#6170e5;
+    background-size: 100% 100%;
 }
 .projects
 {
@@ -134,39 +135,66 @@ html
     font-size: 37px;
 
     background-color:#9A0066;
+    background-size: 100% 100%;
 }
 
 /*****************************************************************/
-.text{   overflow: hidden;}
 .text div
 {
+    overflow: auto;     
     position: fixed;
-    word-wrap:break-word;
     margin: auto;
-    color:black;
 
+    color:black;
+    text-align: center;
     font-family: 'Source Sans Pro', 'HelveticaNeue-Light' sans-serif;
+    display:none; 
 }
 
 .aboutText
 {
-    overflow: auto;
-    display:none;   
     /*background-color:#d35500;*/
 
     top: 0; bottom: 1; left: 0; right: 0;   
-    top: 15%;
+    top: 6%;
     left: 0%;
-    /*float:left;*/
-    height: 63%;
+    height: 67%;
     width: 90%;
-    border: 5px solid red;
 
+    padding: 30px;
     font-size: 40px;
+    /*border: 5px solid red;*/
 }
 
-.name{font-size:85px;}
+.resumeText
+{
+    overflow: auto; 
+    font-size: 100px;
+}
+
+.contactText
+{
+    overflow: auto; 
+    font-size: 100px;
+}
+
+.projectsText
+{
+    overflow: auto; 
+    font-size: 100px;
+}
+
+.name{font-size:100px;}
+.aboutmyself{font-size:60px;}
 .school{color:#ff4c00;}
+.create{color:red;}
+.contacthere
+{
+    text-decoration: none;
+    color:red;
+}
+.contacthere:hover{color:blue;}
+
 .cs
 {
     /*font-family:'Source Code Pro', sans-serif; 
@@ -175,22 +203,4 @@ html
     font-size: 25px;*/
 }
 
-
-.aboutBody
-{
-    text-align: center;
-}
-
-/*.about p:nth-child(2)
-{
-    font-size: 160px;
-}
-.about p:nth-child(3)
-{
-    font-size: 40px;
-}
-.about p:nth-child(4)
-{
-    font-size: 30px;
-}*/
 

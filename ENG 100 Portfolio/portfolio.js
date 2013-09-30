@@ -6,10 +6,6 @@ $(document).ready(function(){
     //face fades in the begining
     $('.face').fadeIn(500);
 
-    $('container').mouseenter(function() {
-	
-    });
-
     //when mouse over face
     $('.face').mouseenter(function() {
 
@@ -276,7 +272,7 @@ function rightBubbleOpen(){
 		right:'-370px',
 	},50,function(){
 		clearHome();
-		$('.resume h1').fadeOut(150);
+		$('.resume').text("");
 		$('.resume').css('position','fixed');
 		$('.resume').css('right','0px');
 
@@ -285,6 +281,9 @@ function rightBubbleOpen(){
 			height:'50%',
 		},200,function(){
 			$('.resume').css('border-radius','60px');
+			$('.resume').css('background-image','url("img/rightbanner.png")');
+			$('.resume').css('background-color','white');
+
 			$('.resume').animate({
 			right:'2.5%',
 			height:'90%',
@@ -301,7 +300,7 @@ function bottomBubbleOpen(){
 		bottom:'-170px',
 	},70,function(){
 		clearHome();
-		$('.contact h1').fadeOut(150);
+		$('.contact').text("");
 		$('.contact').css('position','fixed');
 		$('.contact').css('bottom','0px');
 
@@ -310,6 +309,9 @@ function bottomBubbleOpen(){
 			height:'5%',
 		},200,function(){
 			$('.contact').css('border-radius','60px');
+			$('.contact').css('background-image','url("img/bottombanner.png")');
+			$('.contact').css('background-color','white');
+
 			$('.contact').animate({
 			bottom:'4%',
 			height:'80%',
@@ -326,7 +328,7 @@ function leftBubbleOpen(){
 		left:'-370px',
 	},50,function(){
 		clearHome();
-		$('.projects h1').fadeOut(150);
+		$('.projects').text("");
 		$('.projects').css('position','fixed');
 		$('.projects').css('left','0px');
 
@@ -335,6 +337,9 @@ function leftBubbleOpen(){
 			height:'50%',
 		},200,function(){
 			$('.projects').css('border-radius','60px');
+			$('.projects').css('background-image','url("img/leftbanner.png")');
+			$('.projects').css('background-color','white');
+			
 			$('.projects').animate({
 			left:'2.5%',
 			height:'90%',
@@ -350,24 +355,18 @@ function clearHome(){
 	$('.arrow').fadeOut(150);
 	$('.face').fadeOut(150);
 }
+
 function upChangeText(){
 	$('.aboutText').fadeIn(150);
-	$('.aboutText').css('text-align','center');
-	//$('.aboutBody').fadeIn(150);
-	//$('.aboutBody').css('text-align','left');
-
 }
 function rightChangeText(){
-	$('.resume a').fadeIn(150);
-	$('.resume a').css('text-align','center');
+	$('.resumeText').fadeIn(150);
 }
 function bottomChangeText(){
-	$('.contact p').fadeIn(150);
-	$('.contact p').css('text-align','center');
+	$('.contactText').fadeIn(150);
 }
 function leftChangeText(){
-	$('.projects p').fadeIn(150);
-	$('.projects p').css('text-align','center');
+	$('.projectsText').fadeIn(150)
 }
 
 
