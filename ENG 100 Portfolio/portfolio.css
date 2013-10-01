@@ -50,9 +50,9 @@ html
     height: 0px;
     margin: auto;
     
-    /*border: 3px solid white;*/
     border-radius:999px;
-    box-shadow: 3px 2px 15px rgba(0, 0, 0, .3);
+    /*border: 3px solid white;
+    box-shadow: 3px 2px 15px rgba(0, 0, 0, .3);*/
 }
 
 .up
@@ -87,7 +87,7 @@ html
     margin: auto;
 
     color:black;
-    font-family: 'Source Sans Pro','Open Sans Condensed' sans-serif;
+    font-family: 'Source Sans Pro','Open Sans Condensed','HelveticaNeue-Light' sans-serif;
     text-align: center;
     line-height: 125px;
 
@@ -147,7 +147,7 @@ html
 
     color:black;
     text-align: center;
-    font-family: 'Source Sans Pro', 'HelveticaNeue-Light' sans-serif;
+    font-family: 'Source Sans Pro','Open Sans Condensed','HelveticaNeue-Light' sans-serif;
     display:none; 
 }
 
@@ -187,11 +187,17 @@ html
 .name{font-size:100px;}
 .aboutmyself{font-size:60px;}
 .school{color:#ff4c00;}
-.create{color:red;}
+.create{color:#ff4c00;}
+.matters{color:#ff4c00;}
+.learn{color:#ff4c00;}
+.UI{color:#ff4c00;}
+.software{color:#ff4c00;}
+.web{color:#ff4c00;}
+
 .contacthere
 {
     text-decoration: none;
-    color:red;
+    color:#ff4c00;
 }
 .contacthere:hover{color:blue;}
 

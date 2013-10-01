@@ -1,45 +1,53 @@
 $(document).ready(function(){
 	
 	//toggle for bubble fading away
-	var clicked = 0;
+	var clicked = false;
 
     //face fades in the begining
     $('.face').fadeIn(500);
 
     //when mouse over face
     $('.face').mouseenter(function() {
-
 		//makes face pop out
-		$('.face').animate({
-	    	width:'200px',
-	   		height:'200px',
-		},'fast',function(){
-		});	
+		if(clicked==false)
+		{
+			$('.face').animate({
+	    		width:'200px',
+	   			height:'200px',
+			},150);
 
-		//arrow animations
-		arrowEnter();
+			//arrow animations
+			arrowEnter();
+		}
+		if(clicked==true)
+		{
+			$('.face').animate({
+	    		width:'90px',
+	   			height:'90px',
+			},150);
+		}
     });
+
 
     //when mouse leaves center of screen
     $('.container').mouseleave(function() {
-	
-		//face back to normal size
-		$('.face').animate({
-	    	width:'175px',
-	    	height:'175px',
-		},'fast',function(){
-        });
 
-		//animates arrows to go away
-		$('.arrow img').animate({
-		    width:'0px',
-	    	height:'0px',
-		},200,function(){
-		    $('.up').hide();
-	    	$('.right').hide();
-		    $('.down').hide();
-	    	$('.left').hide();
-		});
+		//face back to normal size if arrow not clicked
+		if(clicked==false)
+		{
+			$('.face').animate({
+	    		width:'175px',
+	    		height:'175px',
+			},150);
+		}
+		if(clicked==true)
+		{
+			$('.face').animate({
+	    		width:'75px',
+	    		height:'75px',
+			},150);
+		}
+		arrowExit();
     });
     
 
@@ -59,67 +67,66 @@ $(document).ready(function(){
 
     //mouse leave arrow, bubble fades away
     $('.up').mouseleave(function(){	
-    	if(clicked==0){
+    	if(clicked==false){
 			$('.about').fadeOut(200);
 		}	
     });
 	$('.right').mouseleave(function(){
-		if(clicked==0){
+		if(clicked==false){
 			$('.resume').fadeOut(200);
 		}	
     });
     $('.down').mouseleave(function(){
-    	if(clicked==0){
+    	if(clicked==false){
 			$('.contact').fadeOut(200);
 		}
     });
     $('.left').mouseleave(function(){
-    	if(clicked==0){
+    	if(clicked==false){
 			$('.projects').fadeOut(200);
 		}	
     });
 
-
-    //click on face and animation
-    $('.face').click(function(){
-		upClick();
-		rightClick();
-		downClick();
-		leftClick();
-    });
-    
-    //arrow click animation
+  
     $('.up').click(function(){
-    	clicked = 1;
+    	clicked = true;
 		upClick();
 		upBubbleOpen();
+		upNavHome();
 
 		//clicked = 0;
     });
 	$('.right').click(function(){
-		clicked = 1;
+		clicked = true;
 		rightClick();
 		rightBubbleOpen();
+		rightNavHome();
 
 		//clicked = 0;
     });
     $('.down').click(function(){
-    	clicked = 1;
+    	clicked = true;
 		downClick();
 		bottomBubbleOpen();
+		downNavHome();
 
 		//clicked = 0;
     });
     $('.left').click(function(){
-    	clicked = 1;
+    	clicked = true;
 		leftClick();
 		leftBubbleOpen();
+		leftNavHome();
 
 		//clicked = 0;
     });
 
+    //click on face and animation
+	$('.face').click(function(){
+		clicked = false;
+		masterReset();
+	});
 });
-
 
 
 //animation of arrow entering when mouse over face
@@ -130,29 +137,43 @@ function arrowEnter(){
 		height:'35px',
 		opacity:1,
 		top:'+25px',
-    },'fast',function(){
+    },200,function(){
     });
     $('.down').animate({
 		width:'35px',
 		height:'35px',
 		opacity:1,
 		bottom:'+25px',
-    },'fast',function(){
+    },200,function(){
     });
     $('.right').animate({
 		width:'35px',
 		height:'35px',
 		opacity:1,
 		right:'+25px',
-    },'fast',function(){
+    },200,function(){
     });
     $('.left').animate({
 		width:'35px',
 		height:'35px',
 		opacity:1,
 		left:'+25px',
-    },'fast',function(){
+    },200,function(){
     });
+}
+
+function arrowExit(){
+	//animates arrows to go away
+	$('.arrow img').animate({
+	    width:'0px',
+    	height:'0px',
+    },200,function(){
+	 	$('.up').hide();
+	   	$('.right').hide();
+	    $('.down').hide();
+	   	$('.left').hide();
+	});
+
 }
 
 //animations of arrows enlarging and bubble fading in when mouse over arrows
@@ -243,8 +264,9 @@ function leftClick(){
 function upBubbleOpen(){	
 	$('.about').delay(95).animate({	//'pushes' bubble with the arrow
 		top:'-170px',
-	},70,function(){	//removes text and finishes push to the window edge
-		clearHome();
+	},70,function(){	//removes text and arrows and finishes push to the window edge
+		$('.arrow').fadeOut(150);	
+
 		$('.about').text("");	
 		$('.about').css('position','fixed');
 		$('.about').css('top','0px');
@@ -271,7 +293,8 @@ function rightBubbleOpen(){
 	$('.resume').delay(120).animate({
 		right:'-370px',
 	},50,function(){
-		clearHome();
+		$('.arrow').fadeOut(150);
+
 		$('.resume').text("");
 		$('.resume').css('position','fixed');
 		$('.resume').css('right','0px');
@@ -299,7 +322,8 @@ function bottomBubbleOpen(){
 	$('.contact').delay(95).animate({
 		bottom:'-170px',
 	},70,function(){
-		clearHome();
+		$('.arrow').fadeOut(150);
+
 		$('.contact').text("");
 		$('.contact').css('position','fixed');
 		$('.contact').css('bottom','0px');
@@ -327,7 +351,8 @@ function leftBubbleOpen(){
 	$('.projects').delay(95).animate({
 		left:'-370px',
 	},50,function(){
-		clearHome();
+		$('.arrow').fadeOut(150);
+
 		$('.projects').text("");
 		$('.projects').css('position','fixed');
 		$('.projects').css('left','0px');
@@ -353,20 +378,86 @@ function leftBubbleOpen(){
 
 function clearHome(){
 	$('.arrow').fadeOut(150);
-	$('.face').fadeOut(150);
+	//$('.face').fadeOut(150);
 }
 
-function upChangeText(){
-	$('.aboutText').fadeIn(150);
+function upChangeText(){$('.aboutText').fadeIn(150);}
+function rightChangeText(){$('.resumeText').fadeIn(150);}
+function bottomChangeText(){$('.contactText').fadeIn(150);}
+function leftChangeText(){$('.projectsText').fadeIn(150);}
+
+function upNavHome(){
+	$('.face').delay(400).animate({
+		width: '75px',
+		height: '75px',
+		bottom: '-180%',
+	},150,function(){
+		//$('.face').css('bottom','1px');
+		//$('.face').css('position','fixed');
+	});
 }
-function rightChangeText(){
-	$('.resumeText').fadeIn(150);
+function rightNavHome(){
+	$('.face').delay(400).animate({
+		width: '75px',
+		height: '75px',
+		left: '-180%',
+	},150,function(){
+		//$('.face').css('bottom','1px');
+		//$('.face').css('position','fixed');
+	});
 }
-function bottomChangeText(){
-	$('.contactText').fadeIn(150);
+function downNavHome(){
+	$('.face').delay(400).animate({
+		width: '75px',
+		height: '75px',
+		top: '-180%',
+	},150,function(){
+		//$('.face').css('bottom','1px');
+		//$('.face').css('position','fixed');
+	});
 }
-function leftChangeText(){
-	$('.projectsText').fadeIn(150)
+function leftNavHome(){
+	$('.face').delay(400).animate({
+		width: '75px',
+		height: '75px',
+		bottom: '-180%',
+	},150,function(){
+		//$('.face').css('bottom','1px');
+		//$('.face').css('position','fixed');
+	});
+}
+
+function masterReset(){
+
+	//resets face and arrows
+	$('.face').animate({
+		width: '175px',
+    	height: '175px',
+    	top: '0', 
+		bottom: '0', 
+		left: '0', 
+		right: '0',
+	})
+	$('.arrow').show();
+
+
+	//resets bubbles
+	$('.text').fadeOut(150);
+	$('.about').fadeOut(150);
+	$('.resume').fadeOut(150);
+	$('.contact').fadeOut(150);
+	$('.projects').fadeOut(150);
+	$('.about').animate({
+		width: '125px',
+    	height: '125px',
+    	position: 'absolute',
+		top: '0', 
+		bottom: '1', 
+		left: '0', 
+		right: '0',
+    	top: '-155px',
+	},200,function(){
+	})
 }
 
 
