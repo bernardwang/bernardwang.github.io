@@ -2,12 +2,20 @@ $(document).ready(function(){
 	
 	//toggle for bubble fading away
 	var clicked = false;
+	var instruct = true;
 
     //face fades in the begining
     $('.face').fadeIn(500);
+    $('.instructions').delay(500).fadeIn(500);
 
     //when mouse over face
     $('.face').mouseenter(function() {
+    	if(instruct==true){
+    		$('.instructions').fadeOut(500);
+    		$('.instructions').text("click on arrows to navigate");
+    		$('.instructions').fadeIn(500)
+    		instruct=false;
+    	}
 		//makes face pop out
 		if(clicked==false)
 		{
@@ -95,6 +103,7 @@ $(document).ready(function(){
 
   
     $('.up').click(function(){
+    	$('.instructions').fadeOut(500);
     	clicked = true;
 		upClick();
 		upBubbleOpen();
@@ -103,6 +112,7 @@ $(document).ready(function(){
 		//clicked = 0;
     });
 	$('.right').click(function(){
+		$('.instructions').fadeOut(500);
 		clicked = true;
 		rightClick();
 		rightBubbleOpen();
@@ -111,6 +121,7 @@ $(document).ready(function(){
 		//clicked = 0;
     });
     $('.down').click(function(){
+    	$('.instructions').fadeOut(500);
     	clicked = true;
 		downClick();
 		bottomBubbleOpen();
@@ -119,6 +130,7 @@ $(document).ready(function(){
 		//clicked = 0;
     });
     $('.left').click(function(){
+    	$('.instructions').fadeOut(500);
     	clicked = true;
 		leftClick();
 		leftBubbleOpen();

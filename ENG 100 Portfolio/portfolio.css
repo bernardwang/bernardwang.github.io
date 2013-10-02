@@ -20,6 +20,15 @@ html
 
 }
 
+.instructions{
+    display:none;
+    font-size: 50px;
+    font-family: 'Source Sans Pro','Open Sans Condensed','HelveticaNeue-Light' sans-serif;
+    position:fixed;
+
+    top: 0; bottom:1; left: 0; right:0;
+}
+
 .face
 {
     display: none;
