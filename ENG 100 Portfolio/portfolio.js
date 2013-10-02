@@ -50,6 +50,12 @@ $(document).ready(function(){
 		arrowExit();
     });
     
+    //when mouse leaves center of screen
+    $('.face').mouseleave(function(){
+    	if(clicked==true){
+    		arrowExit();
+    	}
+	});
 
     //mouse over arrows, show bubble and arrow animation
     $('.up').mouseenter(function(){
@@ -164,9 +170,11 @@ function arrowEnter(){
 
 function arrowExit(){
 	//animates arrows to go away
+	$('.arrow img').show();
 	$('.arrow img').animate({
 	    width:'0px',
     	height:'0px',
+
     },200,function(){
 	 	$('.up').hide();
 	   	$('.right').hide();
@@ -188,7 +196,6 @@ function upMouse(){
 }
 function rightMouse(){
     $('.resume').fadeIn(200);	//
-    $('.resume a').css('display','none');	//
     $('.right').animate({
 		width:'50px',
 		height:'50px',
@@ -198,7 +205,6 @@ function rightMouse(){
 }
 function downMouse(){  
     $('.contact').fadeIn(200);	//
-    $('.contact p').css('display','none');	//
     $('.down').animate({
 		width:'50px',
 		height:'50px',
@@ -207,8 +213,7 @@ function downMouse(){
     });
 }
 function leftMouse(){
-    $('.projects').fadeIn(200);		//
-    $('.projects p').css('display','none');	//
+    $('.projects').fadeIn(200);		
     $('.left').animate({
 		width:'50px',
 		height:'50px',
@@ -262,9 +267,9 @@ function leftClick(){
 
 //bubble opening animations
 function upBubbleOpen(){	
-	$('.about').delay(95).animate({	//'pushes' bubble with the arrow
+	$('.about').delay(90).animate({	//'pushes' bubble with the arrow
 		top:'-170px',
-	},70,function(){	//removes text and arrows and finishes push to the window edge
+	},50,function(){	//removes text and arrows and finishes push to the window edge
 		$('.arrow').fadeOut(150);	
 
 		$('.about').text("");	
@@ -278,6 +283,7 @@ function upBubbleOpen(){
 			$('.about').css('border-radius','60px'); 	//animates bubble expand
 			$('.about').css('background-image','url("img/topbanner.png")');
 			$('.about').css('background-color','white');
+
 			$('.about').animate({
 			top:'4%',
 			height:'80%',
@@ -290,9 +296,9 @@ function upBubbleOpen(){
 
 }
 function rightBubbleOpen(){
-	$('.resume').delay(120).animate({
-		right:'-370px',
-	},50,function(){
+	$('.resume').delay(100).animate({
+		right:'-140%',
+	},100,function(){
 		$('.arrow').fadeOut(150);
 
 		$('.resume').text("");
@@ -319,9 +325,9 @@ function rightBubbleOpen(){
 }
 
 function bottomBubbleOpen(){
-	$('.contact').delay(95).animate({
+	$('.contact').delay(90).animate({
 		bottom:'-170px',
-	},70,function(){
+	},50,function(){
 		$('.arrow').fadeOut(150);
 
 		$('.contact').text("");
@@ -348,9 +354,9 @@ function bottomBubbleOpen(){
 }
 
 function leftBubbleOpen(){
-	$('.projects').delay(95).animate({
-		left:'-370px',
-	},50,function(){
+	$('.projects').delay(100).animate({
+		left:'-140%',
+	},100,function(){
 		$('.arrow').fadeOut(150);
 
 		$('.projects').text("");
@@ -381,49 +387,74 @@ function clearHome(){
 	//$('.face').fadeOut(150);
 }
 
-function upChangeText(){$('.aboutText').fadeIn(150);}
-function rightChangeText(){$('.resumeText').fadeIn(150);}
-function bottomChangeText(){$('.contactText').fadeIn(150);}
-function leftChangeText(){$('.projectsText').fadeIn(150);}
+//shows only relavant text
+function upChangeText(){
+	$('.aboutText').css('display','block');
+
+	$('.text').fadeIn(150); 
+	$('.resumeText').hide();
+	$('.contactText').hide();
+	$('.projectsText').hide();
+}
+function rightChangeText(){
+	$('.resumeText').css('display','block');
+
+	$('.text').fadeIn(150); 
+	$('.aboutText').hide();
+	$('.contactText').hide();
+	$('.projectsText').hide();
+}
+function bottomChangeText(){
+	$('.contactText').css('display','block');
+
+	$('.text').fadeIn(150); 
+	$('.aboutText').hide();
+	$('.resumeText').hide();
+	$('.projectsText').hide();
+}
+function leftChangeText(){
+	$('.projectsText').css('display','block');
+
+	$('.text').fadeIn(150); 
+	$('.aboutText').hide();
+	$('.resumeText').hide();
+	$('.contactText').hide();
+}
 
 function upNavHome(){
-	$('.face').delay(400).animate({
+	$('.face').css('position','fixed');
+	$('.face').delay(375).animate({
 		width: '75px',
 		height: '75px',
-		bottom: '-180%',
+		top: '85%',
 	},150,function(){
-		//$('.face').css('bottom','1px');
-		//$('.face').css('position','fixed');
 	});
 }
 function rightNavHome(){
-	$('.face').delay(400).animate({
+	$('.face').css('position','fixed');
+	$('.face').delay(410).animate({
 		width: '75px',
 		height: '75px',
-		left: '-180%',
-	},150,function(){
-		//$('.face').css('bottom','1px');
-		//$('.face').css('position','fixed');
+		right: '91%',
+	},200,function(){
 	});
 }
 function downNavHome(){
-	$('.face').delay(400).animate({
+	$('.face').css('position','fixed');
+	$('.face').delay(375).animate({
 		width: '75px',
 		height: '75px',
-		top: '-180%',
+		top: '-85%',
 	},150,function(){
-		//$('.face').css('bottom','1px');
-		//$('.face').css('position','fixed');
 	});
 }
 function leftNavHome(){
-	$('.face').delay(400).animate({
+	$('.face').css('position','fixed');
+	$('.face').delay(410).animate({
 		width: '75px',
 		height: '75px',
-		bottom: '-180%',
-	},150,function(){
-		//$('.face').css('bottom','1px');
-		//$('.face').css('position','fixed');
+		left: '91%',
+	},200,function(){
 	});
 }
 
@@ -440,24 +471,44 @@ function masterReset(){
 	})
 	$('.arrow').show();
 
-
 	//resets bubbles
 	$('.text').fadeOut(150);
 	$('.about').fadeOut(150);
 	$('.resume').fadeOut(150);
 	$('.contact').fadeOut(150);
 	$('.projects').fadeOut(150);
-	$('.about').animate({
-		width: '125px',
-    	height: '125px',
-    	position: 'absolute',
-		top: '0', 
-		bottom: '1', 
-		left: '0', 
-		right: '0',
-    	top: '-155px',
-	},200,function(){
+
+	$('.bubbles div').css({
+		'display': 'none',
+		'width': '125px',
+    	'height': '125px',
+    	'position': 'absolute',
+    	'background-image': 'none',
 	})
+	$('.about').css({
+		'top': '0', 'bottom': '1', 'left': '0', 'right': '0',
+    	'top': '-155px',
+    	'background-color': '#34dceb',
+    	})
+	$('.about').text("about");
+	$('.resume').css({
+		'top': '0', 'bottom': '0', 'left': '1', 'right': '0',
+    	'right': '-155px',
+    	'background-color': '#319be7',
+    	})
+	$('.resume').text("resume");
+	$('.contact').css({
+		'top': '1', 'bottom': '0', 'left': '0', 'right': '0',
+    	'bottom': '-155px',
+    	'background-color': '#6170e5',
+    	})
+	$('.contact').text("contact");
+	$('.projects').css({
+		'top': '', 'bottom': '0', 'left': '0', 'right': '1',
+    	'left': '-155px',
+    	'background-color': '#9A0066',
+    	})
+	$('.projects').text("projects");
 }
 
 

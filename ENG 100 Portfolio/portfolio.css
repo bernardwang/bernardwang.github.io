@@ -168,19 +168,26 @@ html
 
 .resumeText
 {
-    overflow: auto; 
+
     font-size: 100px;
+
 }
 
 .contactText
 {
-    overflow: auto; 
+    top: 1; bottom: 0; left: 0; right: 0;   
+    top: 6%;
+    left: 0%;
+    height: 67%;
+    width: 90%;
     font-size: 100px;
+
+    /*border: 5px solid red;*/
 }
 
 .projectsText
 {
-    overflow: auto; 
+
     font-size: 100px;
 }
 
