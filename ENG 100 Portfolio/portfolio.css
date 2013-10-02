@@ -163,32 +163,8 @@ html
 
     padding: 30px;
     font-size: 40px;
+    
     /*border: 5px solid red;*/
-}
-
-.resumeText
-{
-
-    font-size: 100px;
-
-}
-
-.contactText
-{
-    top: 1; bottom: 0; left: 0; right: 0;   
-    top: 6%;
-    left: 0%;
-    height: 67%;
-    width: 90%;
-    font-size: 100px;
-
-    /*border: 5px solid red;*/
-}
-
-.projectsText
-{
-
-    font-size: 100px;
 }
 
 .name{font-size:100px;}
@@ -200,20 +176,60 @@ html
 .UI{color:#ff4c00;}
 .software{color:#ff4c00;}
 .web{color:#ff4c00;}
-
 .contacthere
 {
     text-decoration: none;
     color:#ff4c00;
 }
 .contacthere:hover{color:blue;}
-
 .cs
 {
     /*font-family:'Source Code Pro', sans-serif; 
     background:black; 
     color: #00FF00;
     font-size: 25px;*/
+}
+
+
+.resumeText
+{
+    top: 0; bottom: 0; left: 1; right: 0;   
+    top: 0%;
+    right: 10%;
+    height: 81%;
+    width: 79%;
+    font-size: 100px;
+
+    /*border: 5px solid red;*/
+}
+
+.resumelink{
+    width:250px;
+    height:300px;
+}
+
+.contactText
+{
+    top: 1; bottom: 0; left: 0; right: 0;   
+    top: 12%;
+    height: 74%;
+    width: 90%;
+    font-size: 100px;
+
+    /*border: 5px solid red;*/
+}
+
+.projectsText
+{
+
+    top: 0; bottom: 0; left: 0; right: 1;   
+    top: 0%;
+    left: 10%;
+    height: 81%;
+    width: 79%;
+    font-size: 100px;
+   
+    /*border: 5px solid red;*/
 }
 
 
