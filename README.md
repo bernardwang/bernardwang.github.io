@@ -1,3 +1,3 @@
-portfolio
+bernardwang.com
 =========
-This is a portfolio website designed for my ENG 100 class. I started working on it in the beginning of September 2013. It is a work in progress.
+This is a portfolio website I started working on 9/13. It is a work in progress.
