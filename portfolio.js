@@ -6,7 +6,7 @@ $(document).ready(function(){
 
     //face fades in the begining
     $('.face').fadeIn(500);
-    $('.instructions').delay(500).fadeIn(500);
+    $('.instructions').delay(300).fadeIn(1000);
 
     //when mouse over face
     $('.face').mouseenter(function() {
