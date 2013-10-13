@@ -13,9 +13,9 @@ html
     width: 376px;
     height: 376px;
     position: absolute;
-    left: 50%;
-    top: 50%;
     margin-left: -188px;
+    left:50%;
+    top: 50%;
     margin-top: -188px;
 
 }

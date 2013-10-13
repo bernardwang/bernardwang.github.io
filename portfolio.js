@@ -6,14 +6,14 @@ $(document).ready(function(){
 
     //face fades in the begining
     $('.face').fadeIn(500);
-    $('.instructions').delay(300).fadeIn(1000);
+    $('.instructions').fadeIn(1000);
 
     //when mouse over face
     $('.face').mouseenter(function() {
     	if(instruct==true){
-    		$('.instructions').fadeOut(500);
-    		$('.instructions').text("click on arrows to navigate");
-    		$('.instructions').fadeIn(500)
+    		$('.instructions').fadeOut(function() {
+  				$('.instructions').text("click on arrows to navigate");
+			}).fadeIn(500);
     		instruct=false;
     	}
 		//makes face pop out
