@@ -165,9 +165,9 @@ html
     /*background-color:#d35500;*/
 
     top: 0; bottom: 1; left: 0; right: 0;   
-    top: 6%;
+    top: 4%;
     left: 0%;
-    height: 67%;
+    height: 70%;
     width: 90%;
 
     padding: 30px;
@@ -181,6 +181,7 @@ html
 .school{color:#ff4c00;}
 .create{color:#ff4c00;}
 .matters{color:#ff4c00;}
+.universale{color:#ff4c00;}
 .learn{color:#ff4c00;}
 .UI{color:#ff4c00;}
 .software{color:#ff4c00;}
