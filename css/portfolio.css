@@ -68,22 +68,22 @@ html
 .up
 {
     top: 0; right: 0; bottom: 1; left:0;
-    top: +35px;
+    top: +42px;
 }
 .right
 { 
     top: 0; right: 0; bottom: 0; left:1;
-    right: +35px;
+    right: +42px;
 }
 .down
 {
     top: 1; right: 0; bottom: 0; left:0;
-    bottom: +35px;
+    bottom: +42px;
 }
 .left
 { 
      top: 0; right: 1; bottom: 0; left:0;
-    left: +35px;
+    left: +42px;
 }
 
 /*****************************************************************/
@@ -113,7 +113,7 @@ html
 .about
 {
     top: 0; bottom: 1; left: 0; right: 0;
-    top: -155px;
+    top: -135px;
     font-size: 50px;
 
     background-color:#34dceb;
@@ -123,7 +123,7 @@ html
 .resume
 {
     top: 0; bottom:0; left: 1; right:0;
-    right: -155px;
+    right: -135px;
     font-size: 40px;
 
     background-color:#319be7;
@@ -132,7 +132,7 @@ html
 .contact
 {
     top: 1; bottom:0; left: 0; right:0;
-    bottom: -155px;
+    bottom: -135px;
     font-size: 40px;
 
     background-color:#6170e5;
@@ -141,7 +141,7 @@ html
 .projects
 {
     top: 0; bottom:0; left: 0; right:1;
-    left: -155px;
+    left: -135px;
     font-size: 37px;
 
     background-color:#9A0066;
@@ -179,8 +179,7 @@ html
 
 .name{font-size:100px;}
 .aboutmyself{font-size:60px;}
-.school,.create,.matters,.universal,.learn,.UI,.software,.web,.contacthere
-{color:#ff4c00;}
+.school,.create,.matters,.universal,.learn,.UI,.software,.web,.contacthere{color:#ff4c00;}
 .contacthere:hover{color:#38d;}
 
 .resumeText
@@ -208,7 +207,6 @@ html
 .contactText p{
     margin:5%;
 }
-
 .projectsText
 {
 
