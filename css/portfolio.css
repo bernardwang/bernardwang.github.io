@@ -23,7 +23,7 @@ html
 .instructions{
     display:none
     ;
-    color: #777;
+    color: #444;
     font-size: 40px;
     font-family: 'Source Sans Pro','Open Sans Condensed', 'HelveticaNeue-Light' sans-serif;
     position:fixed;
@@ -179,27 +179,9 @@ html
 
 .name{font-size:100px;}
 .aboutmyself{font-size:60px;}
-.school{color:#ff4c00;}
-.create{color:#ff4c00;}
-.matters{color:#ff4c00;}
-.universale{color:#ff4c00;}
-.learn{color:#ff4c00;}
-.UI{color:#ff4c00;}
-.software{color:#ff4c00;}
-.web{color:#ff4c00;}
-.contacthere
-{
-    text-decoration: none;
-    color:#ff4c00;
-}
-.contacthere:hover{color:blue;}
-.cs
-{
-    /*font-family:'Source Code Pro', sans-serif; 
-    background:black; 
-    color: #00FF00;
-    font-size: 25px;*/
-}
+.school,.create,.matters,.universal,.learn,.UI,.software,.web,.contacthere
+{color:#ff4c00;}
+.contacthere:hover{color:#38d;}
 
 .resumeText
 {
@@ -223,6 +205,9 @@ html
 
     /*border: 5px solid red;*/
 }
+.contactText p{
+    margin:5%;
+}
 
 .projectsText
 {
@@ -240,7 +225,7 @@ html
 /*****************************************************************/
 
 a{
-    color: #777;
+    color: #333;
     text-decoration: none;
 
 }
