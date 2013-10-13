@@ -36,7 +36,6 @@ $(document).ready(function(){
 		}
     });
 
-
     //when mouse leaves center of screen
     $('.container').mouseleave(function() {
 

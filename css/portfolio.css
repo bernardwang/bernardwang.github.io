@@ -8,16 +8,6 @@ html
     background-color: #f4f4ee;
 }
 
-a{
-    color: #777;
-    text-decoration: none;
-
-}
-a:hover{
-    color: #38d;
-    text-decoration: none;
-}
-
 .container
 {
     width: 376px;
@@ -31,12 +21,13 @@ a:hover{
 }
 
 .instructions{
-    display:none;
-    font-size: 50px;
-    font-family: 'Source Sans Pro','Open Sans Condensed','HelveticaNeue-Light' sans-serif;
+    display:none
+    ;
+    color: #777;
+    font-size: 40px;
+    font-family: 'Source Sans Pro','Open Sans Condensed', 'HelveticaNeue-Light' sans-serif;
     position:fixed;
-
-    top: 0; bottom:1; left: 0; right:0;
+    float:left;
 }
 
 .face
@@ -222,18 +213,6 @@ a:hover{
     /*border: 5px solid red;*/
 }
 
-.resumeLink:link{
-    width:150px;
-    height:200px;
-    text-decoration: none;
-}
-.icons{
-    border-top: 1px solid #BDBDBD;
-    width:150px;
-    height:400px;
-    text-decoration: none;
-}
-
 .contactText
 {
     top: 1; bottom: 0; left: 0; right: 0;   
@@ -258,4 +237,22 @@ a:hover{
     /*border: 5px solid red;*/
 }
 
+/*****************************************************************/
+
+a{
+    color: #777;
+    text-decoration: none;
+
+}
+a:hover{
+    /*color: #ff4c00;*/
+    color: #38d;
+    text-decoration: none;
+}
+
+ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 0 2%;
+}
 
