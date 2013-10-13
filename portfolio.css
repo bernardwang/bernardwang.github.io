@@ -8,6 +8,16 @@ html
     background-color: #f4f4ee;
 }
 
+a{
+    color: #777;
+    text-decoration: none;
+
+}
+a:hover{
+    color: #38d;
+    text-decoration: none;
+}
+
 .container
 {
     width: 376px;
@@ -200,7 +210,6 @@ html
     font-size: 25px;*/
 }
 
-
 .resumeText
 {
     top: 0; bottom: 0; left: 1; right: 0;   
@@ -213,9 +222,15 @@ html
     /*border: 5px solid red;*/
 }
 
-.resumelink{
+.resumeLink:link{
     width:150px;
     height:200px;
+    text-decoration: none;
+}
+.icons{
+    border-top: 1px solid #BDBDBD;
+    width:150px;
+    height:400px;
     text-decoration: none;
 }
 
