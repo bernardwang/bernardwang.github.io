@@ -389,7 +389,7 @@ function clearHome(){
 	//$('.face').fadeOut(150);
 }
 
-//shows only relavant text
+//shows only relevant text
 function upChangeText(){
 	$('.aboutText').css('display','block');
 
@@ -434,7 +434,7 @@ function upNavHome(){
 }
 function rightNavHome(){
 	$('.face').css('position','fixed');
-	$('.face').delay(410).animate({
+	$('.face').delay(550).animate({
 		width: '75px',
 		height: '75px',
 		right: '91%',
@@ -452,7 +452,7 @@ function downNavHome(){
 }
 function leftNavHome(){
 	$('.face').css('position','fixed');
-	$('.face').delay(410).animate({
+	$('.face').delay(550).animate({
 		width: '75px',
 		height: '75px',
 		left: '91%',
