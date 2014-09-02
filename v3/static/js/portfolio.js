@@ -1,10 +1,3 @@
-$(document).ready(function(){
-	
-
-	init();
-
-}
-
-function init(){
-
-}
+$(document).ready(function(e) {
+	$('img[usemap]').rwdImageMaps();
+});
