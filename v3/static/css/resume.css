@@ -1,0 +1,15 @@
+@charset "utf-8";
+
+html{
+	font-family: 'IM Fell Great Primer', serif;
+}
+
+
+#download{
+	width:100px;
+	margin:0 auto;
+}
+
+#resume{
+	margin:0 auto;
+}
