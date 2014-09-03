@@ -3,22 +3,22 @@ $(document).ready(function(e) {
 	setTimeout(function(){
 		$('#notebook1').hide();
 		$('#notebook2').hide();
-		$('.spinner').hide();
+		//$('.spinner').hide();
 		highlight();
-	}, 4000); 			//time before highlighting is enabled
+	}, 2100);//4000); 			//time before highlighting is enabled
 });
 
 function transition(){
-	setTimeout(function(){
-		$('#notebook1').toggleClass("show");
+	//setTimeout(function(){
+		//$('#notebook1').toggleClass("show");
 		setTimeout(function(){
 			$('#notebook2').toggleClass("show");
 			setTimeout(function(){
 				$('#notebook3').toggleClass("show");
 				$('#notebook3').rwdImageMaps();
-			}, 800);	// time for notebook2
-		}, 1300);		// time for notebook1
-	}, 1000);			// time before load screen is disabled
+			}, 600);	// time for notebook2
+		}, 600);		// time for notebook1
+	//}, 1000);			// time before load screen is disabled
 }
 
 function highlight(){
