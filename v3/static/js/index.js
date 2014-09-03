@@ -1,18 +1,24 @@
 $(document).ready(function(e) {
 	transition();
 	setTimeout(function(){
+		$('#notebook1').hide();
+		$('#notebook2').hide();
+		$('.spinner').hide();
 		highlight();
-	}, 2500);
+	}, 4000); 			//time before highlighting is enabled
 });
 
 function transition(){
 	setTimeout(function(){
-		$('#notebook2').toggleClass("show");
+		$('#notebook1').toggleClass("show");
 		setTimeout(function(){
-			$('#notebook3').toggleClass("show");
-			$('#notebook3').rwdImageMaps();
-		}, 900);
-	}, 2000);
+			$('#notebook2').toggleClass("show");
+			setTimeout(function(){
+				$('#notebook3').toggleClass("show");
+				$('#notebook3').rwdImageMaps();
+			}, 800);	// time for notebook2
+		}, 1300);		// time for notebook1
+	}, 1000);			// time before load screen is disabled
 }
 
 function highlight(){
