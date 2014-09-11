@@ -17,7 +17,7 @@ function transition(){
 				$('#notebook3').toggleClass("show");
 				$('#notebook3').rwdImageMaps();
 			}, 600);	// time for notebook2
-		}, 600);		// time for notebook1
+		}, 500);		// time for notebook1
 	//}, 1000);			// time before load screen is disabled
 }
 
@@ -36,9 +36,9 @@ function highlight(){
   		else if(id == "linkedin"){
   			$("#link_hl").attr("src","static/img/linkedin_hl.png");
   		}
-        $('#link_hl').fadeIn(100);
+        $('#link_hl').fadeIn(10);
     });
     $('area').mouseout(function (e) {
-    	$('#link_hl').fadeOut(100);
+    	$('#link_hl').fadeOut(10);
     });
 }
