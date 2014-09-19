@@ -1,0 +1,37 @@
+html, body {
+  font-family: 'IM Fell Great Primer', serif;
+  height: 100%;
+  margin: 0;
+  overflow: hidden; }
+
+.links {
+  width: 100%;
+  height: 100%; }
+  .links div {
+    position: relative;
+    left: 27%;
+    top: 57%;
+    height: 5%; }
+    .links div:nth-child(1) {
+      width: 6.5%; }
+    .links div:nth-child(2) {
+      width: 8%; }
+    .links div:nth-child(3) {
+      width: 7.5%; }
+    .links div:nth-child(4) {
+      width: 9%; }
+  .links div a {
+    width: 100%;
+    height: 100%;
+    display: block;
+    border: 1px black solid;
+    opacity: .25;
+    background-color: red; }
+
+p {
+  position: fixed;
+  bottom: 0;
+  right: 10px;
+  opacity: .50;
+  color: white;
+  font-size: 10px; }

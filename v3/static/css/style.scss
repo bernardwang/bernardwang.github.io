@@ -1,0 +1,54 @@
+@charset "utf-8";
+@import "bourbon/bourbon";
+
+$break-small: 600px;
+$break-medium: 1000px;
+$break-large: 1000px;
+
+html,body {
+	font-family: 'IM Fell Great Primer', serif;
+	height: 100%;
+	margin: 0;
+  overflow: hidden;
+}
+
+.links{
+  width: 100%;
+  height: 100%;
+  div{
+    position: relative;
+    left: 27%;
+    top: 57%;
+    height: 5%;
+    &:nth-child(1){
+      width: 6.5%;
+    }
+    &:nth-child(2){   
+      width: 8%;
+    }
+    &:nth-child(3){ 
+      width: 7.5%;
+    }
+    &:nth-child(4){ 
+      width: 9%;
+    }
+  }
+	div a{
+    width: 100%;
+    height: 100%;
+    display: block;
+
+    border: 1px black solid;
+    opacity: .25;
+    background-color: red;
+  }
+}
+
+p {
+  position: fixed;
+  bottom: 0;
+  right: 10px;
+  opacity: .50;
+  color: white;
+  font-size: 10px;
+}
