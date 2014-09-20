@@ -1,10 +1,6 @@
 @charset "utf-8";
 @import "bourbon/bourbon";
 
-$break-small: 600px;
-$break-medium: 1000px;
-$break-large: 1000px;
-
 html,body {
 	font-family: 'IM Fell Great Primer', serif;
 	height: 100%;
@@ -17,21 +13,30 @@ html,body {
   height: 100%;
   div{
     position: relative;
-    left: 27%;
-    top: 57%;
-    height: 5%;
-    &:nth-child(1){
-      width: 6.5%;
+    /*&:nth-child(1){ width: 8%;  }
+    &:nth-child(2){ width: 8.5%;    }
+    &:nth-child(3){ width: 9%;  }
+    &:nth-child(4){ width: 10.5%;    }
+    /*@media screen and (max-width: 1900px){
+      left: 27%;
+      top: 57%;
+      height: 5%;
+    }*/
+
+    @for $i from 0 through 10 {
+      @media screen and (max-width: 2000px - ($i*100)) { 
+        left: 30%-($i*2);
+        width: 10%+($i);
+      }
     }
-    &:nth-child(2){   
-      width: 8%;
+
+    @for $i from 0 through 5 {
+      @media screen and (max-height: 1000px - ($i*100)) { 
+        top: 55.5%+($i);
+        height: 4%+($i);
+      }
     }
-    &:nth-child(3){ 
-      width: 7.5%;
-    }
-    &:nth-child(4){ 
-      width: 9%;
-    }
+
   }
 	div a{
     width: 100%;
