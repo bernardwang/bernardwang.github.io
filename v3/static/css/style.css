@@ -1,98 +1,27 @@
-html, body {
+* {
+  margin: 0;
+  padding: 0; }
+
+html {
   font-family: 'IM Fell Great Primer', serif;
   height: 100%;
-  margin: 0;
   overflow: hidden; }
 
-.links {
-  width: 100%;
-  height: 100%; }
-  .links div {
-    position: relative;
-    /*&:nth-child(1){ width: 8%;  }
-    &:nth-child(2){ width: 8.5%;    }
-    &:nth-child(3){ width: 9%;  }
-    &:nth-child(4){ width: 10.5%;    }
-    /*@media screen and (max-width: 1900px){
-      left: 27%;
-      top: 57%;
-      height: 5%;
-    }*/ }
-    @media screen and (max-width: 2000px) {
-      .links div {
-        left: 30%;
-        width: 10%; } }
-    @media screen and (max-width: 1900px) {
-      .links div {
-        left: 28%;
-        width: 11%; } }
-    @media screen and (max-width: 1800px) {
-      .links div {
-        left: 26%;
-        width: 12%; } }
-    @media screen and (max-width: 1700px) {
-      .links div {
-        left: 24%;
-        width: 13%; } }
-    @media screen and (max-width: 1600px) {
-      .links div {
-        left: 22%;
-        width: 14%; } }
-    @media screen and (max-width: 1500px) {
-      .links div {
-        left: 20%;
-        width: 15%; } }
-    @media screen and (max-width: 1400px) {
-      .links div {
-        left: 18%;
-        width: 16%; } }
-    @media screen and (max-width: 1300px) {
-      .links div {
-        left: 16%;
-        width: 17%; } }
-    @media screen and (max-width: 1200px) {
-      .links div {
-        left: 14%;
-        width: 18%; } }
-    @media screen and (max-width: 1100px) {
-      .links div {
-        left: 12%;
-        width: 19%; } }
-    @media screen and (max-width: 1000px) {
-      .links div {
-        left: 10%;
-        width: 20%; } }
-    @media screen and (max-height: 1000px) {
-      .links div {
-        top: 55.5%;
-        height: 4%; } }
-    @media screen and (max-height: 900px) {
-      .links div {
-        top: 56.5%;
-        height: 5%; } }
-    @media screen and (max-height: 800px) {
-      .links div {
-        top: 57.5%;
-        height: 6%; } }
-    @media screen and (max-height: 700px) {
-      .links div {
-        top: 58.5%;
-        height: 7%; } }
-    @media screen and (max-height: 600px) {
-      .links div {
-        top: 59.5%;
-        height: 8%; } }
-    @media screen and (max-height: 500px) {
-      .links div {
-        top: 60.5%;
-        height: 9%; } }
-  .links div a {
-    width: 100%;
-    height: 100%;
+#links {
+  position: absolute; }
+  #links a {
     display: block;
-    border: 1px black solid;
-    opacity: .25;
-    background-color: red; }
+    height: 25%; }
+    #links a:nth-child(1) {
+      width: 73%; }
+    #links a:nth-child(2) {
+      width: 93%; }
+    #links a:nth-child(3) {
+      width: 83%; }
+    #links a:nth-child(4) {
+      width: 100%; }
+    #links a:hover {
+      border-bottom: 2px #3f3f3f solid; }
 
 p {
   position: fixed;

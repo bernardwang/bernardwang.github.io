@@ -1,52 +1,28 @@
 @charset "utf-8";
 @import "bourbon/bourbon";
 
-html,body {
-	font-family: 'IM Fell Great Primer', serif;
-	height: 100%;
-	margin: 0;
-  overflow: hidden;
+*{
+  margin: 0;
+  padding: 0;
 }
 
-.links{
-  width: 100%;
-  height: 100%;
-  div{
-    position: relative;
-    /*&:nth-child(1){ width: 8%;  }
-    &:nth-child(2){ width: 8.5%;    }
-    &:nth-child(3){ width: 9%;  }
-    &:nth-child(4){ width: 10.5%;    }
-    /*@media screen and (max-width: 1900px){
-      left: 27%;
-      top: 57%;
-      height: 5%;
-    }*/
-
-    @for $i from 0 through 10 {
-      @media screen and (max-width: 2000px - ($i*100)) { 
-        left: 30%-($i*2);
-        width: 10%+($i);
-      }
+html{
+	font-family: 'IM Fell Great Primer', serif;
+	height: 100%;
+  overflow: hidden;
+}
+    
+#links {
+    position: absolute;
+    a {
+      display: block;
+      height: 25%;
+      &:nth-child(1){ width: 73%; }
+      &:nth-child(2){ width: 93%; }
+      &:nth-child(3){ width: 83%; }
+      &:nth-child(4){ width: 100%; }
+      &:hover{ border-bottom: 2px #3f3f3f solid; }
     }
-
-    @for $i from 0 through 5 {
-      @media screen and (max-height: 1000px - ($i*100)) { 
-        top: 55.5%+($i);
-        height: 4%+($i);
-      }
-    }
-
-  }
-	div a{
-    width: 100%;
-    height: 100%;
-    display: block;
-
-    border: 1px black solid;
-    opacity: .25;
-    background-color: red;
-  }
 }
 
 p {
