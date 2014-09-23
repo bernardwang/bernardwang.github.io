@@ -3,7 +3,7 @@ $(document).ready(function() {
     $(window).bind("load", function() {
         var height = window.innerHeight;
         var width = window.innerWidth;
-        if(width > 550 || height > 700){ // mobile
+        if(width > 550 || height > 700){ // not mobile
             pageTransition();
         }
     });
