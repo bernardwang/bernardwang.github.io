@@ -7,6 +7,7 @@ $(document).ready(function() {
 
 	setTimeout(function() { 
 		$("html").backstretch("pause");
+		$(window).resize(moveLinks).ready(moveLinks);
 	}, 1350);
         
     var moveLinks = function() {
@@ -33,7 +34,5 @@ $(document).ready(function() {
             });
         }
     }
-
-    $(window).resize(moveLinks).ready(moveLinks);
 });
 
