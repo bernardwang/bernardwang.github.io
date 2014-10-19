@@ -1,0 +1,20 @@
+* {
+  margin: 0; }
+
+html, body {
+  height: 100%;
+  overflow: hidden; }
+
+.container {
+  min-height: 100%;
+  background: url("../../img/moon.jpg") no-repeat center center;
+  background-size: cover;
+  opacity: 0; }
+
+svg {
+  position: absolute;
+  left: 0;
+  top: 0; }
+
+circle {
+  fill: white; }
