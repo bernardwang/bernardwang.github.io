@@ -16,7 +16,7 @@
 }
 
 html{
-	height: 100%;
+  height: 100%;
   overflow: hidden;
 }
 
@@ -30,8 +30,8 @@ html{
     &:nth-child(3){ width: 83%; }
     &:nth-child(4){ width: 100%; }
     &:hover{ 
-      border-bottom: 2px #3f3f3f solid;
-      border-radius: 2px; 
+      border-bottom: 2.5px #3f3f3f solid;
+      opacity: .8;
     }
   }
 }
@@ -57,7 +57,7 @@ html{
   }
 }
 
-.mobile-container{
+.mobile-container{  
   margin: 9vw;
   margin-top: 0;
   margin-bottom: 100vh;
@@ -79,4 +79,6 @@ html{
   .mobile{
     display: block;
   }
+}
+}
 }
