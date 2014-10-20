@@ -14,7 +14,7 @@ section {
   left: 0; }
 
 .container {
-  background: url("../../img/moonhq.jpg") no-repeat center center;
+  background: url("../../img/moon.jpg") no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -37,5 +37,4 @@ svg {
   opacity: 0; }
 
 circle {
-  fill: white;
-  box-shadow: 10px -10px white; }
+  fill: white; }
