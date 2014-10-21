@@ -1,10 +1,15 @@
 * {
-  margin: 0; }
+  margin: 0;
+  font-family: 'Lato ', sans-serif;
+  font-weight: 300; }
 
 html, body {
-  height: 100%;
+  height: 100%; }
+
+body {
+  background: black;
   overflow: hidden;
-  background: black; }
+  color: white; }
 
 section {
   position: relative;
@@ -14,21 +19,77 @@ section {
   left: 0; }
 
 .container {
-  background: url("../../img/moon.jpg") no-repeat center center;
+  background: url("../../img/moon.jpg") no-repeat bottom center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
   opacity: 0; }
+  .container section {
+    display: -webkit-flexbox;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    background: url("../../img/mountain.png") no-repeat bottom center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    z-index: 999;
+    opacity: 1; }
 
-.container section {
-  background: url("../../img/mountain.png") no-repeat center center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  z-index: 999;
-  opacity: 1; }
+.content {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+  text-align: center;
+  opacity: 0; }
+
+h3 {
+  font-family: "Roboto Condensed", "Helvetica Neue", "Arial", sans-serif;
+  font-size: 30px;
+  font-weight: 900;
+  font-style: italic;
+  letter-spacing: 10px;
+  padding-bottom: 10px; }
+
+p {
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 25px;
+  margin-top: 10px;
+  margin-bottom: 10px; }
+  p span {
+    font-weight: 400; }
+
+ul {
+  list-style-type: none;
+  padding-top: 10px; }
+  ul li {
+    display: inline-block;
+    padding: 6px; }
+
+a {
+  text-decoration: none;
+  font-family: "Roboto Condensed", "Helvetica Neue", "Arial", sans-serif;
+  font-size: 20px;
+  font-weight: 900;
+  font-style: italic;
+  letter-spacing: 6px;
+  color: white;
+  -webkit-transition: opacity 0.3s ease-out;
+  -moz-transition: opacity 0.3s ease-out;
+  transition: opacity 0.3s ease-out; }
+  a:hover {
+    opacity: .3; }
 
 svg {
   position: absolute;

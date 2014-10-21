@@ -1,18 +1,19 @@
 $(document).ready(function() {
 
-  setTimeout(function() {
-    $(".container").fadeTo(1500, 1);
-    setTimeout(function() {
-        $("svg").fadeTo(5000, 1);
-      }, 1200);
-  }, 0);
-
   var w = window.innerWidth,
       h = window.innerHeight,
       start = Date.now();
 
   var ringRange, 
       ringDensity;
+
+  var i, things = [
+        "relaxing in my hammock.",
+        "rock climbing.",
+        "attending hackathons.",
+        "slacklining.",
+        "practicing yoga."
+      ];
 
   if(w>1300){
     ringRange = 8;
@@ -26,6 +27,16 @@ $(document).ready(function() {
     ringRange = 3; 
     ringDensity = 100;
   }
+
+  setTimeout(function() {
+    $(".container").fadeTo(1500, 1);
+    $("#cycle").html(things[i=0]);
+    setTimeout(function() {
+        $("svg").fadeTo(4000, 1);
+        $(".content").fadeTo(4000, .7);
+        setTimeout(function() { cycleText(); },5000);
+      }, 1200);
+  }, 0);
       
   // adds rings
   var rings = [];
@@ -42,41 +53,20 @@ $(document).ready(function() {
     .attr("width", w)
     .attr("height", h)
     .append("svg:g")
-    .attr("transform", "translate("+ 3*w/4 +","+ -h/10 +")scale(1)");
+      .attr("class", "sky")
+      .attr("transform", "translate("+ 3*w/4 +","+ -h/10 +")scale(1)");
   
   // rings svg
   var ring = svg.selectAll("g")
     .data(rings)
     .enter().append("svg:g")
-    .attr("class", "ring")
-    .each(ringEnter);
-
-  var defs = svg.append("defs");
-  var filter = defs.append("filter")
-    .attr("id", "glow")
-    .attr("x", "-200%")
-    .attr("y", "-200%")
-    .attr("width", "500%")
-    .attr("height", "500%");
-
-  colorMatrix = ".13 .13 .13 .13 .13 .13 .13 .13 .13 .13 .13 .13 .13 .13 .13 .13 .13 .13 .13 .13";
-  filter.append("feColorMatrix")
-    .attr("type", "matrix")
-    .attr("values", colorMatrix)
-    .attr("result", "colored");
-  filter.append("feGaussianBlur")
-    .attr("in", "colored")
-    .attr("stdDeviation", 12)
-    .attr("result", "blur");
-
-  
-  var feMerge = filter.append("feMerge");
-  feMerge.append("feMergeNode").attr("in", "blur");
-  feMerge.append("feMergeNode").attr("in", "SourceGraphic");
+      .attr("class", "ring")
+      .each(ringEnter);
   
   d3.timer(function rotateRing() {
     var elapsed = Date.now() - start,
         rotate = function(d) { return "rotate(" + d.speed * elapsed + ")"; };
+
     ring
       .attr("transform", rotate)
       .selectAll("circle")
@@ -102,6 +92,23 @@ $(document).ready(function() {
         .attr("cy", -d.width / 2)
         .attr("r", d.width+1)
         .attr("opacity", Math.random())
-        .style("filter", "url(#glow)");
   }
+
+  function cycleText(){
+    $("#cycle").fadeTo(600, 0);
+    setTimeout(function() {
+        i = (i+1)%things.length;
+        $("#cycle").html(things[i]);
+        $("#cycle").fadeTo(600, 1);
+        setTimeout(function() { cycleText(); }, 5000);
+    }, 500);
+  }
+
+  $(window).resize(function(){
+    w = window.innerWidth;
+    h = window.innerHeight;
+    $("svg").css("width", w);
+    $("svg").css("height", h);
+    $(".sky").attr("transform", "translate("+ 3*w/4 +","+ -h/10 +")scale(1)");
+  });
 });
