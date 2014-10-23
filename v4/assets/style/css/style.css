@@ -42,49 +42,87 @@ section {
     opacity: 1; }
 
 .content {
-  max-width: 475px;
+  max-width: 500px;
   margin-left: auto;
   margin-right: auto;
   padding: 10px;
-  text-align: left;
   opacity: 0; }
 
 h3 {
-  font-family: "Roboto Condensed", "Helvetica Neue", "Arial", sans-serif;
-  font-size: 49px;
-  font-weight: 900;
-  letter-spacing: 11px; }
+  font-family: "Lora", "Helvetica Neue", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 46.5px;
+  letter-spacing: 10.5px;
+  margin-bottom: 5px; }
 
 h2 {
-  font-size: 13.5px;
-  margin-bottom: 25px; }
+  font-family: "Lora", "Helvetica Neue", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 17px;
+  letter-spacing: 3px;
+  margin-bottom: 40px;
+  font-style: normal; }
 
 p {
-  max-width: 650px;
+  max-width: 475px;
   margin-left: auto;
   margin-right: auto;
   font-size: 18px;
   font-weight: 100;
-  line-height: 25px; }
-  p span {
-    font-weight: 200; }
+  line-height: 25px;
+  text-align: center; }
 
-.links {
-  margin-top: 25px; }
-  .links a {
+.cycle {
+  text-align: left;
+  font-weight: 100;
+  margin-left: 25px; }
+  @media screen and (max-width: 550px) {
+    .cycle {
+      text-align: center;
+      margin-left: 0px; } }
+  .cycle span {
+    font-weight: 400; }
+
+br {
+  display: none; }
+  @media screen and (max-width: 550px) {
+    br {
+      display: block; } }
+
+.hr {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  width: 200px;
+  border-top: 2px solid white;
+  opacity: .7; }
+
+ul {
+  list-style-type: none;
+  padding: 0; }
+  ul li {
     display: inline-block;
-    margin-right: 16px;
-    text-decoration: none;
-    font-family: "Roboto Condensed", "Helvetica Neue", "Arial", sans-serif;
-    font-size: 19.5px;
-    font-weight: 900;
-    letter-spacing: 5px;
-    color: white;
-    -webkit-transition: opacity 0.2s ease-out;
-    -moz-transition: opacity 0.2s ease-out;
-    transition: opacity 0.2s ease-out; }
-    .links a:hover {
-      opacity: .3; }
+    margin-right: 20px; }
+    ul li:last-child {
+      margin-right: 0px; }
+    @media screen and (max-width: 550px) {
+      ul li {
+        display: block;
+        margin: 0px;
+        margin-bottom: 10px; } }
+
+a {
+  font-family: "Lora", "Helvetica Neue", "Arial", sans-serif;
+  font-size: 19.2px;
+  text-decoration: none;
+  letter-spacing: 5px;
+  color: white;
+  -webkit-transition: opacity 0.2s ease-out;
+  -moz-transition: opacity 0.2s ease-out;
+  transition: opacity 0.2s ease-out; }
+  a:hover {
+    opacity: .3; }
 
 svg {
   position: absolute;
@@ -94,3 +132,7 @@ svg {
 
 circle {
   fill: white; }
+
+@media screen and (max-width: 550px) {
+  * {
+    text-align: center; } }

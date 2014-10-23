@@ -8,9 +8,9 @@ $(document).ready(function() {
       ringDensity = 200;
 
   var i, things = [
-        "napping in my hammock.",
-        "rock climbing.",
         "attending hackathons.",
+        "rock climbing.",
+        "napping in my hammock.",
         "slacklining.",
         "practicing yoga."
       ];
@@ -28,6 +28,7 @@ $(document).ready(function() {
      ringDensity = 100;
   }*/
 
+  // init
   setTimeout(function(){
     $(".container").fadeTo(1500, 1);
     $("#cycle-text").html(things[i=0]);
@@ -72,10 +73,10 @@ $(document).ready(function() {
       .selectAll("circle")
       .attr("transform", rotate);
 
-    var stars = document.getElementsByTagName("star");
-    for(var i = 0; i < stars.length; i++){
+    //var stars = document.getElementsByTagName("star");
+    //for(var i = 0; i < stars.length; i++){
       
-    }
+    //}
   });
   
   function ringEnter(d, i){
@@ -109,6 +110,6 @@ $(document).ready(function() {
     h = window.innerHeight;
     $("svg").css("width", w);
     $("svg").css("height", h);
-    //$(".sky").attr("transform", "translate("+ 3*w/4 +","+ -h/8 +")scale(1)");
+    $(".sky").attr("transform", "translate("+ 3*w/4 +","+ -h/8 +")scale(1)");
   });
 });
