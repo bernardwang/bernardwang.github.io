@@ -90,10 +90,10 @@ $(document).ready(function() {
 
   function twinkleStars(d){
     var star = d3.select(d);
-    star.attr("r",0); 
+    star.attr("r",0.5); 
     setTimeout(function(){
       star.attr("r",Math.random()*1.2+1)
-    },100);
+    },150);
   }
 
   function ringInit(d, i){
