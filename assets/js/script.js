@@ -20,6 +20,45 @@ $(document).ready(function() {
       ringNum,
       starDensity;
 
+  var update = function(){
+    var elapsed = (Date.now() - start);
+    var rotate = function(d) { return "rotate(" + d.speed * elapsed + ")"; };
+    ring.attr("transform", rotate)
+    if(Math.random()*100 > 50){
+      var stars = d3.selectAll("circle");
+      twinkleStars(stars[0][Math.floor(Math.random()*stars[0].length)]);
+    }
+  }
+
+  var twinkleStars = function(d){
+    var star = d3.select(d);
+    star.attr("r",0.5); 
+    setTimeout(function(){
+      star.attr("r",Math.random()*1.2+1)
+    },150);
+  }
+
+  var ringInit = function(d, i){
+    var starNum = Math.floor( Math.PI / ((Math.random()*100)+starDensity) * d.radius * Math.SQRT1_2);
+    var starPosition = 360/starNum;
+    d3.select(this).selectAll("g")
+      .data(d3.range(starNum).map(function() { return d; }))
+      .enter().append("svg:g")
+        .attr("transform", function(_, i) { return "rotate(" + i * ((starPosition-2)+(Math.random()*2)) + ")translate(" + d.radius + ")"; })
+        .append("svg:circle")
+          .attr("r", d.width+1)
+          .attr("opacity", Math.random())
+  }
+
+  var cycleText = function(){
+    $("#cycle-text").fadeTo(600, 0);
+    setTimeout(function(){
+      i = (i+1)%things.length;
+      $("#cycle-text").html(things[i]);
+      $("#cycle-text").fadeTo(600, 1);
+    }, 500);
+  }
+
   if(is_mobile){
         
   }
@@ -59,12 +98,12 @@ $(document).ready(function() {
   }
 
   // init
-  if(is_firefox){
+  if(is_mobile || is_firefox){
     $(".container").css("opacity",1);
     $(".content").css("opacity",1);
     $("#cycle-text").html(things[i=0]);
     if(!is_mobile) $("svg").fadeTo(3000, 1);
-    setInterval(cycleText(),5000);
+    setInterval(cycleText,5000);
   }
   else{
     setTimeout(function(){
@@ -73,48 +112,9 @@ $(document).ready(function() {
       setTimeout(function(){
         if(!is_mobile) $("svg").fadeTo(3000, 1);
         $(".content").fadeTo(3000, .7);
-        setTimeout(function(){ setInterval(cycleText(),5000); }, 5000);
+        setInterval(cycleText,5000);
       }, 1200);
     }, 0);
-  }
-  
-  function update(){
-    var elapsed = (Date.now() - start);
-    var rotate = function(d) { return "rotate(" + d.speed * elapsed + ")"; };
-    ring.attr("transform", rotate)
-    if(Math.random()*100 > 50){
-      var stars = d3.selectAll("circle");
-      twinkleStars(stars[0][Math.floor(Math.random()*stars[0].length)]);
-    }
-  }
-
-  function twinkleStars(d){
-    var star = d3.select(d);
-    star.attr("r",0.5); 
-    setTimeout(function(){
-      star.attr("r",Math.random()*1.2+1)
-    },150);
-  }
-
-  function ringInit(d, i){
-    var starNum = Math.floor( Math.PI / ((Math.random()*100)+starDensity) * d.radius * Math.SQRT1_2);
-    var starPosition = 360/starNum;
-    d3.select(this).selectAll("g")
-      .data(d3.range(starNum).map(function() { return d; }))
-      .enter().append("svg:g")
-        .attr("transform", function(_, i) { return "rotate(" + i * ((starPosition-2)+(Math.random()*2)) + ")translate(" + d.radius + ")"; })
-        .append("svg:circle")
-          .attr("r", d.width+1)
-          .attr("opacity", Math.random())
-  }
-
-  function cycleText(){
-    $("#cycle-text").fadeTo(600, 0);
-    setTimeout(function(){
-      i = (i+1)%things.length;
-      $("#cycle-text").html(things[i]);
-      $("#cycle-text").fadeTo(600, 1);
-    }, 500);
   }
 
   $(window).resize(function(){

@@ -61,11 +61,13 @@ section{
   top: 0;
   left: 0;
 }
+
 .foreground{
   background: url("../../img/mountain.png") no-repeat bottom center;
   @include background-cover;
   z-index: 2;
 }
+
 .mobile{
   background: url("../../img/stars.png") no-repeat bottom center;
   @include background-cover;
@@ -81,7 +83,6 @@ footer{
   opacity: .5;
   color: white;
   font-size: 10px;
-  z-index: 3;
 }
 
 .content{
@@ -90,10 +91,13 @@ footer{
   max-width: 500px;
   margin-left: auto;
   margin-right: auto;
-  padding: 10px;
-  opacity: 0;
   font-family: $font-primary;
   text-align: center;
+  opacity: 0;
+  z-index: 3;
+  @media screen and (max-width: $small) {
+    width: 90%;
+  }
 }
 
 h3{
@@ -102,6 +106,9 @@ h3{
   font-size: 46px;
   letter-spacing: 10.5px;
   margin-bottom: 5px;
+  @media screen and (max-width: $small) {
+    font-size: 30px;
+  }
 }
 
 h2{
@@ -110,6 +117,9 @@ h2{
   font-size: 17px;
   letter-spacing: 3px;
   margin-bottom: 40px;
+  @media screen and (max-width: $small) {
+    font-size: 11px;
+  }
 }
 
 p{
@@ -119,6 +129,9 @@ p{
   font-size: 18px;
   font-weight: 100;
   line-height: 25px;
+  @media screen and (max-width: $small) {
+    font-size: 14px;
+  }
 }
 
 .cycle{
@@ -132,6 +145,10 @@ p{
   span{
     font-weight: 400;
     font-size: 17px;
+    @media screen and (max-width: $small) {
+      font-size: 13px;
+      margin-left: 0px;
+    }
   }
 }
 
@@ -179,6 +196,9 @@ a{
   &:hover{
     opacity: .3;
   }
+  @media screen and (max-width: $small) {
+    font-size: 20px;
+  }
 }
 
 svg{
@@ -190,10 +210,4 @@ svg{
 
 circle {
   fill: white;
-}
-
-@media screen and (max-width: $small) {
-  *{
-    text-align: center;
-  }
 }
