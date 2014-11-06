@@ -2,10 +2,7 @@
 
 $font-primary: 'Lato', sans-serif;
 $font-secondary: "Lora", "Helvetica Neue", "Arial", sans-serif;
-$large: 750px;
-$medium: 650px;
-$small: 550px;
-
+$mobile: 500px;
 
 @mixin background-cover{
   -webkit-background-size: cover;
@@ -25,6 +22,17 @@ $small: 550px;
   -webkit-align-items: center;
   align-items: center;
 }
+@mixin flex-direction-column{
+  -webkit-flex-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  flex-direction: center;
+  flex-direction: row;
+}
+@include keyframes(rotate) {
+  from { @include transform(rotate(0deg)); }
+  to { @include transform(rotate(360deg)); }
+}
 
 *{
   margin: 0;
@@ -38,6 +46,9 @@ body{
   background: black;
   overflow: hidden;
   color: white;
+  @media screen and (max-width: $mobile) {
+    position:fixed;
+  }
 }
 
 section{
@@ -71,6 +82,12 @@ section{
 .mobile{
   background: url("../../img/stars.png") no-repeat bottom center;
   @include background-cover;
+  @include animation(rotate 70s linear infinite);
+  position: absolute;
+  left: -150px;
+  top: -50px;
+  min-width: 700px;
+  min-height: 700px;
   z-index: 1;
   display:none;
 }
@@ -83,11 +100,14 @@ footer{
   opacity: .5;
   color: white;
   font-size: 10px;
+  z-index: 3;
 }
 
 .content{
-  @include flexbox;
-  @include flex-align-center;
+  @include display(flex);
+  @include flex-direction(column);
+  @include align-items(center);
+  @include justify-content(center);
   max-width: 500px;
   margin-left: auto;
   margin-right: auto;
@@ -95,7 +115,7 @@ footer{
   text-align: center;
   opacity: 0;
   z-index: 3;
-  @media screen and (max-width: $small) {
+  @media screen and (max-width: $mobile) {
     width: 90%;
   }
 }
@@ -106,8 +126,9 @@ h3{
   font-size: 46px;
   letter-spacing: 10.5px;
   margin-bottom: 5px;
-  @media screen and (max-width: $small) {
+  @media screen and (max-width: $mobile) {
     font-size: 30px;
+    letter-spacing: 6px;
   }
 }
 
@@ -117,8 +138,9 @@ h2{
   font-size: 17px;
   letter-spacing: 3px;
   margin-bottom: 40px;
-  @media screen and (max-width: $small) {
-    font-size: 11px;
+  @media screen and (max-width: $mobile) {
+    font-size: 15px;
+    margin-bottom: 15px;
   }
 }
 
@@ -129,7 +151,7 @@ p{
   font-size: 18px;
   font-weight: 100;
   line-height: 25px;
-  @media screen and (max-width: $small) {
+  @media screen and (max-width: $mobile) {
     font-size: 14px;
   }
 }
@@ -138,14 +160,14 @@ p{
   text-align: left;
   font-weight: 100;
   margin-left: 25px;
-  @media screen and (max-width: $small) {
+  @media screen and (max-width: $mobile) {
     text-align: center;
     margin-left: 0px;
   }
   span{
     font-weight: 400;
     font-size: 17px;
-    @media screen and (max-width: $small) {
+    @media screen and (max-width: $mobile) {
       font-size: 13px;
       margin-left: 0px;
     }
@@ -154,7 +176,7 @@ p{
 
 br{
   display: none;
-  @media screen and (max-width: $small) {
+  @media screen and (max-width: $mobile) {
     display: block;
   }
 }
@@ -167,6 +189,9 @@ br{
   width: 200px;
   border-top: 2px solid white;
   opacity: .7;
+  @media screen and (max-width: $mobile) {
+    margin-top: 15px;
+  }
 }
 
 ul{
@@ -178,7 +203,7 @@ ul{
     &:last-child{
       margin-right: 0px;
     }
-    @media screen and (max-width: $small) {
+    @media screen and (max-width: $mobile) {
       display: block;
       margin: 0px;
       margin-bottom: 10px;
@@ -188,7 +213,7 @@ ul{
 
 a{
   font-family: $font-secondary;
-  font-size: 19px;
+  font-size: 17px;
   text-decoration: none;
   letter-spacing: 5px;
   color: white;
@@ -196,7 +221,7 @@ a{
   &:hover{
     opacity: .3;
   }
-  @media screen and (max-width: $small) {
+  @media screen and (max-width: $mobile) {
     font-size: 20px;
   }
 }
@@ -206,8 +231,4 @@ svg{
   left: 0;
   top: 0;
   opacity: 0;
-}
-
-circle {
-  fill: white;
 }

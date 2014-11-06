@@ -24,7 +24,7 @@ $(document).ready(function() {
     var elapsed = (Date.now() - start);
     var rotate = function(d) { return "rotate(" + d.speed * elapsed + ")"; };
     ring.attr("transform", rotate)
-    if(Math.random()*100 > 50){
+    if(Math.random() > 0.4){
       var stars = d3.selectAll("circle");
       twinkleStars(stars[0][Math.floor(Math.random()*stars[0].length)]);
     }
@@ -35,7 +35,7 @@ $(document).ready(function() {
     star.attr("r",0.5); 
     setTimeout(function(){
       star.attr("r",Math.random()*1.2+1)
-    },150);
+    },100);
   }
 
   var ringInit = function(d, i){
@@ -47,7 +47,11 @@ $(document).ready(function() {
         .attr("transform", function(_, i) { return "rotate(" + i * ((starPosition-2)+(Math.random()*2)) + ")translate(" + d.radius + ")"; })
         .append("svg:circle")
           .attr("r", d.width+1)
-          .attr("opacity", Math.random())
+          .attr("opacity", 0.5+(Math.random()*.5))
+          .attr("fill", function(){
+            if(Math.random()*100 > 98) return "#ffff9b";
+            return "white";
+          });
   }
 
   var cycleText = function(){
@@ -59,10 +63,7 @@ $(document).ready(function() {
     }, 500);
   }
 
-  if(is_mobile){
-        
-  }
-  else{
+  if(!is_mobile){
     if(w>1300){
        ringRange = 8;
        ringNum = is_firefox ? 100 : 175;
@@ -102,7 +103,8 @@ $(document).ready(function() {
     $(".container").css("opacity",1);
     $(".content").css("opacity",1);
     $("#cycle-text").html(things[i=0]);
-    if(!is_mobile) $("svg").fadeTo(3000, 1);
+    if(is_mobile) $(".mobile").css("display","block");
+    else $("svg").fadeTo(3000, 1);
     setInterval(cycleText,5000);
   }
   else{
