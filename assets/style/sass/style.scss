@@ -2,7 +2,8 @@
 
 $font-primary: 'Lato', sans-serif;
 $font-secondary: "Lora", "Helvetica Neue", "Arial", sans-serif;
-$mobile: 500px;
+$small: 500px;
+$medium: 700px;
 
 @mixin background-cover{
   -webkit-background-size: cover;
@@ -40,15 +41,12 @@ $mobile: 500px;
 
 html,body{
   height: 100%;
+  overflow: hidden;
 }
 
 body{
   background: black;
-  overflow: hidden;
   color: white;
-  @media screen and (max-width: $mobile) {
-    position:fixed;
-  }
 }
 
 section{
@@ -60,36 +58,33 @@ section{
 }
 
 .container{
-  background: url("../../img/moon.jpg") no-repeat bottom center;
+  background: url("../img/moon.jpg") no-repeat bottom center;
   @include background-cover;
   opacity: 0;
 }
 
-.foreground,.mobile{
+.foreground{
+  background: url("../img/mountain.png") no-repeat bottom center;
+  @include background-cover;
   position: absolute;
   width: 100%;
   height: 100%;
   top: 0;
   left: 0;
-}
-
-.foreground{
-  background: url("../../img/mountain.png") no-repeat bottom center;
-  @include background-cover;
   z-index: 2;
 }
 
 .mobile{
-  background: url("../../img/stars.png") no-repeat bottom center;
+  background: url("../img/stars.png") no-repeat bottom center;
   @include background-cover;
   @include animation(rotate 70s linear infinite);
   position: absolute;
-  left: -150px;
+  left: -50px;
   top: -50px;
   min-width: 700px;
   min-height: 700px;
   z-index: 1;
-  display:none;
+  display: none;
 }
 
 footer{
@@ -114,8 +109,8 @@ footer{
   font-family: $font-primary;
   text-align: center;
   opacity: 0;
-  z-index: 3;
-  @media screen and (max-width: $mobile) {
+  z-index: 4;
+  @media screen and (max-width: $small) {
     width: 90%;
   }
 }
@@ -126,7 +121,10 @@ h3{
   font-size: 46px;
   letter-spacing: 10.5px;
   margin-bottom: 5px;
-  @media screen and (max-width: $mobile) {
+  @media screen and (max-width: $medium) {
+    font-size: 40px;
+  }
+  @media screen and (max-width: $small) {
     font-size: 30px;
     letter-spacing: 6px;
   }
@@ -138,9 +136,12 @@ h2{
   font-size: 17px;
   letter-spacing: 3px;
   margin-bottom: 40px;
-  @media screen and (max-width: $mobile) {
-    font-size: 15px;
+  @media screen and (max-width: $small) {
     margin-bottom: 15px;
+  }
+  @media screen and (max-width: $medium) {
+    font-size: 15px;
+    margin-bottom: 25px;
   }
 }
 
@@ -151,8 +152,8 @@ p{
   font-size: 18px;
   font-weight: 100;
   line-height: 25px;
-  @media screen and (max-width: $mobile) {
-    font-size: 14px;
+  @media screen and (max-width: $small) {
+    font-size: 16px;
   }
 }
 
@@ -160,15 +161,15 @@ p{
   text-align: left;
   font-weight: 100;
   margin-left: 25px;
-  @media screen and (max-width: $mobile) {
+  @media screen and (max-width: $small) {
     text-align: center;
     margin-left: 0px;
   }
   span{
     font-weight: 400;
     font-size: 17px;
-    @media screen and (max-width: $mobile) {
-      font-size: 13px;
+    @media screen and (max-width: $small) {
+      font-size: 15px;
       margin-left: 0px;
     }
   }
@@ -176,7 +177,7 @@ p{
 
 br{
   display: none;
-  @media screen and (max-width: $mobile) {
+  @media screen and (max-width: $small) {
     display: block;
   }
 }
@@ -189,8 +190,11 @@ br{
   width: 200px;
   border-top: 2px solid white;
   opacity: .7;
-  @media screen and (max-width: $mobile) {
+  @media screen and (max-width: $small) {
     margin-top: 15px;
+  }
+  @media screen and (max-width: $medium) {
+    margin-top: 25px;
   }
 }
 
@@ -203,7 +207,7 @@ ul{
     &:last-child{
       margin-right: 0px;
     }
-    @media screen and (max-width: $mobile) {
+    @media screen and (max-width: $small) {
       display: block;
       margin: 0px;
       margin-bottom: 10px;
@@ -213,7 +217,7 @@ ul{
 
 a{
   font-family: $font-secondary;
-  font-size: 17px;
+  font-size: 19px;
   text-decoration: none;
   letter-spacing: 5px;
   color: white;
@@ -221,8 +225,11 @@ a{
   &:hover{
     opacity: .3;
   }
-  @media screen and (max-width: $mobile) {
+  @media screen and (max-width: $small) {
     font-size: 20px;
+  }
+  @media screen and (max-width: $medium) {
+    font-size: 15px;
   }
 }
 
@@ -230,5 +237,7 @@ svg{
   position: absolute;
   left: 0;
   top: 0;
+  width: 100%;
+  height: 100%;
   opacity: 0;
 }
