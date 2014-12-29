@@ -76,11 +76,11 @@ $(document).ready(function(){
       var elapsed = (Date.now() - start);
       var rotate = function(d) { return "rotate(" + d.speed * elapsed + ")"; };
       ring.attr("transform", rotate);
-      if(Math.random() > 0.4){
+      if(Math.random() > 0.3){
         var stars = d3.selectAll("circle");
         twinkleStar(stars[0][Math.floor(Math.random()*stars[0].length)]);
       }
-      setTimeout(update,50);
+      setTimeout(update,40);
     })();
   }
 
