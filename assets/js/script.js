@@ -6,12 +6,11 @@ $(document).ready(function(){
       start = Date.now();
 
   var i, things = [
-    "attending hackathons.",
-    "rock climbing.",
-    "napping in my hammock.",
-    "slacklining.",
-    "practicing yoga.",
-    "playing kendama."
+    "attend hackathons.",
+    "rock climb.",
+    "nap in my hammock.",
+    "slackline.",
+    "practice yoga."
   ];
 
   // intialized is_mobile
@@ -57,7 +56,7 @@ $(document).ready(function(){
     for(i = 0; i < ringNum; i++){
       rings.push({
         radius: 300 * Math.random() * ringRange, 
-        speed: ((Math.random()*-15e-4)+(-5e-4)) 
+        speed: ((Math.random()*-15e-4)+(-6e-4)) 
       });
     }
  
@@ -106,12 +105,12 @@ $(document).ready(function(){
   }
 
   (function cycleText(){
-    $("#cycle-text").fadeTo(600, 0);
+    $("#cycle-text").fadeToggle();
     setTimeout(function(){
       i = (i+1)%things.length;
       $("#cycle-text").html(things[i]);
-      $("#cycle-text").fadeTo(600, 1);
-    }, 600);
-    setTimeout(cycleText,5000);
+      $("#cycle-text").fadeToggle();
+    }, 400);
+    setTimeout(cycleText,6000);
   })();
 });
