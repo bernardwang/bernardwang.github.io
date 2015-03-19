@@ -3,14 +3,16 @@ $(document).ready(function(){
 
   var w = window.innerWidth,
       h = window.innerHeight,
-      start = Date.now();
+      start = Date.now(),
+      i = 0;
 
-  var i, things = [
-    "attend hackathons.",
-    "rock climb.",
-    "nap in my hammock.",
-    "slackline.",
-    "practice yoga."
+  var text = [
+      "attend hackathons.",
+      "rock climb.",
+      "nap in my hammock.",
+      "slackline.",
+      "travel everywhere.",
+      "practice yoga."
   ];
 
   // intialized is_mobile
@@ -31,7 +33,7 @@ $(document).ready(function(){
       },100);
     };
 
-    var ringInit = function(d, i){
+    var ringInit = function(d){
       var starNum = Math.floor( Math.PI / ((Math.random()*100)+starDensity) * d.radius * Math.SQRT1_2);
       var starPosition = 360/starNum;
       d3.select(this).selectAll("g")
@@ -88,14 +90,12 @@ $(document).ready(function(){
     $(".container").css("opacity",1);
     $(".content").css("opacity",1);
     $("footer").css("opacity",1);
-    $("#cycle-text").html(things[i=0]);
     $(".mobile").css("display","block");
     $("body").css("position","fixed");  
   }
   else{
     setTimeout(function(){
       $(".container").fadeTo(1500, 1);
-      $("#cycle-text").html(things[i=0]);
       setTimeout(function(){
         $("svg").fadeTo(3000, 1);
         $(".content").fadeTo(3000, 0.7);
@@ -104,13 +104,14 @@ $(document).ready(function(){
     }, 0);
   }
 
+  i = -1;
   (function cycleText(){
     $("#cycle-text").fadeToggle();
     setTimeout(function(){
-      i = (i+1)%things.length;
-      $("#cycle-text").html(things[i]);
+      i = (i+1)%text.length;
+      $("#cycle-text").html(text[i]);
       $("#cycle-text").fadeToggle();
     }, 400);
-    setTimeout(cycleText,6000);
+    setTimeout(cycleText,5000);
   })();
 });
