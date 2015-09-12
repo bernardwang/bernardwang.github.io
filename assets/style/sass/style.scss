@@ -1,7 +1,8 @@
 @import "../bourbon/bourbon";
 
-$font-primary: 'Lato', sans-serif;
-$font-secondary: "Lora", "Helvetica Neue", "Arial", sans-serif;
+$font-primary: 'Source Sans Pro', sans-serif;
+$font-secondary: "Oswald", "Helvetica Neue", "Arial", sans-serif;
+
 $small: 500px;
 $medium: 700px;
 
@@ -91,6 +92,7 @@ footer{
   margin-left: auto;
   margin-right: auto;
   font-family: $font-primary;
+    font-weight: 200;
   text-align: center;
   opacity: 0;
   z-index: 4;
@@ -102,7 +104,7 @@ footer{
 h3{
   font-family: $font-secondary;
   font-weight: 400;
-  font-size: 46px;
+  font-size: 48px;
   letter-spacing: 10.5px;
   margin-bottom: 5px;
   @media screen and (max-width: $medium) {
