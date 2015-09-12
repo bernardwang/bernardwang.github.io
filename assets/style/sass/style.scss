@@ -4,7 +4,7 @@ $font-primary: 'Source Sans Pro', sans-serif;
 $font-secondary: "Oswald", "Helvetica Neue", "Arial", sans-serif;
 
 $small: 500px;
-$medium: 700px;
+$medium: 800px;
 
 @mixin background-cover{
   -webkit-background-size: cover;
@@ -92,7 +92,7 @@ footer{
   margin-left: auto;
   margin-right: auto;
   font-family: $font-primary;
-    font-weight: 200;
+  font-weight: 200;
   text-align: center;
   opacity: 0;
   z-index: 4;
@@ -104,11 +104,11 @@ footer{
 h3{
   font-family: $font-secondary;
   font-weight: 400;
-  font-size: 48px;
+  font-size: 3.73vw;
   letter-spacing: 10.5px;
   margin-bottom: 5px;
   @media screen and (max-width: $medium) {
-    font-size: 40px;
+    font-size: 6vw;
   }
   @media screen and (max-width: $small) {
     font-size: 31px;
@@ -119,14 +119,14 @@ h3{
 h2{
   font-family: $font-secondary;
   font-weight: 400;
-  font-size: 17px;
+  font-size: 1.45vw;
   letter-spacing: 3px;
   margin-bottom: 40px;
   @media screen and (max-width: $small) {
     margin-bottom: 15px;
   }
   @media screen and (max-width: $medium) {
-    font-size: 15px;
+    font-size: 2.4vw;
     margin-bottom: 25px;
   }
 }
@@ -186,7 +186,7 @@ br{
   margin-right: auto;
   margin-top: 40px;
   margin-bottom: 20px;
-  width: 200px;
+  width: 175px;
   border-top: 2px solid white;
   opacity: .7;
   @media screen and (max-width: $small) {
@@ -216,7 +216,7 @@ ul{
 
 li > a{
   font-family: $font-secondary;
-  font-size: 19px;
+  font-size: 1.55vw;
   text-decoration: none;
   letter-spacing: 5px;
   color: white;
@@ -229,7 +229,7 @@ li > a{
   }
   @media screen and (max-width: $medium) {
     font-size: 15px;
-  }
+}
 }
 
 svg{
