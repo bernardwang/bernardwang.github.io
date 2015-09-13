@@ -8,7 +8,7 @@ var gulp = require('gulp'),
 	concat = require('gulp-concat'),
 	del = require('del');
 
-gulp.task('default', ['clean'], function() {
+gulp.task('default', function() {
     gulp.start('style', 'script');
 });
 
@@ -27,7 +27,7 @@ gulp.task('style', function() {
 });
 
 gulp.task('script', function() {
-	return gulp.src('assets/js/*.js')
+	return gulp.src(['assets/js/*.js','!assets/js/*.min.js'])
 		.pipe(jshint('.jshintrc'))
 	    .pipe(jshint.reporter('default'))
 	   	//.pipe(concat('script.js'))

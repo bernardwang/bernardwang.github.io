@@ -4,8 +4,8 @@
   "description": "Bernard Wang's Personal Website",
   "author": "Bernard Wang",
   "license": "MIT",
-  "scripts": {  
-    "start": "ws" 
+  "scripts": {
+    "start": "ws"
   },
   "repository": {
     "type": "git",
@@ -15,6 +15,7 @@
     "url": "https://github.com/bw-vbnm/personal/issues"
   },
   "devDependencies": {
+    "browser-sync": "^2.9.3",
     "del": "^1.1.0",
     "gulp": "^3.8.10",
     "gulp-concat": "^2.4.2",
