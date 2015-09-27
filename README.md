@@ -1,3 +1,3 @@
 www.bernard.wang
 ==========
-my little corner of the internet
+my little space on the internet
