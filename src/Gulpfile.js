@@ -12,23 +12,23 @@ var gulp				= require('gulp');
     del                 = require('del');
 
 // location constants
-var DIST_HTML			= './dist';
-    DIST_JS				= './dist/assets/js/';
-    DIST_JS_LIB			= './dist/assets/js/lib';
-    DIST_CSS			= './dist/assets/styles/css/';
-    DIST_IMG			= './dist/assets/img/';
+var DIST_HTML			= '../';
+    DIST_JS				= '../assets/js/';
+    DIST_JS_LIB			= '../assets/js/lib';
+    DIST_CSS			= '../assets/styles/css/';
+    DIST_IMG			= '../assets/img/';
 
-	ALL_HTML 			= './src/**/*.html';
-	ALL_SCSS 			= './src/assets/styles/sass/*.scss'; 
-	ALL_CSS 			= './src/assets/styles/css/*.css';
-	DEST_CSS 			= './src/assets/styles/css/';
+	ALL_HTML 			= './**/*.html';
+	ALL_SCSS 			= './assets/styles/sass/*.scss'; 
+	ALL_CSS 			= './assets/styles/css/*.css';
+	DEST_CSS 			= './assets/styles/css/';
 
-	ALL_JS_LIB			= './src/assets/js/lib/*.js';
-	ALL_JS_CORE			= './src/assets/js/*.js';
-	DEST_JS_LIB			= './src/assets/js/lib/';
-	DEST_JS_CORE		= './src/assets/js/';
+	ALL_JS_LIB			= './assets/js/lib/*.js';
+	ALL_JS_CORE			= './assets/js/*.js';
+	DEST_JS_LIB			= './assets/js/lib/';
+	DEST_JS_CORE		= './assets/js/';
 
-	ALL_IMG				= './src/assets/img/**/**';
+	ALL_IMG				= './assets/img/**/**';
 
 // convert sass to css
 gulp.task('sass', function(){
