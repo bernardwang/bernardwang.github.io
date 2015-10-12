@@ -27,8 +27,8 @@ function init() {
             $('.container').fadeTo(1500, 1);
             setTimeout(function(){
                 $('svg').fadeTo(3000, 1);
-                $('.content').fadeTo(3000, 0.7);
-                $('footer').fadeTo(3000, 0.7);
+                $('.content').fadeTo(3000, 1);
+                $('footer').fadeTo(3000, 1);
             }, 1200);
         }, 0);
         
@@ -36,7 +36,6 @@ function init() {
         updateD3();
     }
     cycleText();
-    
 }
 
 var touch;

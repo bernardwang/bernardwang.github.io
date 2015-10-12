@@ -145,6 +145,7 @@ h3 {
   font-family: "Oswald", "Helvetica Neue", "Arial", sans-serif;
   font-weight: 400;
   font-size: 3.73vw;
+  text-transform: uppercase;
   letter-spacing: 10.5px;
   margin-bottom: 5px; }
   @media screen and (max-width: 800px) {
@@ -159,6 +160,7 @@ h2 {
   font-family: "Oswald", "Helvetica Neue", "Arial", sans-serif;
   font-weight: 400;
   font-size: 1.45vw;
+  text-transform: uppercase;
   letter-spacing: 3px;
   margin-bottom: 40px; }
   @media screen and (max-width: 500px) {
@@ -220,7 +222,7 @@ br {
   margin-bottom: 20px;
   width: 175px;
   border-top: 2px solid white;
-  opacity: .7; }
+  opacity: 1; }
   @media screen and (max-width: 500px) {
     .hr {
       margin-top: 15px; } }
