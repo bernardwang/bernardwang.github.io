@@ -159,7 +159,7 @@ gulp.task('min-img', () => {
 /**
  *	Auto build and reload
  */
-gulp.task('watch', ['styles','scripts-watch'], () => {
+gulp.task('dev', ['styles','scripts-watch'], () => {
   sync({
     server: {
       baseDir: './dist/'
@@ -184,9 +184,9 @@ gulp.task('dist', ['min-img','min-styles','lint-scripts','min-scripts'], () => {
 });
 
 /**
- *	Deploy to gh-pages branch
+ *	Deploy to github pages
  */
-gulp.task('deploy', ['dist'], () => {
+gulp.task('deploy', ['min-img','min-styles','lint-scripts','min-scripts'], () => {
 	return gulp.src('./dist/**/*')
 		.pipe(deploy(deployOpts));
 });
