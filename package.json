@@ -1,32 +1,45 @@
 {
-  "name": "www.bernard.wang",
-  "version": "1.0.0",
-  "description": "Bernard Wang's Personal Website",
+  "name": "bernard.wamg",
+  "version": "0.0.0",
+  "description": "Bernard Wang's Personal Site",
   "author": "Bernard Wang",
-  "license": "MIT",
-  "scripts": {
-    "start": "ws"
-  },
   "repository": {
     "type": "git",
-    "url": "https://github.com/bw-vbnm/personal.git"
+    "url": "git://github.com/bw-vbnm/personal"
   },
   "bugs": {
     "url": "https://github.com/bw-vbnm/personal/issues"
   },
+  "license": "MIT",
+  "dependencies": {
+  },
   "devDependencies": {
-    "browser-sync": "^2.9.3",
-    "del": "^1.1.0",
-    "gulp": "^3.9.0",
-    "gulp-concat": "^2.4.2",
-    "gulp-concat-css": "^2.2.0",
-    "gulp-html-replace": "^1.5.1",
-    "gulp-jshint": "^1.9.0",
-    "gulp-minify-css": "^0.3.11",
-    "gulp-notify": "^2.1.0",
-    "gulp-rename": "^1.2.0",
-    "gulp-sass": "^1.2.4",
-    "gulp-uglify": "^1.0.2",
-    "gulp-watch": "^4.3.5"
+    "babel": "^6.5.2",
+    "babel-eslint": "^5.0.0",
+    "babel-polyfill": "^6.5.0",
+    "babel-preset-es2015": "^6.5.0",
+    "babel-preset-react": "^6.5.0",
+    "babelify": "~7.2.0",
+    "browser-sync": "^2.11.1",
+    "browserify": "^13.0.0",
+    "eslint": "^2.2.0",
+    "eslint-config-airbnb": "^6.0.1",
+    "eslint-plugin-react": "^4.0.0",
+    "gulp": "~3.9.1",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-cssnano": "^2.1.1",
+    "gulp-eslint": "^2.0.0",
+    "gulp-imagemin": "^2.4.0",
+    "gulp-sass": "^2.2.0",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-uglify": "^1.5.3",
+    "lodash": "^4.5.1",
+    "vinyl-source-stream": "^1.0.0",
+    "watchify": "^3.7.0"
+  },
+  "babel": {
+    "presets": [
+      "es2015"
+    ]
   }
 }
