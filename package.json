@@ -11,8 +11,7 @@
     "url": "https://github.com/bw-vbnm/personal/issues"
   },
   "license": "MIT",
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
     "babel": "^6.5.2",
     "babel-eslint": "^5.0.0",
@@ -29,6 +28,7 @@
     "gulp-autoprefixer": "^3.1.0",
     "gulp-cssnano": "^2.1.1",
     "gulp-eslint": "^2.0.0",
+    "gulp-gh-pages": "^0.5.4",
     "gulp-imagemin": "^2.4.0",
     "gulp-sass": "^2.2.0",
     "gulp-sourcemaps": "^1.6.0",

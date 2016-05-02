@@ -13,6 +13,7 @@ import cssnano from 'gulp-cssnano';
 import autoprefixer from 'gulp-autoprefixer';
 import imagemin from 'gulp-imagemin';
 import sync from 'browser-sync';
+import ghpages from 'gulp-gh-pages';
 import _ from 'lodash';
 
 /************ Options ************/
@@ -169,12 +170,20 @@ gulp.task('watch', ['styles','scripts-watch'], () => {
 });
 
 /**
- *	Production build
+ *	Dist build
  */
-gulp.task('prod', ['min-img','min-styles','lint-scripts','min-scripts'], () => {
+gulp.task('dist', ['min-img','min-styles','lint-scripts','min-scripts'], () => {
   sync({
     server: {
       baseDir: './dist/'
     }
   });
+});
+
+/**
+ *	Deploy to gh-pages branch
+ */
+gulp.task('deploy', ['dist'], () => {
+	return gulp.src('./dist/**/*')
+		.pip(ghpages());
 });
