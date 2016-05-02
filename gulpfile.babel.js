@@ -13,7 +13,7 @@ import cssnano from 'gulp-cssnano';
 import autoprefixer from 'gulp-autoprefixer';
 import imagemin from 'gulp-imagemin';
 import sync from 'browser-sync';
-import ghpages from 'gulp-gh-pages';
+import deploy from 'gulp-gh-pages';
 import _ from 'lodash';
 
 /************ Options ************/
@@ -47,6 +47,9 @@ const imageminOpts = {
 };
 const syncOpts = {
   stream: true,
+};
+const deployOpts = {
+	branch: 'master', // user page website
 };
 
 /************ HELPER VARIABLES AND FUNCTIONS ************/
@@ -185,5 +188,5 @@ gulp.task('dist', ['min-img','min-styles','lint-scripts','min-scripts'], () => {
  */
 gulp.task('deploy', ['dist'], () => {
 	return gulp.src('./dist/**/*')
-		.pip(ghpages());
+		.pipe(deploy(deployOpts));
 });
