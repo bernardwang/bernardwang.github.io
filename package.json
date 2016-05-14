@@ -1,14 +1,14 @@
 {
-  "name": "bernard.wamg",
+  "name": "bernard.wang",
   "version": "0.0.0",
   "description": "Bernard Wang's Personal Site",
   "author": "Bernard Wang",
   "repository": {
     "type": "git",
-    "url": "git://github.com/bw-vbnm/personal"
+    "url": "git://github.com/bernardwang/personal"
   },
   "bugs": {
-    "url": "https://github.com/bw-vbnm/personal/issues"
+    "url": "https://github.com/bernardwang/personal/issues"
   },
   "license": "MIT",
   "dependencies": {},
