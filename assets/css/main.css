@@ -1,1 +1,14 @@
-*{box-sizing:border-box}body,html{width:100%;height:100%;margin:0}body{padding:5vw}
+* {
+	box-sizing:border-box
+}
+
+body,html {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+}
+
+body {
+	padding-left: 5vw;
+	font-family: 'Cutive Mono', monospace;
+}
