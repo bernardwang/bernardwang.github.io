@@ -1,10 +1,9 @@
 <template lang="pug">
   section.mt6
-    h1.title.w-80-ns.f2.lh-title About
-    div
-      div.fl.w-100.w-20-ns
-        div.fl.w-100
-          p.f6.lh-copy.w-90-ns Interested in my resume? Grab a copy here.
+    h1.pad-l.f2.lh-title About
+    div.cf
+      aside.fl.w-100.w-20-ns
+        p.f6.lh-copy.w-90-ns Interested in my resume? Grab a copy here.
       div.fl.w-100.w-80-ns
         div.fl.w-100.w-50-ns
           p.f5.lh-copy.w-90-ns I am excited about applying my background in Front-end Engineering and product design to social good. Specifically, I care about using technology to improve public works and empower grassroots organizing.
@@ -27,7 +26,7 @@ export default {
     padding-left: calc(100% / 6);
   }
 
-  .title{
+  .pad-l{
     padding-left: calc(100% / 5);
   }
 }
