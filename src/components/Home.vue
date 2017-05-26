@@ -1,12 +1,12 @@
 <template lang="pug">
   div
+    grid(v-if="showGrid").pad
     nav.pad
     main.pad
       intro
       about
       projects
       contact
-    grid(v-if="showGrid").pad
 </template>
 
 <script>
@@ -37,8 +37,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.pad{
-  padding-left: 8%;
-  padding-right: 8%;
+.pad {
+  padding-left: 10%;
+  padding-right: 10%;
 }
 </style>
