@@ -1,12 +1,12 @@
 <template lang="pug">
   div
-    grid(v-if="showGrid")
-    nav
-    main.mh6
+    nav.pad
+    main.pad
       intro
       about
       projects
       contact
+    grid(v-if="showGrid").pad
 </template>
 
 <script>
@@ -37,21 +37,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-h1, h2 {
-  font-weight: normal;
-}
-
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-
-a {
-  color: #42b983;
+.pad{
+  padding-left: 8%;
+  padding-right: 8%;
 }
 </style>
