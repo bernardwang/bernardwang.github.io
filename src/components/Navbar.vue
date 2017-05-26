@@ -20,4 +20,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@media screen and (min-width: 30em) {
+  nav{
+    width: calc((74%)/6); // 1/6 of width - padding, hardcoded, fix later
+  }
+}
 </style>
