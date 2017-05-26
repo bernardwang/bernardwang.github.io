@@ -5,7 +5,6 @@
       div.fl.w-100.w-50-ns.h-100.ba.b--near-white
     div.fl.w-100.w-third-ns.h-100.ba.b--near-white
     div.fl.w-100.w-third-ns.h-100.ba.b--near-white
-
 </template>
 
 <script>
