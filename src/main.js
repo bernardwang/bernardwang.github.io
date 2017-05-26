@@ -3,7 +3,9 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+
 import 'tachyons/css/tachyons.css'
+import 'normalize.css/normalize.css'
 import './sass/main.scss'
 
 Vue.config.productionTip = false
