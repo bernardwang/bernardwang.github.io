@@ -1,9 +1,14 @@
-.ph-10 {
-  padding-left: 10%;
-  padding-right: 10%;
+.ph-page {
+  padding-left: 6%;
+  padding-right: 6%;
 }
 
 @media screen and (min-width: 30em) {
+  .ph-page {
+    padding-left: 13%;
+    padding-right: 13%;
+  }
+
   .pl-sixth {
     padding-left: calc(100% / 6);
   }
