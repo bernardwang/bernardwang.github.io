@@ -1,10 +1,10 @@
 <template lang="pug">
-  section.mt6
-    h1.pad-l.f2.lh-title Projects
+  section.mt6.pl-sixth
+    h1.pl-fifth.f2.lh-title Projects
     div
-      article.mt5(v-for="proj in projects")
-        h1.pad-l.f3.lh-title.mb0 {{ proj.title }}
-        div.cf(v-for="(value, key) in proj.list" v-if="value")
+      article(v-for="proj in projects").mt5
+        h1.pl-fifth.f3.lh-title.mb0 {{ proj.title }}
+        div(v-for="(value, key) in proj.list" v-if="value").cf
           aside.fl.w-100.w-20-ns
             p.f6.lh-copy.w-90-ns.mb0 {{ key }}
           div.fl.w-100.w-80-ns
@@ -57,15 +57,4 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-// Fix later
-// Copied from tachyon -ns media query
-@media screen and (min-width: 30em) {
-  section{
-    padding-left: calc(100% / 6);
-  }
-
-  .pad-l{
-    padding-left: calc(100% / 5);
-  }
-}
 </style>

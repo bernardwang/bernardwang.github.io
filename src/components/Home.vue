@@ -1,8 +1,8 @@
 <template lang="pug">
   div
-    grid(v-if="showGrid").pad
-    nav.pad
-    main.pad
+    grid(v-if="showGrid").ph-10
+    nav.ph-10
+    main.ph-10
       intro
       about
       projects
@@ -29,7 +29,6 @@ export default {
   },
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App',
       showGrid: true
     }
   }
@@ -37,8 +36,4 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.pad {
-  padding-left: 10%;
-  padding-right: 10%;
-}
 </style>

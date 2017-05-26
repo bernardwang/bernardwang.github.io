@@ -1,5 +1,5 @@
 <template lang="pug">
-  section.mt5
+  section.mt5.pl-third
     div.w-100.w-two-thirds-l
       h1.w-100-l.f1.lh-title Hi 👋, I’m Bernard! <br/> Welcome to my little space on the internet.
       p.w-100-l.f4.lh-copy I’m a developer and designer based in Urbana, IL. <br/> Currently I am studying Statistics & Computer Science at the University of Illinois at Urbana Champaign.
@@ -13,11 +13,4 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-// Fix later
-// Copied from tachyon -ns media query
-@media screen and (min-width: 30em) {
-  section{
-    padding-left: calc(100% / 3);
-  }
-}
 </style>

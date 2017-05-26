@@ -1,6 +1,6 @@
 <template lang="pug">
-  section.mt6
-    h1.pad-l.f2.lh-title About
+  section.mt6.pl-sixth
+    h1.pl-fifth.f2.lh-title About
     div.cf
       aside.fl.w-100.w-20-ns
         p.f6.lh-copy.w-90-ns Interested in my resume? Grab a copy here.
@@ -19,15 +19,4 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-// Fix later
-// Copied from tachyon -ns media query
-@media screen and (min-width: 30em) {
-  section{
-    padding-left: calc(100% / 6);
-  }
-
-  .pad-l{
-    padding-left: calc(100% / 5);
-  }
-}
 </style>

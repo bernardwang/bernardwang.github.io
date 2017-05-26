@@ -1,0 +1,18 @@
+.ph-10 {
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+@media screen and (min-width: 30em) {
+  .pl-sixth{
+    padding-left: calc(100% / 6);
+  }
+
+  .pl-fifth{
+    padding-left: calc(100% / 5);
+  }
+
+  .pl-third {
+    padding-left: calc(100% / 3);
+  }
+}
