@@ -1,7 +1,8 @@
 <template lang="pug">
   div
+    grid(v-if="showGrid")
     nav
-    main
+    main.mh6
       intro
       about
       projects
@@ -9,6 +10,7 @@
 </template>
 
 <script>
+import grid from './Grid'
 import nav from './Nav'
 import intro from './Intro'
 import about from './About'
@@ -18,6 +20,7 @@ import contact from './Contact'
 export default {
   name: 'home',
   components: {
+    grid,
     nav,
     intro,
     about,
@@ -26,7 +29,8 @@ export default {
   },
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      msg: 'Welcome to Your Vue.js App',
+      showGrid: true
     }
   }
 }
