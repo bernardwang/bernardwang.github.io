@@ -1,5 +1,5 @@
 <template lang="pug">
-  div
+  div.w-100.v-100.relative
     grid(v-if="showGrid").ph-10
     nav.ph-10
     main.ph-10

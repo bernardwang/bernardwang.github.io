@@ -1,5 +1,5 @@
 <template lang="pug">
-  section.mt6.pl-sixth
+  section.mt5.pl-sixth
     h2.pl-fifth.f2.lh-title Contact
     div.cf
       aside.fl.w-100.w-20-ns
