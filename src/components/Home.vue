@@ -1,13 +1,13 @@
 <template lang="pug">
   div.w-100.v-100.relative
-    grid(v-if="showGrid").ph-page
-    navbar.ph-page
+    grid(v-if="showGrid")#grid.ph-page
+    navbar#navbar.ph-page
     main#home.ph-page
       intro#intro
       about#about
       projects#projects
       contact#contact
-    links.ph-page
+    links#links.ph-page
 </template>
 
 <script>
