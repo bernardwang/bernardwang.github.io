@@ -1,15 +1,16 @@
 <template lang="pug">
-  nav.fixed.w-20-ns.w-100.mt5
-    h1.mt2 🌺
-    ul.cf
-      li.fl.w-100-ns.w-auto
-        p.f5.mt0 #[a(href="#home" alt="Home") Home]
-      li.fl.w-100-ns.w-auto
-        p.f5.mt0 #[a(href="#about" alt="About") About]
-      li.fl.w-100-ns.w-auto
-        p.f5.mt0 #[a(href="#projects" alt="Projects") Projects]
-      li.fl.w-100-ns.w-auto
-        p.f5.mt0 #[a(href="#contact" alt="Contact") Contact]
+  nav.fixed.w-80.mt5-ns.ph0
+    ul.flex.flex-column-ns.flex-row.justify-around.items-center
+      li.w-100-ns.w-auto.mb3
+        h1.mv0 🌺
+      li.w-100-ns.w-auto.mb3
+        p.f5.mv0 #[a(href="#home" alt="Home") Home]
+      li.w-100-ns.w-auto.mb3
+        p.f5.mv0 #[a(href="#about" alt="About") About]
+      li.w-100-ns.w-auto.mb3
+        p.f5.mv0 #[a(href="#projects" alt="Projects") Projects]
+      li.w-100-ns.w-auto.mb3
+        p.f5.mv0 #[a(href="#contact" alt="Contact") Contact]
 </template>
 
 <script>
