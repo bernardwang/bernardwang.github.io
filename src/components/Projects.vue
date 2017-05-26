@@ -1,9 +1,9 @@
 <template lang="pug">
   section.mt6.pl-sixth
-    h1.pl-fifth.f2.lh-title Projects
+    h2.pl-fifth.f2.lh-title Projects
     div
       article(v-for="proj in projects").mt5
-        h1.pl-fifth.f3.lh-title.mb0 {{ proj.title }}
+        h3.pl-fifth.f3.lh-title.mb0 {{ proj.title }}
         div(v-for="(value, key) in proj.list" v-if="value").cf
           aside.fl.w-100.w-20-ns
             p.f6.lh-copy.w-90-ns.mb0 {{ key }}

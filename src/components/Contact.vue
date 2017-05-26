@@ -1,6 +1,6 @@
 <template lang="pug">
   section.mt6.pl-sixth
-    h1.pl-fifth.f2.lh-title Contact
+    h2.pl-fifth.f2.lh-title Contact
     div.cf
       aside.fl.w-100.w-20-ns
         p.f6.lh-copy.w-90-ns.mt4.pt1 I’m available for projects, lets work together!

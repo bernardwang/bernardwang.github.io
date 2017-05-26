@@ -1,6 +1,6 @@
 <template lang="pug">
   section.mt6.pl-sixth
-    h1.pl-fifth.f2.lh-title About
+    h2.pl-fifth.f2.lh-title About
     div.cf
       aside.fl.w-100.w-20-ns
         p.f6.lh-copy.w-90-ns Interested in my resume? Grab a copy here.

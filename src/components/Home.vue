@@ -7,6 +7,7 @@
       about
       projects
       contact
+    links.ph-10
 </template>
 
 <script>
@@ -16,6 +17,7 @@ import intro from './Intro'
 import about from './About'
 import projects from './Projects'
 import contact from './Contact'
+import links from './Links'
 
 export default {
   name: 'home',
@@ -25,7 +27,8 @@ export default {
     intro,
     about,
     projects,
-    contact
+    contact,
+    links
   },
   data () {
     return {
