@@ -11,10 +11,27 @@
 
 #navbar {
   a {
+    color: $cl-text-main;
     text-decoration: none;
   }
 
   a.target {
     text-decoration: underline;
+  }
+
+  li:nth-of-type(2) {
+    @include set-nav-color(1);
+  }
+
+  li:nth-of-type(3) {
+    @include set-nav-color(2);
+  }
+
+  li:nth-of-type(4) {
+    @include set-nav-color(3);
+  }
+
+  li:nth-of-type(5) {
+    @include set-nav-color(4);
   }
 }

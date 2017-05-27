@@ -4,13 +4,13 @@
       li.w-100-ns.mb3-ns.pr3
         h1.f3.mv0 #[span(v-on:click="emitToggle").pointer 🌺]
       li.w-100-ns.mb3-ns.pr2
-        p.lh-solid.mv0 #[router-link(to="/#intro") Home]
+        router-link(to="/#intro").lh-solid.mv0 Home
       li.w-100-ns.mb3-ns.pr2
-        p.lh-solid.mv0 #[router-link(to="/#about") About]
+        router-link(to="/#about").lh-solid.mv0 About
       li.w-100-ns.mb3-ns.pr2
-        p.lh-solid.mv0 #[router-link(to="/#projects") Projects]
+        router-link(to="/#projects").lh-solid.mv0 Projects
       li.w-100-ns.mb3-ns.pr2
-        p.lh-solid.mv0 #[router-link(to="/#contact") Contact]
+        router-link(to="/#contact").lh-solid.mv0 Contact
 </template>
 
 <script>
