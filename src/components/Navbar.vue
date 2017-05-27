@@ -4,13 +4,13 @@
       li.w-100-ns.w-auto.mb3.pr3
         h1.mv0 🌺
       li.w-100-ns.w-auto.mb3.pr3
-        p.f5.mv0 #[a(href="#home" alt="Home") Home]
+        p.f5.mv0 #[router-link(to="/#intro") Home]
       li.w-100-ns.w-auto.mb3.pr3
-        p.f5.mv0 #[a(href="#about" alt="About") About]
+        p.f5.mv0 #[router-link(to="/#about") About]
       li.w-100-ns.w-auto.mb3.pr3
-        p.f5.mv0 #[a(href="#projects" alt="Projects") Projects]
+        p.f5.mv0 #[router-link(to="/#projects") Projects]
       li.w-100-ns.w-auto.mb3.pr3
-        p.f5.mv0 #[a(href="#contact" alt="Contact") Contact]
+        p.f5.mv0 #[router-link(to="/#contact") Contact]
 </template>
 
 <script>
