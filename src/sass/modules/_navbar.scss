@@ -1,0 +1,20 @@
+@media screen and (min-width: 30em) {
+  #navbar {
+    width: calc((74%)/6); // 1/6 of width - padding, hardcoded, fix later
+  }
+}
+@media screen and (max-width: 30em) {
+  #navbar {
+    background: linear-gradient(to bottom, $cl-bg-main 70%, rgba($cl-bg-main, 0) 100%);
+  }
+}
+
+#navbar {
+  a {
+    text-decoration: none;
+  }
+
+  .target {
+    text-decoration: underline;
+  }
+}

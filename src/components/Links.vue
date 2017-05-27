@@ -1,5 +1,5 @@
 <template lang="pug">
-  footer.mt6.pb5
+  footer.pt5.pb5
     div.cf
       div.fl.w-100.w-third-l
         h3.mb0 Information
