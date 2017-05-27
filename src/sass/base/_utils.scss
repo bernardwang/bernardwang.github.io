@@ -35,6 +35,21 @@
       color: black;
     }
   }
+
+  input,
+  textarea {
+    border-color: $color;
+    transition: background-color .15s ease-in;
+  }
+
+  input[type="submit"] {
+    color: $color;
+  }
+
+  input[type="submit"]:hover {
+    color: white; // TODO: change to $cl-bg-main hex
+    background-color: $color;
+  }
 }
 
 @mixin set-nav-color($index) {

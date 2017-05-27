@@ -13,6 +13,11 @@ textarea {
   -moz-osx-font-smoothing: grayscale;
 }
 
+input::placeholder,
+textarea::placeholder {
+  color: $cl-text-sub;
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-weight: 600;
 }
@@ -43,6 +48,7 @@ aside p {
   @extend .lh-copy;
   @extend .w-90-ns;
   line-height: 1.5rem;
+  color: $cl-text-sub;
 }
 
 a {
