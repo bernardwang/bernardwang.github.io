@@ -3,7 +3,7 @@
     h2.pl-fifth.f2.lh-title Contact
     div.cf
       aside.fl.w-100.w-20-ns
-        p.f6.lh-copy.w-90-ns.mt4.pt1 I’m currently available for projects, lets work together!
+        p.mt4.pt1 I’m currently available for projects, lets work together!
       form(accept-charset="utf-8").fl.w-100.w-80-ns
         fieldset(action="msg_submit").ba.b--transparent.pa0.ma0.cf
           legend.ph0.mh0.fw6.clip Submit Message

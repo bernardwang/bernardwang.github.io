@@ -1,16 +1,16 @@
 <template lang="pug">
-  nav.fixed.w-100.mt5-ns.ph0
+  nav.fixed.w-100.mt5-ns.ph0.pr0
     ul.flex.flex-column-ns.flex-row.items-center
       li.w-100-ns.w-auto.mb3.pr3
-        h1.mv0 🌺
+        h1.f3.mv0 🌺
       li.w-100-ns.w-auto.mb3.pr3
-        p.f5.mv0 #[router-link(to="/#intro") Home]
+        p.lh-solid.mv0 #[router-link(to="/#intro") Home]
       li.w-100-ns.w-auto.mb3.pr3
-        p.f5.mv0 #[router-link(to="/#about") About]
+        p.lh-solid.mv0 #[router-link(to="/#about") About]
       li.w-100-ns.w-auto.mb3.pr3
-        p.f5.mv0 #[router-link(to="/#projects") Projects]
+        p.lh-solid.mv0 #[router-link(to="/#projects") Projects]
       li.w-100-ns.w-auto.mb3.pr3
-        p.f5.mv0 #[router-link(to="/#contact") Contact]
+        p.lh-solid.mv0 #[router-link(to="/#contact") Contact]
 </template>
 
 <script>
@@ -21,7 +21,7 @@ export default {
 
 <style lang="scss" scoped>
 @media screen and (min-width: 30em) {
-  nav{
+  nav {
     width: calc((74%)/6); // 1/6 of width - padding, hardcoded, fix later
   }
 }

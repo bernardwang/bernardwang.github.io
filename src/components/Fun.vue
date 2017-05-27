@@ -1,18 +1,18 @@
 <template lang="pug">
   section.mt3.cf
     div.fl.w-60-ns.w-100
-      h3.f3.lh-title.mb0 Pictures with facts
+      h3.mb0 Pictures with facts
       div.flex.flex-row
         figure(v-for="pics in pictures").w-100.w-third-ns.mr5.ml0.mt3
           a(v-bind:href="pics.link" target="_blank")
             img(v-bind:src="pics.src").w-100
             figcaption {{pics.caption}}
     div.fl.w-40-ns.w-100.relative
-      h3.f3.lh-title.mb0 Current favorites
+      h3.mb0 Current favorites
       div.w-100.flex.flex-column
-        p.f5.lh-copy.mb0 📚 #[span.ml1 Book: {{ favorites.book }}]
-        p.f5.lh-copy.mb0 🎵 #[span.ml1 Album: {{ favorites.album }}]
-        p.f5.lh-copy.mb0 🎙️ #[span.ml1 Podcast: {{ favorites.podcast }}]
+        p.f5.mb0.w-100 📚 #[span.ml1 Book: {{ favorites.book }}]
+        p.f5.mb0.w-100 🎵 #[span.ml1 Album: {{ favorites.album }}]
+        p.f5.mb0.w-100 🎙️ #[span.ml1 Podcast: {{ favorites.podcast }}]
 </template>
 
 <script>
