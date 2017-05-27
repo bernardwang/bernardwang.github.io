@@ -1,21 +1,26 @@
 <template lang="pug">
-  nav.fixed.w-100.mt5-ns.ph0.pr0
+  nav.fixed.mt5-ns.ph0.pr0
     ul.flex.flex-column-ns.flex-row.items-center
-      li.w-100-ns.w-auto.mb3.pr3
-        h1.f3.mv0 🌺
-      li.w-100-ns.w-auto.mb3.pr3
+      li.w-100-ns.mb3.pr3
+        h1(v-on:click="emitToggle").f3.mv0.pointer 🌺
+      li.w-100-ns.mb3.pr3
         p.lh-solid.mv0 #[router-link(to="/#intro") Home]
-      li.w-100-ns.w-auto.mb3.pr3
+      li.w-100-ns.mb3.pr3
         p.lh-solid.mv0 #[router-link(to="/#about") About]
-      li.w-100-ns.w-auto.mb3.pr3
+      li.w-100-ns.mb3.pr3
         p.lh-solid.mv0 #[router-link(to="/#projects") Projects]
-      li.w-100-ns.w-auto.mb3.pr3
+      li.w-100-ns.mb3.pr3
         p.lh-solid.mv0 #[router-link(to="/#contact") Contact]
 </template>
 
 <script>
 export default {
-  name: 'navbar'
+  name: 'navbar',
+  methods: {
+    emitToggle: function () {
+      this.$emit('toggle')
+    }
+  }
 }
 </script>
 

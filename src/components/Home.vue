@@ -1,7 +1,7 @@
 <template lang="pug">
   div.w-100.v-100.relative
     grid(v-if="showGrid")#grid.ph-page
-    navbar#navbar.ph-page
+    navbar(v-on:toggle="toggleGrid")#navbar.ph-page
     main#home.ph-page
       intro#intro
       about#about
@@ -32,7 +32,12 @@ export default {
   },
   data () {
     return {
-      showGrid: true
+      showGrid: false
+    }
+  },
+  methods: {
+    toggleGrid: function () {
+      this.showGrid = !this.showGrid
     }
   }
 }
