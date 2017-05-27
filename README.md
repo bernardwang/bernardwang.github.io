@@ -25,6 +25,11 @@ npm run e2e
 
 # run all tests
 npm test
+
+# deploy to gh-pages
+npm run deploy
 ```
+
+Using [git-directory-deploy](https://github.com/X1011/git-directory-deploy) for deploying to gh-pages
 
 For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
