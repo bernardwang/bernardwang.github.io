@@ -10,7 +10,8 @@
     "unit": "cross-env BABEL_ENV=test karma start test/unit/karma.conf.js --single-run",
     "e2e": "node test/e2e/runner.js",
     "test": "npm run unit && npm run e2e",
-    "lint": "eslint --ext .js,.vue src test/unit/specs test/e2e/specs"
+    "lint": "eslint --ext .js,.vue src test/unit/specs test/e2e/specs",
+    "deploy": "npm run build && echo 'bernard.wang' > dist/CNAME && git subtree split --prefix dist -b deploy && git push -f origin deploy:master && git branch -D deploy"
   },
   "dependencies": {
     "normalize.css": "^7.0.0",
