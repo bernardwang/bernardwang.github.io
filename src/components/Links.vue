@@ -1,5 +1,5 @@
 <template lang="pug">
-  footer.links-section
+  footer#links
     div.cf
       div.fl.w-100.w-third-l
         h4.mb0 Information

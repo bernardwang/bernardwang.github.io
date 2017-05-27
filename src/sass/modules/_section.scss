@@ -1,34 +1,32 @@
-#app {
-  .sub-section {
-    @extend .pt5;
-    @extend .pl-sixth;
-  }
+.sub-section {
+  @extend .pt5;
+  @extend .pl-sixth;
+}
 
-  .intro-section {
-    @extend .pt5-ns;
-    @extend .pt6;
-    @extend .pl-third;
-    @include set-section-color(1);
-  }
+#intro {
+  @extend .pt5-ns;
+  @extend .pt6;
+  @extend .pl-third;
+  @include set-section-color(1);
+}
 
-  .about-section {
-    @extend .sub-section;
-    @include set-section-color(2);
-  }
+#about {
+  @extend .sub-section;
+  @include set-section-color(2);
+}
 
-  .project-section {
-    @extend .sub-section;
-    @include set-section-color(3);
-  }
+#projects {
+  @extend .sub-section;
+  @include set-section-color(3);
+}
 
-  .contact-section {
-    @extend .sub-section;
-    @include set-section-color(4);
-  }
+#contact {
+  @extend .sub-section;
+  @include set-section-color(4);
+}
 
-  .links-section {
-    @extend .pb5;
-    @extend .pt5;
-    @include set-section-color(4);
-  }
+#links {
+  @extend .pb5;
+  @extend .pt5;
+  @include set-section-color(4);
 }

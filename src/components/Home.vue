@@ -1,13 +1,13 @@
 <template lang="pug">
   div.w-100.v-100.ph-page.relative
-    grid(v-if="showGrid")#grid
-    navbar(v-on:toggle="toggleGrid")#navbar
+    grid(v-if="showGrid")
+    navbar(v-bind:pageIndex="pageIndex" v-on:toggle="toggleGrid")
     main#home
-      intro#intro
-      about#about
-      projects#projects
-      contact#contact
-    links#links
+      intro
+      about
+      projects
+      contact
+    links
 </template>
 
 <script>
@@ -32,6 +32,7 @@ export default {
   },
   data () {
     return {
+      pageIndex: 1,
       showGrid: false
     }
   },

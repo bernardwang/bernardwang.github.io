@@ -44,7 +44,9 @@
     color: $color;
   }
 
-  a.target {
-    color: $color;
+  &.target {
+    a {
+      color: $color;
+    }
   }
 }

@@ -1,14 +1,14 @@
 <template lang="pug">
   section.mt3.cf
     div.fl.w-60-l.w-100
-      h3.mb0 Pictures with facts
+      h4.mb0 Pictures with facts
       div.flex.flex-row.item-start.mt3
         figure(v-for="pics in pictures").w-100.w-third-l.ma0.pr3
           a(v-bind:href="pics.link" target="_blank")
             img(v-bind:src="pics.src").w-80
             figcaption {{pics.caption}}
     div.fl.w-40-l.w-100.relative
-      h3.mb0 Current favorites
+      h4.mb0 Current favorites
       div.w-100.flex.flex-column
         p.f5.mb0.w-100 📚 #[span.ml1 Book: {{ favorites.book }}]
         p.f5.mb0.w-100 🎵 #[span.ml1 Album: {{ favorites.album }}]

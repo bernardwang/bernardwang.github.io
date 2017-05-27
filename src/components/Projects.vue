@@ -1,5 +1,5 @@
 <template lang="pug">
-  section.project-section
+  section#projects
     h2.pl-fifth Projects
     div.cf
       article(v-for="proj in projects").fl.w-100.mb4
