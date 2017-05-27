@@ -1,5 +1,5 @@
 <template lang="pug">
-  section.contact-section.sub-section
+  section.contact-section
     h2.pl-fifth.f2.lh-title Contact
     div.cf
       aside.fl.w-100.w-20-ns

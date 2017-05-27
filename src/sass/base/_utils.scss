@@ -22,7 +22,7 @@
   }
 }
 
-@mixin set-color($index) {
+@mixin set-section-color($index) {
   $color: nth($cl-text-hl, $index);
 
   h1, h2, h4 {
@@ -34,5 +34,17 @@
     &:hover {
       color: black;
     }
+  }
+}
+
+@mixin set-nav-color($index) {
+  $color: nth($cl-text-hl, $index);
+
+  a:hover {
+    color: $color;
+  }
+
+  a.target {
+    color: $color;
   }
 }

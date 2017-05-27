@@ -1,5 +1,5 @@
 <template lang="pug">
-  section.about-section.sub-section
+  section.about-section
     section
       h2.pl-fifth About
       div.cf
