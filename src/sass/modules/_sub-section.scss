@@ -1,0 +1,29 @@
+#app {
+  .sub-section {
+    @extend .pt5;
+    @extend .pl-sixth;
+  }
+
+  .intro-section {
+    @extend .pt5-ns;
+    @extend .pt6;
+    @extend .pl-third;
+    @include set-color(1);
+  }
+
+  .about-section {
+    @include set-color(2);
+  }
+
+  .project-section {
+    @include set-color(3);
+  }
+
+  .contact-section {
+    @include set-color(4);
+  }
+
+  .links-section {
+    @include set-color(4);
+  }
+}

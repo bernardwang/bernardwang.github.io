@@ -1,15 +1,15 @@
 <template lang="pug">
-  footer.pt5.pb5
+  footer.links-section.pt5.pb5
     div.cf
       div.fl.w-100.w-third-l
-        h3.mb0 Information
+        h4.mb0 Information
         ul
           li.w-100
             p.f5.mv1 Phone: #[a(href="" target="_blank" alt="phone") +1-973-216-9810]
           li.w-100
             p.f5.mv1 Email: #[a(href="mailto:bernard@bernard.wang" target="_blank" alt="email") bernard@bernard.wang]
       div.fl.w-100.w-third-l
-        h3.mb0 Work
+        h4.mb0 Work
         ul
           li.w-100.cf
             p.fl.f5.mv1.w-30 Github:
@@ -21,7 +21,7 @@
             p.fl.f5.mv1.w-30 LinkedIn:
             p.fl.f5.mv1.w-70 #[a(href="https://www.linkedin.com/in/bernardwang" target="_blank" alt="linkedin") bernardwang]
       div.fl.w-100.w-third-l
-        h3.mb0 Social
+        h4.mb0 Social
         ul
           li.w-100.cf
             p.fl.f5.mv1.w-30 Twitter:

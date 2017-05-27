@@ -21,3 +21,18 @@
     padding-left: calc(100% / 3);
   }
 }
+
+@mixin set-color($index) {
+  $color: nth($cl-text-hl, $index);
+
+  h1, h2, h4 {
+    color: $color;
+  }
+
+  .link {
+    color: $color;
+    &:hover {
+      color: black;
+    }
+  }
+}
