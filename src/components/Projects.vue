@@ -3,7 +3,7 @@
     h2.pl-fifth Projects
     div.cf
       article(v-for="proj in projects").fl.w-100.mb4
-        h4.pl-fifth.mv0 {{ proj.title }}
+        h4.pl-fifth.mv0 #[a(v-bind:href="proj.url") {{ proj.title }}]
         div(v-for="(value, key) in proj.list" v-if="value").cf
           aside.fl.w-100.w-20-ns
             p.mb0 {{ key }}
@@ -14,6 +14,7 @@
 <script>
 const projects = [{
   title: 'Explorations',
+  url: 'http://bernard.wang/explorations',
   list: {
     Expertise: 'Front-end / Web Design',
     Details: 'Personal project showcasing my work in Art & Design classes throughout college. Uses Flickr to host images and a Handlebars to build the page.',
@@ -22,6 +23,7 @@ const projects = [{
   }
 }, {
   title: 'Lisa Vuong Portfolio',
+  url: 'http://lisavuong.com/',
   list: {
     Expertise: 'Front-end',
     Details: 'Portfolio site for my dear friend and fellow shiba fan. Coded entirely in vanilla JS and Sass, the site   also uses custom built gallery sliders.',
@@ -30,6 +32,7 @@ const projects = [{
   }
 }, {
   title: 'IBM Maelstrom',
+  url: 'http://bernard.wang/mael-nano/',
   list: {
     Expertise: 'Project Management / Web Design / Front-end',
     Details: 'Website built for IBM Maelstrom, a ten week design program in Austin, TX. Part of a week long micro-project involving other branding and style deliverables.',
@@ -38,6 +41,7 @@ const projects = [{
   }
 }, {
   title: 'This site!',
+  url: 'http://bernard.wang/',
   list: {
     Expertise: 'Front-end / Web Design',
     Details: 'Personal site and portfolio built with Vue.js, Webpack, Tachyons and PugJS. Visit archive.bernard.wang to view previous versions of this site!',

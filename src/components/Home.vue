@@ -32,7 +32,7 @@ export default {
   },
   data () {
     return {
-      pageIndex: 1,
+      pageIndex: 0,
       showGrid: false
     }
   },
