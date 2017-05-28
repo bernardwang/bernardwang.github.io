@@ -8,8 +8,8 @@
 #app,
 input,
 textarea {
-  //font-family: system;
-  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: system;
+  //font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   -moz-osx-font-smoothing: grayscale;
 }
 
@@ -54,5 +54,7 @@ aside p {
 a {
   @extend .link;
   text-decoration: underline;
+  text-decoration-skip: ink;
+  -webkit-text-decoration-skip: ink;
 }
 

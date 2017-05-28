@@ -47,7 +47,7 @@
   }
 
   input[type="submit"]:hover {
-    color: white; // TODO: change to $cl-bg-main hex
+    color: $cl-bg-main;
     background-color: $color;
   }
 }
