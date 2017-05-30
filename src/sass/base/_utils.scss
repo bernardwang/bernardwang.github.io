@@ -59,9 +59,7 @@
     color: $color;
   }
 
-  &.target {
-    a {
-      color: $color;
-    }
+  .router-link-exact-active {
+    color: $color;
   }
 }
