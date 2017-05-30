@@ -4,7 +4,7 @@ import Home from '@/components/Home'
 
 Vue.use(Router)
 
-export default new Router({
+const router = new Router({
   mode: 'history',
   routes: [{
     path: '/',
@@ -16,8 +16,12 @@ export default new Router({
       return savedPosition
     }
     if (to.hash) {
-      const toElem = document.querySelector(to.hash)
-      return toElem.scrollIntoView({ behavior: 'smooth' })
+      const link = to.hash
+      const linkElem = document.querySelector(link)
+      if (linkElem) {
+        linkElem.scrollIntoView({ behavior: 'smooth' })
+      }
+      return
     }
     return {
       x: 0,
@@ -25,3 +29,5 @@ export default new Router({
     }
   }
 })
+
+export default router

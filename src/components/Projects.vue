@@ -3,7 +3,8 @@
     h2.pl-fifth Projects
     div.cf
       article(v-for="proj in projects").fl.w-100.mb4
-        h4.pl-fifth.mv0 #[a(v-bind:href="proj.url") {{ proj.title }}]
+        h4.pl-fifth.mv0(v-if="proj.url") #[a(v-bind:href="proj.url") {{ proj.title }}]
+        h4.pl-fifth.mv0(v-else) {{ proj.title }}
         div(v-for="(value, key) in proj.list" v-if="value").cf
           aside.fl.w-100.w-20-ns
             p.mb0 {{ key }}
@@ -41,7 +42,6 @@ const projects = [{
   }
 }, {
   title: 'This site!',
-  url: 'http://bernard.wang/',
   list: {
     Expertise: 'Front-end / Web Design',
     Details: 'Personal site and portfolio built with Vue.js, Webpack, Tachyons and PugJS. Visit archive.bernard.wang to view previous versions of this site!',
@@ -61,4 +61,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+article:last-child{
+  margin-bottom: 0;
+}
 </style>

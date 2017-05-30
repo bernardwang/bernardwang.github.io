@@ -4,7 +4,7 @@
       li.w-100-ns.mb3-ns.pr3
         h1.f3.mv0 #[span(v-on:click="emitToggle").pointer 🌺]
       li(v-bind:class="(index==1) ? 'target' : ''").w-100-ns.mb3-ns.pr2
-        router-link(to="/#home").lh-solid.mv0 Home
+        router-link(to="/").lh-solid.mv0 Home
       li(v-bind:class="(index==2) ? 'target' : ''").w-100-ns.mb3-ns.pr2
         router-link(to="/#about").lh-solid.mv0 About
       li(v-bind:class="(index==3) ? 'target' : ''").w-100-ns.mb3-ns.pr2

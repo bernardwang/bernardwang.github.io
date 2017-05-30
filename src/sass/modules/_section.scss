@@ -1,6 +1,7 @@
 .sub-section {
   @extend .pt5;
   @extend .pl-sixth;
+  @extend .pb3;
 }
 
 #intro {
@@ -26,7 +27,7 @@
 }
 
 #links {
-  @extend .pb5;
   @extend .pt5;
+  @extend .pb5;
   @include set-section-color(4);
 }
