@@ -6,11 +6,11 @@
       li.w-100-ns.mb3-ns.pr2
         router-link(to="/").lh-solid.mv0 Home
       li.w-100-ns.mb3-ns.pr2
-        router-link(to="/about").lh-solid.mv0 About
+        router-link(to="/#about").lh-solid.mv0 About
       li.w-100-ns.mb3-ns.pr2
-        router-link(to="/projects").lh-solid.mv0 Projects
+        router-link(to="/#projects").lh-solid.mv0 Projects
       li.w-100-ns.mb3-ns.pr2
-        router-link(to="/contact").lh-solid.mv0 Contact
+        router-link(to="/#contact").lh-solid.mv0 Contact
 </template>
 
 <script>

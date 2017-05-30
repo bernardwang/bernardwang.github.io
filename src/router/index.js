@@ -7,31 +7,20 @@ Vue.use(Router)
 
 const router = new Router({
   mode: 'history',
-  routes: [{
-    path: '/',
-    name: 'Home',
-    component: Home,
-    meta: { link: '#home' },
-    children: [{
-      path: '/about',
-      component: Home,
-      meta: { link: '#about' }
+  routes: [
+    {
+      path: '/home',
+      redirect: '/'
     }, {
-      path: '/projects',
+      path: '/',
+      name: 'Home',
       component: Home,
-      meta: { link: '#projects' }
+      meta: { link: '#home' }
     }, {
-      path: '/contact',
-      component: Home,
-      meta: { link: '#contact' }
-    }]
-  }, {
-    path: '/home',
-    redirect: '/'
-  }, {
-    path: '*',
-    component: NotFound
-  }],
+      path: '*',
+      component: NotFound
+    }
+  ],
   scrollBehavior: (to, from, savedPosition) => {
     if (savedPosition) {
       return savedPosition
