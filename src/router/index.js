@@ -8,9 +8,6 @@ Vue.use(Router)
 const router = new Router({
   mode: 'history',
   routes: [{
-    path: '/home',
-    redirect: '/'
-  }, {
     path: '/',
     name: 'Home',
     component: Home,
@@ -29,6 +26,9 @@ const router = new Router({
       meta: { link: '#contact' }
     }]
   }, {
+    path: '/home',
+    redirect: '/'
+  }, {
     path: '*',
     component: NotFound
   }],
@@ -36,10 +36,15 @@ const router = new Router({
     if (savedPosition) {
       return savedPosition
     }
-
+    if (to.hash) {
+      const linkElem = document.querySelector(to.hash)
+      if (linkElem) {
+        linkElem.scrollIntoView({ behavior: 'smooth' })
+      }
+      return
+    }
     if (to.matched.some(m => m.meta.link)) {
-      const link = to.meta.link
-      const linkElem = document.querySelector(link)
+      const linkElem = document.querySelector(to.meta.link)
       if (linkElem) {
         linkElem.scrollIntoView({ behavior: 'smooth' })
       }

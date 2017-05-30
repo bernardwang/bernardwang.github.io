@@ -19,7 +19,7 @@
             textarea(id="message" placeholder="Hi Bernard! I'm interested in..." name="message" aria-describedby="message-desc").pa3.mb2.ba.w-100
         div.w-100.w-50-ns
           input(id="submit" value="SEND →" type="submit").b.pa3.ba.bg-transparent.pointer.f5.w-90-ns.w-100
-          input(type="hidden" name="_next" value="//#contact")
+          input(type="hidden" name="_next" value="//")
 </template>
 
 <script>

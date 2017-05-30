@@ -4,7 +4,7 @@
       li.w-100-ns.mb3-ns.pr3
         h1.f3.mv0 #[span(v-on:click="emitToggle").pointer 🌺]
       li.w-100-ns.mb3-ns.pr2
-        router-link(to="/home").lh-solid.mv0 Home
+        router-link(to="/").lh-solid.mv0 Home
       li.w-100-ns.mb3-ns.pr2
         router-link(to="/about").lh-solid.mv0 About
       li.w-100-ns.mb3-ns.pr2
