@@ -13,9 +13,10 @@
   a {
     color: $cl-text-main;
     text-decoration: none;
+    transition: color .15s ease-in;
   }
 
-  .router-link-exact-active {
+  .active {
     text-decoration: underline;
   }
 

@@ -4,8 +4,10 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import smoothscroll from 'smoothscroll-polyfill'
+import raf from 'raf'
 import './sass/main.scss'
 
+raf.polyfill()
 smoothscroll.polyfill()
 Vue.config.productionTip = false
 
