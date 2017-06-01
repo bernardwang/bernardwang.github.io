@@ -1,12 +1,10 @@
 <template lang="pug">
   section.mt4.cf
-    div.fl.w-60-l.w-100
+    div.fl.w-60-l.w-100.ma0-l.mb4
       h4.mb0 Pictures with facts
       div.flex.flex-row.item-start.mt3
-        figure(v-for="pics in pictures").w-100.w-third-l.ma0.pr3
-          a(v-bind:href="pics.link" target="_blank")
-            img(v-bind:src="pics.src").w-80
-            figcaption {{pics.caption}}
+        div(v-for="picObj in pictures").w-100.w-third-l
+          picture(v-bind:pic="picObj")
     div.fl.w-40-l.w-100.relative
       h4.mb0 Current favorites
       div.w-100.flex.flex-column
@@ -16,6 +14,7 @@
 </template>
 
 <script>
+import picture from './Picture'
 import hkSrc from '../assets/img/hk.png'
 import baoSrc from '../assets/img/bao.png'
 import dogSrc from '../assets/img/dog.png'
@@ -27,7 +26,7 @@ const pictures = [{
 }, {
   src: baoSrc,
   link: 'https://www.instagram.com/p/BIUNhwiDwFy/',
-  caption: 'XiaoLongBao. I love cooking.'
+  caption: 'Xiao Long Bao (小笼包). I love cooking.'
 }, {
   src: dogSrc,
   link: 'https://www.instagram.com/p/BOwOhpPjsqt/',
@@ -41,6 +40,9 @@ const favorites = {
 
 export default {
   name: 'fun',
+  components: {
+    picture
+  },
   data () {
     return {
       pictures,

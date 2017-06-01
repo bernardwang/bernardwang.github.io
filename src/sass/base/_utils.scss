@@ -38,6 +38,10 @@
     }
   }
 
+  figure {
+    outline: 1px solid $color;
+  }
+
   input,
   textarea {
     border-color: $color;
