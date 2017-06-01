@@ -1,7 +1,7 @@
 <template lang="pug">
   div.w-100.v-100.ph-page.relative
     grid(v-if="showGrid")
-    navbar(v-bind:index="sectionIndex" v-on:toggle="toggleGrid")
+    navbar(:index="sectionIndex" @toggle="toggleGrid")
     main#home
       intro.js-scroll
       about.js-scroll

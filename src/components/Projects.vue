@@ -3,7 +3,7 @@
     h2.pl-fifth Projects
     div.cf
       article(v-for="proj in projects").fl.w-100.mb4
-        h4.pl-fifth.mv0(v-if="proj.url") #[a(v-bind:href="proj.url") {{ proj.title }}]
+        h4.pl-fifth.mv0(v-if="proj.url") #[a(:href="proj.url") {{ proj.title }}]
         h4.pl-fifth.mv0(v-else) {{ proj.title }}
         div(v-for="(value, key) in proj.list" v-if="value").cf
           aside.fl.w-100.w-20-ns

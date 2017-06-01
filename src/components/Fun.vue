@@ -4,7 +4,7 @@
       h4.mb0 Pictures with facts
       div.flex.flex-row.item-start.mt3
         div(v-for="picObj in pictures").w-100.w-third-l
-          picture(v-bind:pic="picObj")
+          picture(:pic="picObj")
     div.fl.w-40-l.w-100.relative
       h4.mb0 Current favorites
       div.w-100.flex.flex-column
