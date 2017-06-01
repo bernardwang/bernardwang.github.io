@@ -2,14 +2,14 @@
   font-family: system;
   font-style: normal;
   font-weight: 400;
-  src: local(".SFNSText-Light"), local(".HelveticaNeueDeskInterface-Light"), local(".LucidaGrandeUI"), local("Ubuntu Light"), local("Segoe UI Light"), local("Roboto-Light"), local("DroidSans"), local("Tahoma");
+  src: local("-apple-system"), local(".SFNSText-Light"), local(".HelveticaNeueDeskInterface-Light"), local(".LucidaGrandeUI"), local("Ubuntu Light"), local("Segoe UI Light"), local("Roboto-Light"), local("Tahoma");
 }
+$font-stack: system, -apple-system, Avenir Next, MacBlinkSystemFont, "Segoe UI", Roboto, Helvetica, sans-serif;
 
 #app,
 input,
 textarea {
-  font-family: system;
-  //font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: $font-stack;
   -moz-osx-font-smoothing: grayscale;
 }
 

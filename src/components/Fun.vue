@@ -1,5 +1,5 @@
 <template lang="pug">
-  section.mt3.cf
+  section.mt4.cf
     div.fl.w-60-l.w-100
       h4.mb0 Pictures with facts
       div.flex.flex-row.item-start.mt3

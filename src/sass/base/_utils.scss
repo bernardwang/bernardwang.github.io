@@ -1,8 +1,3 @@
-.ph-page {
-  padding-left: 6%;
-  padding-right: 6%;
-}
-
 @media screen and (min-width: 30em) {
   .ph-page {
     padding-left: 13%;
@@ -19,6 +14,13 @@
 
   .pl-third {
     padding-left: calc(100% / 3);
+  }
+}
+
+@media screen and (max-width: 50em){
+  .ph-page {
+    padding-left: 6%;
+    padding-right: 6%;
   }
 }
 
