@@ -1,10 +1,9 @@
 <template lang="pug">
-  figure(v-on:mouseover="hover=true" v-on:mouseleave="hover=false").w-80.h-100.ma0.mr4-l.mr3.relative
+  figure(v-on:mouseover="hover=true" v-on:mouseleave="hover=false").w-80.h-100.ma0.mr4-l.mr3.flex.flex-column.justify-center
     a(v-bind:href="pic.link" target="_blank")
-      transition(name="fadepic")
+      transition(name="fade" mode="out-in")
         img(v-bind:src="pic.src" v-if="!hover").db
-      transition(name="fadepic")
-        figcaption(v-if="hover").tc.f5.ph1 {{pic.caption}}
+        figcaption(v-else).tc.f5.ph1 {{pic.caption}}
 </template>
 
 <script>
@@ -20,20 +19,4 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-figcaption {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-.fadepic-enter-active, .fadepic-leave-active {
-  transition: opacity .15s;
-}
-.fadepic-enter-active {
-  transition-delay: 0.15s;
-}
-.fadepic-enter, .fadepic-leave-to {
-  position: absolute;
-  opacity: 0;
-}
 </style>
