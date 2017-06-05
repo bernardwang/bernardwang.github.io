@@ -10,6 +10,3 @@ export default {
   name: 'intro'
 }
 </script>
-
-<style lang="scss" scoped>
-</style>

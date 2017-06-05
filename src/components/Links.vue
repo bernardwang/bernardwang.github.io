@@ -36,6 +36,3 @@ export default {
   name: 'links'
 }
 </script>
-
-<style lang="scss" scoped>
-</style>
