@@ -9,7 +9,7 @@
           aside.fl.w-100.w-20-ns
             p.mb0 {{ key }}
           div.fl.w-100.w-80-ns
-            p.mb0 {{ value }}
+            p.mb0.mt3-ns.mt1 {{ value }}
 </template>
 
 <script>
