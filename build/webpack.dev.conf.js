@@ -30,9 +30,9 @@ module.exports = merge(baseWebpackConfig, {
       filename: 'index.html',
       template: 'index.html',
       inject: true,
-      favicon: './src/assets/favicon.ico'
+      // favicon: './src/assets/favicon.ico'
     }),
-    // new FaviconsWebpackPlugin('./src/assets/favicon.png'),
+    new FaviconsWebpackPlugin('./src/assets/favicon.png'),
     new FriendlyErrorsPlugin()
   ]
 })
