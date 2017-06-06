@@ -3,3 +3,36 @@ $cl-text-sub: #777;
 $cl-text-hl: #FF548F, #FF54E5, #C454FF, #6D54FF;
 
 $cl-bg-main: #fffbfb;
+
+@keyframes rainbow1 {
+  0% { color: nth($cl-text-hl, 1) }
+  33% { color: nth($cl-text-hl, 2) }
+  66% { color: nth($cl-text-hl, 3) }
+  100% { color: nth($cl-text-hl, 4) }
+}
+
+@keyframes rainbow2 {
+  0% { color: nth($cl-text-hl, 2) }
+  17% { color: nth($cl-text-hl, 3) }
+  33% { color: nth($cl-text-hl, 4) }
+  50% { color: nth($cl-text-hl, 3) }
+  66% { color: nth($cl-text-hl, 2) }
+  83% { color: nth($cl-text-hl, 1 ) }
+  100% { color: nth($cl-text-hl, 2) }
+}
+
+@keyframes rainbow3 {
+  0% { color: nth($cl-text-hl, 3) }
+  17% { color: nth($cl-text-hl, 2) }
+  33% { color: nth($cl-text-hl, 1) }
+  50% { color: nth($cl-text-hl, 2) }
+  66% { color: nth($cl-text-hl, 3) }
+  83% { color: nth($cl-text-hl, 4 ) }
+  100% { color: nth($cl-text-hl, 3) }
+}
+
+$animate-link-1: .5s infinite alternate linear rainbow1;
+$animate-link-2: 1s infinite linear rainbow2;
+$animate-link-3: 1s infinite linear rainbow3;
+$animate-link-4: .5s infinite alternate-reverse linear rainbow1;
+$animate-link: $animate-link-1, $animate-link-2, $animate-link-3, $animate-link-4;
