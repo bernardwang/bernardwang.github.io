@@ -31,8 +31,8 @@ $cl-bg-main: #fffbfb;
   100% { color: nth($cl-text-hl, 3) }
 }
 
-$animate-link-1: .5s infinite alternate linear rainbow1;
-$animate-link-2: 1s infinite linear rainbow2;
-$animate-link-3: 1s infinite linear rainbow3;
-$animate-link-4: .5s infinite alternate-reverse linear rainbow1;
+$animate-link-1: 1s infinite alternate linear rainbow1;
+$animate-link-2: 2s infinite linear rainbow2;
+$animate-link-3: 2s infinite linear rainbow3;
+$animate-link-4: 1s infinite alternate-reverse linear rainbow1;
 $animate-link: $animate-link-1, $animate-link-2, $animate-link-3, $animate-link-4;
