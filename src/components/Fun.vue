@@ -33,7 +33,7 @@ const pictures = [{
   caption: 'I love dogs and they love me back.'
 }]
 const favorites = {
-  book: 'Orientalism - Edward Said',
+  book: 'What Fanon Said - Lewis R. Gordon',
   album: 'Exchange - The JuJu',
   podcast: 'Code Switch - NPR'
 }

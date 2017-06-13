@@ -5,7 +5,7 @@
         h4.mb0 Information
         ul
           li.w-100
-            p.f5.mv1 Phone: #[a(href="" target="_blank" alt="phone") +1-973-216-9810]
+            p.f5.mv1 Phone: #[a(href="tel:973-216-9810" alt="phone") +1-973-216-9810]
           li.w-100
             p.f5.mv1 Email: #[a(href="mailto:bernard@bernard.wang" target="_blank" alt="email") bernard@bernard.wang]
       div.fl.w-100.w-third-l.mb3.mb0-l
