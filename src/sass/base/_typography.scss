@@ -5,6 +5,7 @@
   src: local("-apple-system"), local(".SFNSText-Light"), local(".HelveticaNeueDeskInterface-Light"), local(".LucidaGrandeUI"), local("Ubuntu Light"), local("Segoe UI Light"), local("Roboto-Light"), local("Tahoma");
 }
 $font-stack: system, -apple-system, Avenir Next, MacBlinkSystemFont, "Segoe UI", Roboto, Helvetica, sans-serif;
+$header-stack: Avenir Next, system, -apple-system, MacBlinkSystemFont, "Segoe UI", Roboto, Helvetica, sans-serif;
 
 #app,
 input,
@@ -19,7 +20,8 @@ textarea::placeholder {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-weight: 600;
+  font-family: $header-stack;
+  font-weight: 500;
   @extend .mt0;
 }
 
