@@ -4,13 +4,13 @@
       li.w-100-ns.mb3-ns.pr3
         h1.f3.mv0 #[span(@click="emitToggle").pointer 🌺]
       li.w-100-ns.mb3-ns.pr2
-        router-link(to="/" :class="(index==0) ? 'active' : ''").lh-solid.mv0 Home
+        router-link(@click.native="scroll('#home')" to="/" :class="(index==0)?'active':''").lh-solid.mv0 Home
       li.w-100-ns.mb3-ns.pr2
-        router-link(to="/#about" :class="(index==1) ? 'active' : ''").lh-solid.mv0 About
+        router-link(@click.native="scroll('#about')" to="/#about" :class="(index==1)?'active':''").lh-solid.mv0 About
       li.w-100-ns.mb3-ns.pr2
-        router-link(to="/#projects" :class="(index==2) ? 'active' : ''").lh-solid.mv0 Projects
+        router-link(@click.native="scroll('#projects')" to="/#projects" :class="(index==2)?'active':''").lh-solid.mv0 Projects
       li.w-100-ns.mb3-ns.pr2
-        router-link(to="/#contact" :class="(index==3) ? 'active' : ''").lh-solid.mv0 Contact
+        router-link(@click.native="scroll('#contact')" to="/#contact" :class="(index==3)?'active':''").lh-solid.mv0 Contact
 </template>
 
 <script>
@@ -20,6 +20,12 @@ export default {
   methods: {
     emitToggle: function () {
       this.$emit('toggle')
+    },
+    scroll: function (hash) {
+      const linkElem = document.querySelector(hash)
+      if (linkElem) {
+        linkElem.scrollIntoView({ behavior: 'smooth' })
+      }
     }
   }
 }

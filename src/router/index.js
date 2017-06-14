@@ -14,36 +14,12 @@ const router = new Router({
     }, {
       path: '/',
       name: 'Home',
-      component: Home,
-      meta: { link: '#home' }
+      component: Home
     }, {
       path: '*',
       component: NotFound
     }
-  ],
-  scrollBehavior: (to, from, savedPosition) => {
-    if (savedPosition) {
-      return savedPosition
-    }
-    if (to.hash) {
-      const linkElem = document.querySelector(to.hash)
-      if (linkElem) {
-        linkElem.scrollIntoView({ behavior: 'smooth' })
-      }
-      return
-    }
-    if (to.matched.some(m => m.meta.link)) {
-      const linkElem = document.querySelector(to.meta.link)
-      if (linkElem) {
-        linkElem.scrollIntoView({ behavior: 'smooth' })
-      }
-      return
-    }
-    return {
-      x: 0,
-      y: 0
-    }
-  }
+  ]
 })
 
 export default router
