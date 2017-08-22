@@ -8,7 +8,7 @@
 
 <script>
 export default {
-  name: 'picture',
+  name: 'pic',
   props: ['pic'],
   data () {
     return {

@@ -10,7 +10,7 @@
           legend.ph0.mh0.fw6.clip Submit Message
           div.form-name.fl.w-100.w-50-ns.mb3
             label(for="name").f6.b.db.mb2 Name
-            input(id="name" placeholder="Boaty McBoatface" type="text" name="name" aria-describedby="name-desc" required).w-90-ns.w-100.pa3.ba.bg-transparent
+            input(id="name" placeholder="That's you!" type="text" name="name" aria-describedby="name-desc" required).w-90-ns.w-100.pa3.ba.bg-transparent
           div.form-email.fl.w-100.w-50-ns.mb3
             label(for="email-address").f6.b.db.mb2 Email address
             input(id="email" placeholder="hello@email.com" type="email" name="email" aria-describedby="email-desc" required).w-90-ns.w-100.pa3.ba.bg-transparent

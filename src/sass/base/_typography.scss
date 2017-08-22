@@ -20,8 +20,8 @@ textarea::placeholder {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: $header-stack;
-  font-weight: 500;
+  font-family: $font-stack;
+  font-weight: bold;
   @extend .mt0;
 }
 

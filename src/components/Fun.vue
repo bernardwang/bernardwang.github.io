@@ -4,7 +4,7 @@
       h4.mb0 Pictures with facts
       div.flex.flex-row.item-start.mt3
         div(v-for="picObj in pictures").w-100.w-third-l
-          picture(:pic="picObj")
+          pic(:pic="picObj")
     div.fl.w-40-l.w-100.relative
       h4.mb0 Current favorites
       div.w-100.flex.flex-column
@@ -14,7 +14,7 @@
 </template>
 
 <script>
-import picture from './Picture'
+import pic from './Picture'
 import hkSrc from '../assets/img/hk.png'
 import baoSrc from '../assets/img/bao.png'
 import dogSrc from '../assets/img/dog.png'
@@ -33,15 +33,15 @@ const pictures = [{
   caption: 'I love dogs and they love me back.'
 }]
 const favorites = {
-  book: 'What Fanon Said - Lewis R. Gordon',
-  album: 'Exchange - The JuJu',
+  book: 'Queer Heartache - Kit Yan',
+  album: 'Subluxe - Healy',
   podcast: 'Code Switch - NPR'
 }
 
 export default {
   name: 'fun',
   components: {
-    picture
+    pic
   },
   data () {
     return {
