@@ -4,8 +4,21 @@
   font-weight: 400;
   src: local("-apple-system"), local(".SFNSText-Light"), local(".HelveticaNeueDeskInterface-Light"), local(".LucidaGrandeUI"), local("Ubuntu Light"), local("Segoe UI Light"), local("Roboto-Light"), local("Tahoma");
 }
-$font-stack: system, -apple-system, Avenir Next, MacBlinkSystemFont, "Segoe UI", Roboto, Helvetica, sans-serif;
-$header-stack: Avenir Next, system, -apple-system, MacBlinkSystemFont, "Segoe UI", Roboto, Helvetica, sans-serif;
+@font-face {
+  font-family: calibre;
+  font-style: normal;
+  font-weight: 400;
+  src: url('../assets/fonts/calibre_regular.woff');
+}
+@font-face {
+  font-family: calibreSemiBold;
+  font-style: normal;
+  font-weight: 400;
+  src: url('../assets/fonts/calibre_semibold.woff');
+}
+
+$font-stack: calibre, -apple-system, Avenir Next, MacBlinkSystemFont, "Segoe UI", Roboto, Helvetica, sans-serif;
+$header-stack: calibreSemiBold, system, -apple-system, MacBlinkSystemFont, "Segoe UI", Roboto, Helvetica, sans-serif;
 
 #app,
 input,
@@ -20,8 +33,7 @@ textarea::placeholder {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: $font-stack;
-  font-weight: bold;
+  font-family: $header-stack;
   @extend .mt0;
 }
 
@@ -41,13 +53,14 @@ h4 {
 }
 
 p {
+  font-family: $font-stack;
   @extend .f5;
   @extend .lh-copy;
   @extend .w-90-ns;
 }
 
 aside p {
-  @extend .f6;
+  @extend .f5;
   @extend .lh-copy;
   @extend .w-90-ns;
   line-height: 1.5rem;
