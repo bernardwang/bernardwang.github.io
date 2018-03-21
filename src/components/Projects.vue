@@ -46,7 +46,7 @@ const projects = [{
     Expertise: 'Front-end / Web Design',
     Details: 'Personal site and portfolio built with Vue.js, Webpack, Tachyons and PugJS. Visit archive.bernard.wang to view previous versions of this site!',
     Credits: '',
-    Year: new Date().getFullYear()
+    Year: '2017'
   }
 }]
 

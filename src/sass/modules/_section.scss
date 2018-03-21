@@ -2,7 +2,7 @@
   @extend .pt5;
   @extend .pl-sixth;
   @extend .pb3;
-  @extend .mt4;
+  @extend .mt5;
 }
 
 #intro {
@@ -13,7 +13,7 @@
 }
 
 #about {
-  @extend .mt5;
+  @extend .mt6;
   @extend .sub-section;
   @include set-section-color(2);
 }
@@ -31,6 +31,6 @@
 #links {
   @extend .pt5;
   @extend .pb5;
-  @extend .mt4;
+  @extend .mt5;
   @include set-section-color(4);
 }
