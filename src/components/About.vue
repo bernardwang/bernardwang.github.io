@@ -14,17 +14,17 @@
       div.ml-fifth.w-100-ns.mt3
         button(@click="showFun = !showFun").f5.lh-copy.mt0.pa0.bn.b.tl.pointer.bg-transparent.link {{ showFun?"-  less":"+ more" }} fun
     transition(name="fade")
-      fun(v-if="showFun")
+      AboutMore(v-if="showFun")
 </template>
 
 <script>
-import fun from './Fun'
+import AboutMore from './AboutMore'
 import resumeSrc from '../assets/img/resume.pdf'
 
 export default {
-  name: 'about',
+  name: 'About',
   components: {
-    fun
+    AboutMore
   },
   data () {
     return {

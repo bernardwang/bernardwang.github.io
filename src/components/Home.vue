@@ -1,35 +1,35 @@
 <template lang="pug">
   div.w-100.v-100.ph-page.relative
-    grid(v-if="showGrid")
-    navbar(:index="sectionIndex" @toggle="toggleGrid" @update="updateIndex")
+    Grid(v-if="showGrid")
+    Navbar(:index="sectionIndex" @toggle="toggleGrid" @update="updateIndex")
     main(role="main")#home
-      intro.js-scroll
-      about.js-scroll
-      projects.js-scroll
-      contact.js-scroll
-    links
+      Intro.js-scroll
+      About.js-scroll
+      Projects.js-scroll
+      Contact.js-scroll
+    Footer
 </template>
 
 <script>
-import grid from './Grid'
-import navbar from './Navbar'
-import intro from './Intro'
-import about from './About'
-import projects from './Projects'
-import contact from './Contact'
-import links from './Links'
+import Grid from './Grid'
+import Navbar from './Navbar'
+import Intro from './Intro'
+import About from './About'
+import Projects from './Projects'
+import Contact from './Contact'
+import Footer from './Footer'
 import _ from 'lodash'
 
 export default {
-  name: 'home',
+  name: 'Home',
   components: {
-    grid,
-    navbar,
-    intro,
-    about,
-    projects,
-    contact,
-    links
+    Grid,
+    Navbar,
+    Intro,
+    About,
+    Projects,
+    Contact,
+    Footer
   },
   data () {
     return {

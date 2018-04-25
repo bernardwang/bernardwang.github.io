@@ -34,6 +34,6 @@
 
 <script>
 export default {
-  name: 'links'
+  name: 'Footer'
 }
 </script>

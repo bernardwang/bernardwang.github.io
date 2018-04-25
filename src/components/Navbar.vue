@@ -15,7 +15,7 @@
 
 <script>
 export default {
-  name: 'navbar',
+  name: 'Navbar',
   props: ['index'],
   methods: {
     emitToggle: function () {

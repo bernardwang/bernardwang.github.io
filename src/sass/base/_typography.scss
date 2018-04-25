@@ -1,10 +1,4 @@
 @font-face {
-  font-family: system;
-  font-style: normal;
-  font-weight: 400;
-  src: local("-apple-system"), local(".SFNSText-Light"), local(".HelveticaNeueDeskInterface-Light"), local(".LucidaGrandeUI"), local("Ubuntu Light"), local("Segoe UI Light"), local("Roboto-Light"), local("Tahoma");
-}
-@font-face {
   font-family: calibre;
   src: url('../assets/fonts/calibre_regular.woff');
 }
@@ -13,8 +7,8 @@
   src: url('../assets/fonts/calibre_medium.woff');
 }
 
-$font-stack: calibre, Avenir Next, system, -apple-system, Roboto, Helvetica, sans-serif;
-$header-stack: calibreMedium, system, -apple-system, Roboto, Helvetica, sans-serif;
+$font-stack: calibre, Avenir Next, -apple-system, Roboto, Helvetica, sans-serif;
+$header-stack: calibreMedium, -apple-system, Roboto, Helvetica, sans-serif;
 
 #app,
 input,
