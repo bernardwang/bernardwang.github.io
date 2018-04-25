@@ -1,7 +1,6 @@
 <template lang="pug">
   section#contact
-    div.ml-fifth.puck
-    h2.ml-fifth.mt3.f2.lh-title.hl Contact
+    h2.ml-fifth.f2.lh-title.hl Contact
     div.cf
       aside.fl.w-100.w-20-ns
         p.mt3-ns.pt1-ns I'm available for contract or freelance work!

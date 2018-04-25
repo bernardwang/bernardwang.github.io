@@ -24,17 +24,8 @@
   }
 }
 
-.puck {
-  width: 2.1rem;
-  height: 0.5rem;
-}
-
 @mixin set-section-color($index) {
   $color: nth($cl-text-hl, $index);
-
-  .puck {
-    background-color: transparent;
-  }
 
   .hl {
     position: relative;

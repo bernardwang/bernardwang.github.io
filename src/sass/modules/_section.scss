@@ -6,8 +6,8 @@
 }
 
 #intro {
-  //@extend .pt5-ns;
-  //@extend .pt6;
+  @extend .pt5-ns;
+  @extend .pt6;
   @extend .ml-third;
   @include set-section-color(1);
 }

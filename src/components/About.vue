@@ -1,8 +1,7 @@
 <template lang="pug">
   section#about
     section
-      div.ml-fifth.puck
-      h2.ml-fifth.mt3.hl About
+      h2.ml-fifth.hl About
       div.cf
         aside.fl.w-100.w-20-ns
           p.mt0 Interested in my resume? Grab a copy #[a(:href="resumeSrc" target="_blank" alt="resume") here]!

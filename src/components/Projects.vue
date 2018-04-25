@@ -1,7 +1,6 @@
 <template lang="pug">
   section#projects
-    div.ml-fifth.puck
-    h2.ml-fifth.mt3.hl Projects
+    h2.ml-fifth.hl Projects
     div.cf
       article(v-for="proj in projects").fl.w-100.mb4
         h4.ml-fifth.mv0(v-if="proj.url") #[a(:href="proj.url") {{ proj.title }}]
