@@ -9,9 +9,12 @@ $cl-bg-main: #fff;
 
 @keyframes rainbow1 {
   0% { color: nth($cl-text-hl, 1) }
-  33% { color: nth($cl-text-hl, 2) }
+  17% { color: nth($cl-text-hl, 2) }
+  33% { color: nth($cl-text-hl, 3) }
+  50% { color: nth($cl-text-hl, 4) }
   66% { color: nth($cl-text-hl, 3) }
-  100% { color: nth($cl-text-hl, 4) }
+  83% { color: nth($cl-text-hl, 2 ) }
+  100% { color: nth($cl-text-hl, 1) }
 }
 
 @keyframes rainbow2 {
@@ -34,8 +37,30 @@ $cl-bg-main: #fff;
   100% { color: nth($cl-text-hl, 3) }
 }
 
-$animate-link-1: 1s infinite alternate linear rainbow1;
-$animate-link-2: 2s infinite linear rainbow2;
-$animate-link-3: 2s infinite linear rainbow3;
-$animate-link-4: 1s infinite alternate-reverse linear rainbow1;
+@keyframes rainbow4 {
+  0% { color: nth($cl-text-hl, 4) }
+  17% { color: nth($cl-text-hl, 3) }
+  33% { color: nth($cl-text-hl, 2) }
+  50% { color: nth($cl-text-hl, 1) }
+  66% { color: nth($cl-text-hl, 2) }
+  83% { color: nth($cl-text-hl, 3 ) }
+  100% { color: nth($cl-text-hl, 4) }
+}
+
+$animate-link-1: 3s infinite linear rainbow1;
+$animate-link-2: 3s infinite linear rainbow2;
+$animate-link-3: 3s infinite linear rainbow3;
+$animate-link-4: 3s infinite linear rainbow4;
 $animate-link: $animate-link-1, $animate-link-2, $animate-link-3, $animate-link-4;
+
+@keyframes rainbowend {
+  0% { background-color: nth($cl-text-hl, 1) }
+  17% { background-color: nth($cl-text-hl, 2) }
+  33% { background-color: nth($cl-text-hl, 3) }
+  50% { background-color: nth($cl-text-hl, 4) }
+  66% { background-color: nth($cl-text-hl, 3) }
+  83% { background-color: nth($cl-text-hl, 2) }
+  100% { background-color: nth($cl-text-hl, 1) }
+}
+
+$animate-end: 3s infinite linear rainbowend;

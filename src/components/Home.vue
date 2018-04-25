@@ -1,8 +1,8 @@
 <template lang="pug">
   div.w-100.v-100.ph-page.relative
     grid(v-if="showGrid")
-    navbar(:index="sectionIndex" @toggle="toggleGrid")
-    main#home
+    navbar(:index="sectionIndex" @toggle="toggleGrid" @update="updateIndex")
+    main(role="main")#home
       intro.js-scroll
       about.js-scroll
       projects.js-scroll
@@ -18,6 +18,7 @@ import about from './About'
 import projects from './Projects'
 import contact from './Contact'
 import links from './Links'
+import _ from 'lodash'
 
 export default {
   name: 'home',
@@ -41,47 +42,45 @@ export default {
     }
   },
   methods: {
-    handleScroll: function () {
-      if (!this.tick) {
-        window.requestAnimationFrame(() => {
-          if (this.sectionIndex === -1) { // Index not yet initialized
-            return
-          }
-          if (this.sectionIndex !== this.sectionSize - 1) {
-            let next = this.sections[this.sectionIndex + 1].getBoundingClientRect().top
-            if (next < this.sectionThreshold) {
-              this.sectionIndex++
-            }
-          }
-          if (this.sectionIndex !== 0) {
-            let prev = this.sections[this.sectionIndex].getBoundingClientRect().top
-            if (prev > this.sectionThreshold) {
-              this.sectionIndex--
-            }
-          }
-          this.tick = false
-        })
+    scrollUpdate: function () {
+      if (this.sectionIndex === -1) { // Index not yet initialized
+        return
       }
-      this.tick = true
+      if (this.sectionIndex !== this.sectionSize - 1) {
+        let next = this.sections[this.sectionIndex + 1].getBoundingClientRect().top
+        if (next < this.sectionThreshold) {
+          this.sectionIndex++
+        }
+      }
+      if (this.sectionIndex !== 0) {
+        let prev = this.sections[this.sectionIndex].getBoundingClientRect().top
+        if (prev > this.sectionThreshold) {
+          this.sectionIndex--
+        }
+      }
     },
     toggleGrid: function () {
       this.showGrid = !this.showGrid
+    },
+    updateIndex: function (index) {
+      this.sectionIndex = index
     }
   },
   mounted () {
     this.sections = document.getElementsByClassName('js-scroll')
     this.sectionSize = this.sections.length
     this.sectionIndex = this.sectionSize - 1
+    // TODO: initialize with url hash
     for (let i = 0; i < this.sectionSize; i++) {
       if (this.sections[i].getBoundingClientRect().top > this.sectionThreshold) {
         this.sectionIndex = i - 1
         break
       }
     }
-    window.addEventListener('scroll', this.handleScroll)
+    document.body.addEventListener('scroll', _.throttle(this.scrollUpdate, 100))
   },
   destroyed () {
-    window.removeEventListener('scroll', this.handleScroll)
+    document.body.removeEventListener('scroll', _.throttle(this.scrollUpdate, 100))
   }
 }
 </script>

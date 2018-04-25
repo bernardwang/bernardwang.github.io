@@ -3,11 +3,11 @@
     h2.ml-fifth.hl Projects
     div.cf
       article(v-for="proj in projects").fl.w-100.mb4
-        h4.ml-fifth.mv0(v-if="proj.url") #[a(:href="proj.url") {{ proj.title }}]
+        h4.ml-fifth.mv0(v-if="proj.url") #[a(:href="proj.url" target="_blank") {{ proj.title }}]
         h4.ml-fifth.mv0(v-else) {{ proj.title }}
         div(v-for="(value, key) in proj.list" v-if="value").cf
           aside.fl.w-100.w-20-ns
-            p.mb0.mt2-ns.mt1 {{ key }}
+            p.mb0.mt2-ns.mt1 {{ key+":" }}
           div.fl.w-100.w-80-ns
             p.mb0.mt2-ns.mt1 {{ value }}
 </template>

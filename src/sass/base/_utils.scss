@@ -47,12 +47,19 @@
     }
   }
 
+  .end {
+    &:before {
+      animation: $animate-end;
+    }
+  }
+
   h1, h2, h4 {
     color: $color;
   }
 
   .link {
     color: $color;
+    font-weight: 500;
     &:hover {
       text-decoration: none;
       animation: nth($animate-link, $index);
@@ -61,18 +68,6 @@
 
   figure {
     outline: 1px solid $color;
-    // position: relative;
-
-    // &:before {
-    //   content: '';
-    //   background-color: $color;
-    //   position: absolute;
-    //   width: 100%;
-    //   height: 100%;
-    //   left: -0.5rem;
-    //   top: 0.5rem;
-    //   z-index: -1;
-    // }
   }
 
   input,

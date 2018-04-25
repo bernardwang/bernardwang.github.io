@@ -3,7 +3,7 @@
     section
       h2.ml-fifth.hl About
       div.cf
-        aside.fl.w-100.w-20-ns
+        aside(role="complementary").fl.w-100.w-20-ns
           p.mt0 Interested in my resume? Grab a copy #[a(:href="resumeSrc" target="_blank" alt="resume") here]!
         div.fl.w-100.w-80-ns
           div.fl.w-100.w-50-ns

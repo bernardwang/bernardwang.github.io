@@ -1,5 +1,5 @@
 <template lang="pug">
-  footer#links.mb0
+  footer(role="contentinfo")#links.mb0
     div.cf
       div.fl.w-100.w-third-l.mb3.mb0-l
         h4.mb0 Information
@@ -29,7 +29,7 @@
             p.fl.f5.mv1.w-30 LinkedIn:
             p.fl.f5.mv1.w-70 #[a(href="https://www.linkedin.com/in/bernardwang" target="_blank" alt="linkedin") bernardwang]
     div.cf
-      h4.mt7.ml-third.mb0.hl The end.
+      h4.mt7.ml-third.mb0.hl.end The end.
 </template>
 
 <script>

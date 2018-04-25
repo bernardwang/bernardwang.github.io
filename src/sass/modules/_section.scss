@@ -1,19 +1,16 @@
 .sub-section {
-  @extend .pt5;
+  padding-top: 7rem;
   @extend .ml-sixth;
   @extend .pb3;
-  @extend .mt5;
 }
 
 #intro {
-  @extend .pt5-ns;
-  @extend .pt6;
   @extend .ml-third;
+  @extend .sub-section;
   @include set-section-color(1);
 }
 
 #about {
-  @extend .mt6;
   @extend .sub-section;
   @include set-section-color(2);
 }
