@@ -1,9 +1,10 @@
 <template lang="pug">
   section#contact
-    h2.pl-fifth.f2.lh-title Contact
+    div.ml-fifth.puck
+    h2.ml-fifth.mt3.f2.lh-title.hl Contact
     div.cf
       aside.fl.w-100.w-20-ns
-        p.mt3-ns.pt1-ns Send a message, don't be a stranger!
+        p.mt3-ns.pt1-ns I'm available for contract or freelance work!
       form(accept-charset="utf-8" action="https://formspree.io/bernard@bernard.wang"
       method="POST").fl.w-100.w-80-ns
         fieldset.ba.b--transparent.pa0.ma0.cf

@@ -1,12 +1,14 @@
 <template lang="pug">
   section.mt4.cf
     div.fl.w-60-l.w-100.ma0-l.mb4
-      h4.mb0 Pictures with facts
+      div.puck
+      h4.mt3.mb0 Pictures with facts
       div.flex.flex-row.item-start.mt3
         div(v-for="picObj in pictures").w-100.w-third-l
           pic(:pic="picObj")
     div.fl.w-40-l.w-100.relative
-      h4.mb0 Current favorites
+      div.puck
+      h4.mt3.mb0 Current favorites
       div.w-100.flex.flex-column
         p.f5.mb0.w-100 📚 #[span.ml1 Book: {{ favorites.book }}]
         p.f5.mb0.w-100 🎵 #[span.ml1 Album: {{ favorites.album }}]

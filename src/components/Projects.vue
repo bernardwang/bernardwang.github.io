@@ -1,15 +1,16 @@
 <template lang="pug">
   section#projects
-    h2.pl-fifth Projects
+    div.ml-fifth.puck
+    h2.ml-fifth.mt3.hl Projects
     div.cf
       article(v-for="proj in projects").fl.w-100.mb4
-        h4.pl-fifth.mv0(v-if="proj.url") #[a(:href="proj.url") {{ proj.title }}]
-        h4.pl-fifth.mv0(v-else) {{ proj.title }}
+        h4.ml-fifth.mv0(v-if="proj.url") #[a(:href="proj.url") {{ proj.title }}]
+        h4.ml-fifth.mv0(v-else) {{ proj.title }}
         div(v-for="(value, key) in proj.list" v-if="value").cf
           aside.fl.w-100.w-20-ns
-            p.mb0 {{ key }}
+            p.mb0.mt2-ns.mt1 {{ key }}
           div.fl.w-100.w-80-ns
-            p.mb0.mt3-ns.mt1 {{ value }}
+            p.mb0.mt2-ns.mt1 {{ value }}
 </template>
 
 <script>
@@ -24,10 +25,10 @@ const projects = [{
   }
 }, {
   title: 'Lisa Vuong Portfolio',
-  url: 'http://lisavuong.com/',
+  url: 'http://bernard.wang/lisa-irl-copy/',
   list: {
     Expertise: 'Front-end',
-    Details: 'Portfolio site for my dear friend and fellow shiba fan. Coded entirely in vanilla JS and Sass, the site   also uses custom built gallery sliders.',
+    Details: 'Portfolio site for my dear friend and fellow shiba fan. Coded entirely in vanilla JS and Sass, the site also uses custom built gallery sliders.',
     Credits: 'Web Design: Lisa Vuong',
     Year: '2015'
   }

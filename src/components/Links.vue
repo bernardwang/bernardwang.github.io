@@ -1,15 +1,19 @@
 <template lang="pug">
-  footer#links
+  footer#links.mb0
     div.cf
       div.fl.w-100.w-third-l.mb3.mb0-l
-        h4.mb0 Information
+        div.puck
+        h4.mt3.mb0 Information
         ul
           li.w-100
             p.f5.mv1 Phone: #[a(href="tel:973-216-9810" alt="phone") +1-973-216-9810]
           li.w-100
-            p.f5.mv1 Email: #[a(href="mailto:bernard@bernard.wang" target="_blank" alt="email") bernard@bernard.wang]
+            p.f5.mv1 Email: #[a(href="mailto:bw.vbnm@gmail.com" target="_blank" alt="email") bw.vbnm@gmail.com]
+          li.w-100
+            p.fl.f5.mv1.w-100 © Bernard Wang 2018
       div.fl.w-100.w-third-l.mb3.mb0-l
-        h4.mb0 Work
+        div.puck
+        h4.mt3.mb0 Work
         ul
           li.w-100.cf
             p.fl.f5.mv1.w-30 Github:
@@ -17,18 +21,18 @@
           li.w-100.cf
             p.fl.f5.mv1.w-30 Codepen:
             p.fl.f5.mv1.w-70 #[a(href="https://codepen.io/bernardwang/" target="_blank" alt="codepen") bernardwang]
-          li.w-100.cf
-            p.fl.f5.mv1.w-30 LinkedIn:
-            p.fl.f5.mv1.w-70 #[a(href="https://www.linkedin.com/in/bernardwang" target="_blank" alt="linkedin") bernardwang]
       div.fl.w-100.w-third-l.mb3.mb0-l
-        h4.mb0 Social
+        div.puck
+        h4.mt3.mb0 Social
         ul
           li.w-100.cf
             p.fl.f5.mv1.w-30 Twitter:
             p.fl.f5.mv1.w-70 #[a(href="https://twitter.com/_bernardwang/" target="_blank" alt="twitter") _bernardwang]
           li.w-100.cf
-            p.fl.f5.mv1.w-30 Instagram:
-            p.fl.f5.mv1.w-70 #[a(href="https://www.instagram.com/_bernardwang/" target="_blank" alt="instgram") _bernardwang]
+            p.fl.f5.mv1.w-30 LinkedIn:
+            p.fl.f5.mv1.w-70 #[a(href="https://www.linkedin.com/in/bernardwang" target="_blank" alt="linkedin") bernardwang]
+    div.cf
+      h4.mt7.ml-third.mb0.hl The end.
 </template>
 
 <script>

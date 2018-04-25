@@ -1,14 +1,14 @@
 .sub-section {
   @extend .pt5;
-  @extend .pl-sixth;
+  @extend .ml-sixth;
   @extend .pb3;
   @extend .mt5;
 }
 
 #intro {
-  @extend .pt5-ns;
-  @extend .pt6;
-  @extend .pl-third;
+  //@extend .pt5-ns;
+  //@extend .pt6;
+  @extend .ml-third;
   @include set-section-color(1);
 }
 
@@ -30,7 +30,7 @@
 
 #links {
   @extend .pt5;
-  @extend .pb5;
+  @extend .pb0;
   @extend .mt5;
   @include set-section-color(4);
 }

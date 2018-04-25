@@ -6,19 +6,15 @@
 }
 @font-face {
   font-family: calibre;
-  font-style: normal;
-  font-weight: 400;
   src: url('../assets/fonts/calibre_regular.woff');
 }
 @font-face {
-  font-family: calibreSemiBold;
-  font-style: normal;
-  font-weight: 400;
-  src: url('../assets/fonts/calibre_semibold.woff');
+  font-family: calibreMedium;
+  src: url('../assets/fonts/calibre_medium.woff');
 }
 
-$font-stack: calibre, -apple-system, Avenir Next, MacBlinkSystemFont, "Segoe UI", Roboto, Helvetica, sans-serif;
-$header-stack: calibreSemiBold, system, -apple-system, MacBlinkSystemFont, "Segoe UI", Roboto, Helvetica, sans-serif;
+$font-stack: calibre, Avenir Next, system, -apple-system, Roboto, Helvetica, sans-serif;
+$header-stack: calibreMedium, system, -apple-system, Roboto, Helvetica, sans-serif;
 
 #app,
 input,

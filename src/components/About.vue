@@ -1,7 +1,8 @@
 <template lang="pug">
   section#about
     section
-      h2.pl-fifth About
+      div.ml-fifth.puck
+      h2.ml-fifth.mt3.hl About
       div.cf
         aside.fl.w-100.w-20-ns
           p.mt0 Interested in my resume? Grab a copy #[a(:href="resumeSrc" target="_blank" alt="resume") here]!
@@ -11,7 +12,7 @@
           div.fl.w-100.w-50-ns
             p.mt0 Most recently, I've been building  #[a(href="http://grove.ai" target="_blank" alt="Grove AI") Grove AI], which helps progressive campaigns and nonprofits organize using Facebook Messenger chatbots.
             p.mt0 Check out more of my work on my #[a(href="https://github.com/bernardwang" target="_blank" alt="github") Github]!
-      div.pl-fifth.w-100-ns.mt3
+      div.ml-fifth.w-100-ns.mt3
         button(@click="showFun = !showFun").f5.lh-copy.mt0.pa0.bn.b.tl.pointer.bg-transparent.link {{ showFun?"-  less":"+ more" }} fun
     transition(name="fade")
       fun(v-if="showFun")
