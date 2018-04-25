@@ -29,6 +29,7 @@
 
   .hl {
     position: relative;
+    margin-right: -1px; // TODO: hacky fix
     padding-left: 0.5rem;
     padding-right: 0.5rem;
     color: white;

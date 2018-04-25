@@ -1,7 +1,7 @@
 <template lang="pug">
   footer(role="contentinfo")#links.mb0
     div.cf
-      div.fl.w-100.w-third-l.mb3.mb0-l
+      div.fl.w-100.w-third-ns.mb3.mb0-l
         h4.mb0 Information
         ul
           li.w-100
@@ -9,8 +9,8 @@
           li.w-100
             p.f5.mv1 Email: #[a(href="mailto:bw.vbnm@gmail.com" target="_blank" alt="email") bw.vbnm@gmail.com]
           li.w-100
-            p.fl.f5.mv1.w-100 © Bernard Wang 2018
-      div.fl.w-100.w-third-l.mb3.mb0-l
+            p.f5.mv1 © Bernard Wang 2018
+      div.fl.w-100.w-third-ns.mb3.mb0-l
         h4.mb0 Work
         ul
           li.w-100.cf
@@ -19,7 +19,7 @@
           li.w-100.cf
             p.fl.f5.mv1.w-30 Codepen:
             p.fl.f5.mv1.w-70 #[a(href="https://codepen.io/bernardwang/" target="_blank" alt="codepen") bernardwang]
-      div.fl.w-100.w-third-l.mb3.mb0-l
+      div.fl.w-100.w-third-ns.mb3.mb0-l
         h4.mb0 Social
         ul
           li.w-100.cf
