@@ -1,6 +1,6 @@
 <template lang="pug">
-  section#projects
-    h2.ml-fifth.hl Projects
+  section#work
+    h2.ml-fifth.hl Work
     div.cf
       article(v-for="proj in projects").fl.w-100.mb4
         h4.ml-fifth.mv0(v-if="proj.url") #[a(:href="proj.url" target="_blank") {{ proj.title }}]
@@ -14,6 +14,15 @@
 
 <script>
 const projects = [{
+  title: 'Grove AI',
+  url: 'http://grove.ai',
+  list: {
+    Expertise: 'Full-stack / UI & UX Design / Product Vision',
+    Details: 'Platform for progressive campaigns and nonprofits to organize online through Facebook Messenger chatbots',
+    Credits: 'Product Vision & Backend: Vishal Disawar',
+    Year: '2017 - 2018'
+  }
+}, {
   title: 'Explorations',
   url: 'http://bernard.wang/explorations',
   list: {

@@ -8,7 +8,7 @@
       li.w-100-ns.mb3-ns.pr2
         router-link(@click.native="scroll('#about', 1)" to="/#about" :class="(index==1)?'active':''").lh-solid.mv0.f4 About
       li.w-100-ns.mb3-ns.pr2
-        router-link(@click.native="scroll('#projects', 2)" to="/#projects" :class="(index==2)?'active':''").lh-solid.mv0.f4 Projects
+        router-link(@click.native="scroll('#work', 2)" to="/#work" :class="(index==2)?'active':''").lh-solid.mv0.f4 Work
       li.w-100-ns.mb3-ns.pr2
         router-link(@click.native="scroll('#contact', 3)" to="/#contact" :class="(index==3)?'active':''").lh-solid.mv0.f4 Contact
 </template>
