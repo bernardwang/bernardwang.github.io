@@ -12,20 +12,29 @@
             p.mt0 Most recently, I built #[a(href="http://grove.ai" target="_blank" alt="Grove AI") Grove AI], which helps progressive campaigns and nonprofits organize using Facebook Messenger chatbots.
             p.mt0 Check out more of my work on my #[a(href="https://github.com/bernardwang" target="_blank" alt="github") Github]!
       div.ml-fifth.w-100-ns.mt3
-        button(@click="showFun = !showFun").lh-copy.mt0.pa0.bn.tl.pointer.bg-transparent.btn
-          p.b.link {{ showFun ? "-  less" : "+ more" }} fun
+        CoreButton(:onClick="btnClick" :text="btnText()")
     transition(name="fade")
       AboutMore(v-if="showFun")
 </template>
 
 <script>
+import CoreButton from './core/Button'
 import AboutMore from './AboutMore'
 import resumeSrc from '../assets/img/resume.pdf'
 
 export default {
   name: 'About',
   components: {
+    CoreButton,
     AboutMore
+  },
+  methods: {
+    btnText: function () {
+      return this.showFun ? '-  less fun' : '+ more fun '
+    },
+    btnClick: function () {
+      this.showFun = !this.showFun
+    }
   },
   data () {
     return {
