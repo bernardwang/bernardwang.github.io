@@ -2,11 +2,11 @@
   section#work
     h2.ml-fifth.hl Work
     div.cf
-      article(v-for="proj in projects").fl.w-100.mb4.mt2
+      article(v-for="proj in works").fl.w-100.mb4.mt2
         h4.ml-fifth.mv0(v-if="proj.url") #[a(:href="proj.url" target="_blank") {{ proj.title }}]
         h4.ml-fifth.mv0(v-else) {{ proj.title }}
         div.flex.flex-row.item-start.mt3.mb2.ml-fifth
-          ProjectsGallery(:images="proj.images" :title="proj.title")
+          WorkGallery(:images="proj.images" :title="proj.title")
         div(v-for="(value, key) in proj.details" v-if="value")
           aside.fl.w-100.w-20-ns
             p.mb0.mt2-ns.mt1 {{ key+":" }}
@@ -15,7 +15,7 @@
 </template>
 
 <script>
-import ProjectsGallery from './ProjectsGallery'
+import WorkGallery from './WorkGallery'
 import grove1 from '../assets/img/grove1.png'
 import grove2 from '../assets/img/grove2.png'
 import grove3 from '../assets/img/grove3.png'
@@ -26,7 +26,7 @@ import lisa2 from '../assets/img/lisa2.png'
 import mael1 from '../assets/img/mael1.png'
 import mael2 from '../assets/img/mael2.png'
 
-const projects = [{
+const works = [{
   title: 'Grove AI',
   url: 'http://grove.ai',
   images: [ grove1, grove2, grove3 ],
@@ -77,11 +77,11 @@ const projects = [{
 }]
 
 export default {
-  name: 'Projects',
-  components: { ProjectsGallery },
+  name: 'Work',
+  components: { WorkGallery },
   data () {
     return {
-      projects
+      works
     }
   }
 }

@@ -1,5 +1,5 @@
 <template lang="pug">
-  button(@click="onClick").lh-copy.mt0.pa1.bn.tl.pointer.bg-transparent.btn
+  button(@click="onClick").lh-copy.mt0.pa0.pv1.bn.tl.pointer.bg-transparent.btn
     p.b.mv1.link.w-100 {{ text }}
 </template>
 

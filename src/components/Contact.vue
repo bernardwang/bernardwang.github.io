@@ -18,7 +18,7 @@
             label(for="message").f4.db.mb2 Message
             textarea(id="message" placeholder="Hey Bernard..." name="message" aria-describedby="message-desc" required).pa3.mb2.ba.w-100.bg-transparent
         div.w-100.w-50-ns
-          input(id="submit" value="SEND →" type="submit").b.pa3.ba.bg-transparent.pointer.f5.w-90-ns.w-100
+          input(id="submit" value="Send →" type="submit").b.pa3.ba.bg-transparent.pointer.f4.w-90-ns.w-100
           input(type="hidden" name="_next" value="//")
 </template>
 

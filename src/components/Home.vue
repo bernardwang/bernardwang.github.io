@@ -5,9 +5,9 @@
     main(role="main")#home
       Intro.js-scroll
       About.js-scroll
-      Projects.js-scroll
+      Work.js-scroll
       Contact.js-scroll
-    Footer
+    ContactLinks
 </template>
 
 <script>
@@ -15,9 +15,9 @@ import Grid from './Grid'
 import Navbar from './Navbar'
 import Intro from './Intro'
 import About from './About'
-import Projects from './Projects'
+import Work from './Work'
 import Contact from './Contact'
-import Footer from './Footer'
+import ContactLinks from './ContactLinks'
 import _ from 'lodash'
 
 export default {
@@ -27,9 +27,9 @@ export default {
     Navbar,
     Intro,
     About,
-    Projects,
+    Work,
     Contact,
-    Footer
+    ContactLinks
   },
   data () {
     return {

@@ -63,3 +63,7 @@ a {
   text-decoration-skip: ink;
 }
 
+textarea, input {
+  @extend .f5;
+}
+

@@ -34,6 +34,6 @@
 
 <script>
 export default {
-  name: 'Footer'
+  name: 'ContactLinks'
 }
 </script>

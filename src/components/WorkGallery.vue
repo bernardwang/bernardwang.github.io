@@ -1,16 +1,17 @@
 <template lang="pug">
-  div(v-if="gallerySize > 0").w-100.flex.items-start
-    figure(@mouseover="hover=true" @mouseleave="hover=false").w-50-l.w-100.h-100.ma0.mr3.gallery
+  div(v-if="gallerySize > 0").w-100.h-100.flex.items-start.flex-wrap
+    figure(@mouseover="hover=true" @mouseleave="hover=false").w-50-l.w-100.h-100.ma0.mr3.mb3.gallery
       img(v-for="(image, i) in images" :src="image" :alt="title + ' Screen ' + i" :class="{ show: (i === galleryIndex) }").image
       img(:src="images[0]").background
-    CoreButton(:onClick="galleryNext" text='Next').arrow
+    CoreButton(:onClick="galleryNext" text='→').arrow
 </template>
 
 <script>
 import CoreButton from './core/Button'
+import _ from 'lodash'
 
 export default {
-  name: 'ProjectsGallery',
+  name: 'WorkGallery',
   props: ['title', 'images'],
   components: {
     CoreButton
@@ -22,11 +23,13 @@ export default {
   },
   data () {
     return {
-      gallerySize: this.images.length || 0,
+      gallerySize: 0,
       galleryIndex: 0,
-      hover: false,
-      loop: null
+      hover: false
     }
+  },
+  mounted () {
+    this.gallerySize = _.get(this.images, 'length', 0)
   }
 }
 </script>
@@ -34,11 +37,6 @@ export default {
 <style lang="scss" scoped>
 .gallery {
   position: relative;
-}
-.counter {
-  text-align: center;
-  max-width: 5rem;
-  padding-top: 0.5rem;
 }
 .arrow {
   margin-top: -1rem;
