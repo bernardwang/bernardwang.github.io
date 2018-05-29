@@ -16,6 +16,8 @@
 
 <script>
 import WorkGallery from './WorkGallery'
+import archive1 from '../assets/img/archive1.png'
+import archive2 from '../assets/img/archive2.png'
 import grove1 from '../assets/img/grove1.png'
 import grove2 from '../assets/img/grove2.png'
 import grove3 from '../assets/img/grove3.png'
@@ -27,6 +29,15 @@ import mael1 from '../assets/img/mael1.png'
 import mael2 from '../assets/img/mael2.png'
 
 const works = [{
+  title: 'archive.bernard.wang',
+  url: 'http://archive.bernard.wang',
+  images: [ archive1, archive2 ],
+  details: {
+    Expertise: 'UI & UX Design / Front-end',
+    Details: 'Record of all the past iterations of my personal website. Quick project finished during my job search of 2018.',
+    Year: '2018'
+  }
+}, {
   title: 'Grove AI',
   url: 'http://grove.ai',
   images: [ grove1, grove2, grove3 ],
