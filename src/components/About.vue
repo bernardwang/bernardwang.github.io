@@ -12,7 +12,7 @@
             p.mt0 Most recently, I built #[a(href="http://grove.ai" target="_blank" alt="Grove AI") Grove AI], which helps progressive campaigns and nonprofits organize using Facebook Messenger chatbots.
             p.mt0 Check out more of my work on my #[a(href="https://github.com/bernardwang" target="_blank" alt="github") Github]!
       div.ml-fifth.w-100-ns.mt3
-        CoreButton(:onClick="btnClick" :text="btnText()")
+        CoreButton(:onClick="btnClick" :text="btnText()" variant="link")
     transition(name="fade")
       AboutMore(v-if="showFun")
 </template>
@@ -46,8 +46,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.btn {
-  width: 6rem;
-}
 </style>
 

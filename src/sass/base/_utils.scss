@@ -19,8 +19,8 @@
 
 @media screen and (max-width: 50em){
   .ph-page {
-    padding-left: 6%;
-    padding-right: 6%;
+    padding-left: 6vw;
+    padding-right: 6vw;
   }
 }
 
@@ -67,21 +67,21 @@
     }
   }
 
-  figure {
+  figure, img {
     outline: 1.5px solid $color;
   }
 
-  input,
-  textarea {
+  .btn, input, textarea {
+    cursor: pointer;
     border-color: $color;
     transition: background-color .15s ease-in;
   }
 
-  input[type="submit"] {
+  .btn, input[type="submit"] {
     color: $color;
   }
 
-  input[type="submit"]:hover {
+  .btn:hover, input[type="submit"]:hover {
     color: $cl-bg-main;
     background-color: $color;
   }
