@@ -51,9 +51,8 @@ p {
 
 aside p {
   @extend .f4;
-  @extend .lh-copy;
   @extend .w-90-ns;
-  line-height: 1.5rem;
+  line-height: 1.4;
   color: $cl-text-sub;
 }
 

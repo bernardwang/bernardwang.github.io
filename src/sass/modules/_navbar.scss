@@ -1,8 +1,15 @@
 @media screen and (max-width: 30em) {
   #navbar {
     left: 0;
-    padding-left: 6%;
-    background: linear-gradient(to bottom, $cl-bg-main 70%, rgba($cl-bg-main, 0) 100%);
+    background: $cl-bg-main;
+
+    ul {
+      padding-left: 6%;
+      &.border0 { @include set-nav-color(1); }
+      &.border1 { @include set-nav-color(2); }
+      &.border2 { @include set-nav-color(3); }
+      &.border3 { @include set-nav-color(4); }
+    }
   }
 }
 
@@ -19,8 +26,8 @@
     text-decoration: underline;
   }
 
-  li:nth-of-type(2) { @include set-nav-color(1); }
-  li:nth-of-type(3) { @include set-nav-color(2); }
-  li:nth-of-type(4) { @include set-nav-color(3); }
-  li:nth-of-type(5) { @include set-nav-color(4); }
+  li:nth-of-type(2) { @include set-nav-link-color(1); }
+  li:nth-of-type(3) { @include set-nav-link-color(2); }
+  li:nth-of-type(4) { @include set-nav-link-color(3); }
+  li:nth-of-type(5) { @include set-nav-link-color(4); }
 }

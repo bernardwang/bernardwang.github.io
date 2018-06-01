@@ -89,6 +89,11 @@
 
 @mixin set-nav-color($index) {
   $color: nth($cl-text-hl, $index);
+  border-bottom: 2px solid $color;
+}
+
+@mixin set-nav-link-color($index) {
+  $color: nth($cl-text-hl, $index);
 
   .link:hover {
     text-decoration: none;

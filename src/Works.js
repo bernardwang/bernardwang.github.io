@@ -23,7 +23,7 @@ const works = [{
   }],
   details: {
     Expertise: 'UI & UX Design / Front-end',
-    Details: 'Record of all the past iterations of my personal website. Retro design inspired by my childhood desktop computer, torrent readmes, and GameFAQ guides.',
+    Details: 'Record of past iterations of my personal website. Retro design inspired by my childhood desktop computer, torrent readmes, and GameFAQ walkthroughs.',
     Year: '2018'
   }
 }, {

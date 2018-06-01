@@ -9,9 +9,9 @@
           WorkGallery(:gallery="proj.gallery" :title="proj.title")
         div(v-for="(value, key) in proj.details" v-if="value")
           aside.fl.w-100.w-20-ns
-            p.mb0.mt2-ns.mt1 {{ key+":" }}
+            p.mb1.mt2-ns.mt1.lh-title {{ key+":" }}
           div.fl.w-100.w-80-ns
-            p.mb0.mt2-ns.mt1 {{ value }}
+            p.mb1.mt2-ns.mt1.lh-title {{ value }}
 </template>
 
 <script>
