@@ -10,8 +10,30 @@ import lisa1 from './assets/img/lisa1.png'
 import lisa2 from './assets/img/lisa2.png'
 import mael1 from './assets/img/mael1.png'
 import mael2 from './assets/img/mael2.png'
+import borderless from './assets/img/borderless.pdf'
+import borderless1 from './assets/img/borderless1.jpg'
+import borderless2 from './assets/img/borderless2.jpg'
+import borderless3 from './assets/img/borderless3.jpg'
 
 const works = [{
+  title: 'Borderless Zine',
+  url: borderless,
+  gallery: [{
+    caption: 'Cover spread',
+    src: borderless1
+  }, {
+    caption: '',
+    src: borderless2
+  }, {
+    caption: '',
+    src: borderless3
+  }],
+  details: {
+    Expertise: 'Graphic Design',
+    Details: 'Zine showcasing poetry, art, writings, and other media around the experiences of migration. Submissions from local community members at UIUC and from across the US. Originally created for my Immigration, Law, and Rights class in Spring of 2017.',
+    Year: '2018'
+  }
+}, {
   title: 'archive.bernard.wang',
   url: 'http://archive.bernard.wang',
   gallery: [{

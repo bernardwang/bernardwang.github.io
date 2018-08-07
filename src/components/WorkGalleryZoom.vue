@@ -45,11 +45,6 @@ export default {
 .fig {
   outline: none !important; // TODO: oooopppppssss this is temp fix
   position: absolute;
-  width: calc(100% - 26vw);
-  @media screen and (max-width: 50em){
-    width: calc(100% - 12vw);
-  }
-
   opacity: 0;
   transition: opacity 1s;
 }
@@ -57,8 +52,8 @@ export default {
   opacity: 1;
 }
 .image {
-  width: 100%;
-  height: auto;
+  max-width: 95vw;
+  max-height: 90vh;
   cursor: e-resize;
 }
 .caption {
