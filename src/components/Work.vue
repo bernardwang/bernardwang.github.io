@@ -4,7 +4,7 @@
     div.cf
       article(v-for="proj in works").fl.w-100.mb4.mt2
         h4.ml-fifth.mv0(v-if="proj.url") #[a(:href="proj.url" target="_blank") {{ proj.title }}]
-        h4.ml-fifth.mv0(v-else) {{ proj.title }}
+        h4.ml-fifth.mv0.link(v-else) {{ proj.title }}
         div.flex.flex-row.item-start.mt3.mb2.ml-fifth
           WorkGallery(:gallery="proj.gallery" :title="proj.title")
         div(v-for="(value, key) in proj.details" v-if="value")

@@ -52,7 +52,7 @@ export default {
   opacity: 1;
 }
 .image {
-  max-width: 95vw;
+  max-width: 85vw;
   max-height: 90vh;
   cursor: e-resize;
 }
