@@ -2,7 +2,7 @@
   nav(role="navigation")#navbar.fixed.mt5-ns.pr0.w-auto-ns.w-100
     ul(:class="classObj").flex.flex-column-ns.flex-row.items-center.pv2-ns.pt3.pb3.ma0
       li.w-100-ns.mb3-ns.pr3
-        h1.f3.mv0 #[span(@click="emitToggle").pointer 🌺]
+        h1.f3.mv0 #[span(@click="emitToggle" aria-hidden="true").pointer 🌺]
       li.w-100-ns.mb3-ns.pr2
         router-link(@click.native="scroll('#home', 0)" to="/" :class="(index==0)?'active':''").lh-solid.mv0.f4 Home
       li.w-100-ns.mb3-ns.pr2

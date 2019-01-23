@@ -9,7 +9,7 @@
           li.w-100
             p.mv1 Email: #[a(href="mailto:bw.vbnm@gmail.com" target="_blank" alt="email") bw.vbnm@gmail.com]
           li.w-100
-            p.mv1 © Bernard Wang 2018
+            p.mv1 © Bernard Wang 2019
       div.fl.w-100.w-third-ns.mb3.mb0-l
         h4.mb0 Work
         ul
