@@ -9,7 +9,7 @@
           li.w-100
             p.mv1 Email: #[a(href="mailto:bw.vbnm@gmail.com" target="_blank" alt="email") bw.vbnm@gmail.com]
           li.w-100
-            p.mv1 © Bernard Wang 2019
+            p.mv1 © Bernard Wang {{ new Date().getFullYear() }}
       div.fl.w-100.w-third-ns.mb3.mb0-l
         h4.mb0 Work
         ul
@@ -29,7 +29,7 @@
             p.fl.mv1.w-30 LinkedIn:
             p.fl.mv1.w-70 #[a(href="https://www.linkedin.com/in/bernardwang" target="_blank" alt="linkedin") bernardwang]
     div.cf
-      h4.mt7.ml-third.mb0.hl.end The end.
+      h4.mt6.ml-third.mb0.hl.end The end.
 </template>
 
 <script>
