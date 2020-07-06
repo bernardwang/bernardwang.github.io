@@ -23,23 +23,20 @@ import dogSrc from '../assets/img/dog.png'
 
 const pictures = [{
   src: hkSrc,
-  link: 'https://www.instagram.com/p/BGlj2LfgW_g/',
   alt: 'Graffiti of an astronaut with chinese characters on a power box in Hong Kong.',
-  caption: 'I studied abroad in Hong Kong in 2016.'
+  caption: 'I lived in Hong Kong in 2016.'
 }, {
   src: baoSrc,
-  link: 'https://www.instagram.com/p/BIUNhwiDwFy/',
   alt: 'Three handmade xiao long bao in my hand.',
   caption: 'Xiao Long Bao (小笼包). I love cooking.'
 }, {
   src: dogSrc,
-  link: 'https://www.instagram.com/p/BOwOhpPjsqt/',
   alt: 'Me cuddling with a tan and white doggie.',
   caption: 'I love dogs and they love me back.'
 }]
 const favorites = {
   book: 'All About Love - bellhooks',
-  album: 'H.E.R. - H.E.R',
+  album: 'XS - Rina Sawayama',
   podcast: 'Code Switch - NPR'
 }
 

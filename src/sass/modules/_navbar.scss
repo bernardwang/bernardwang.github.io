@@ -5,10 +5,10 @@
 
     ul {
       padding-left: 6%;
-      &.border0 { @include set-nav-color(1); }
-      &.border1 { @include set-nav-color(2); }
-      &.border2 { @include set-nav-color(3); }
-      &.border3 { @include set-nav-color(4); }
+      &.border1 { @include set-nav-color(1); }
+      &.border2 { @include set-nav-color(2); }
+      &.border3 { @include set-nav-color(3); }
+      &.border4 { @include set-nav-color(4); }
     }
   }
 }

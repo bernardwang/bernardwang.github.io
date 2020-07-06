@@ -3,7 +3,7 @@
     h2.ml-fifth.f2.lh-title.hl Contact
     div.cf
       aside.fl.w-100.w-20-ns
-        p.mt3-ns.pt1-ns I'm always looking for new projects and volunteer work!
+        p.mt3-ns.pt1-ns Got an interesting project? Lets chat!
       form(accept-charset="utf-8" action="https://formspree.io/bernard@bernard.wang"
       method="POST").fl.w-100.w-80-ns
         fieldset.ba.b--transparent.pa0.ma0.cf
@@ -16,7 +16,7 @@
             input(id="email" placeholder="hello@email.com" type="email" name="email" aria-describedby="email-desc" required).w-90-ns.w-100.pa3.ba.bg-transparent
           div.form-msg.fl.w-100.mb3
             label(for="message").f4.db.mb2 Message
-            textarea(id="message" placeholder="Hey Bernard lets work together..." name="message" aria-describedby="message-desc" required).pa3.mb2.ba.w-100.bg-transparent
+            textarea(id="message" placeholder="👋💬☕" name="message" aria-describedby="message-desc" required).pa3.mb2.ba.w-100.bg-transparent
         div.w-100.w-50-ns
           input(id="submit" value="Send →" type="submit").b.pa3.ba.bg-transparent.pointer.f4.w-90-ns.w-100
 </template>

@@ -1,6 +1,6 @@
 <template lang="pug">
-  button(@click="onClick" :class="classObj").lh-copy.mt0.pa0.pv1.tl.pointer.bg-transparent
-    p.b.mv1.w-100.lh-solid {{ text }}
+  button(@click="onClick" :class="classObj").lh-copy.pa0.mv1.tl.pointer.bg-transparent
+    span.b.mv0.w-100.lh-solid {{ text }}
 </template>
 
 <script>
