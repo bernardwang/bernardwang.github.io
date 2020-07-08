@@ -38,3 +38,41 @@ export default {
   }
 }
 </script>
+
+<style lang="scss" scoped>
+  @import "../sass/base/color";
+  @import "../sass/base/utils";
+
+  @media screen and (max-width: 60em) {
+    #navbar {
+      background: $cl-bg-main;
+      left: 0;
+      ul {
+        padding-left: 6%;
+        &.border1 { @include set-nav-color(1); }
+        &.border2 { @include set-nav-color(2); }
+        &.border3 { @include set-nav-color(3); }
+        &.border4 { @include set-nav-color(4); }
+      }
+    }
+  }
+
+  #navbar {
+    z-index: 2;
+
+    a {
+      color: $cl-text-main;
+      text-decoration: none;
+      transition: color .15s ease-in;
+    }
+
+    .active {
+      text-decoration: underline;
+    }
+
+    li:nth-of-type(2) { @include set-nav-link-color(1); }
+    li:nth-of-type(3) { @include set-nav-link-color(2); }
+    li:nth-of-type(4) { @include set-nav-link-color(3); }
+    li:nth-of-type(5) { @include set-nav-link-color(4); }
+  }
+</style>

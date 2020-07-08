@@ -72,7 +72,7 @@ export default {
   font-size: 1.5rem;
   line-height: 1;
   &:hover {
-    color: white;
+    color: $cl-bg-main;
   }
 }
 </style>

@@ -7,7 +7,7 @@
 
 .skip-nav {
   font-size: 1.5rem;
-  color: white;
+  color: $cl-bg-main;
   background-color: nth($cl-text-hl, 1);
   padding: 1rem 2rem;
   position: absolute;
