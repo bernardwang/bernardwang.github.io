@@ -3,7 +3,7 @@
     figure(@click="galleryClick").w-50-l.ma0.mr3.gallery
       img(v-for="(image, i) in gallery" :src="image.src" :alt="title + ' Screen ' + galleryLabel(i)" :class="{ show: (i === index) }").image
       img(:src="gallery[0].src").background
-    CoreButton(:onClick="galleryNext" variant="link" text='→').arrow-btn.mt3-m
+    CoreButton(:onClick="galleryNext" variant="link" text='→' aria-label="Next image").arrow-btn.mt3-m
 </template>
 
 <script>

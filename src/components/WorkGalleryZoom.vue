@@ -4,7 +4,7 @@
       figure(v-for="(image, i) in gallery" :class="{ show: (i === index) }").ma0.fig
         img(@click="galleryNext" :src="image.src" :alt="title + ' Screen ' + i").image
         figcaption.ma0.mt2.w-50-l.w-100caption {{galleryLabel(i) + image.caption}}
-    CoreButton(:onClick="galleryClick" text='X' variant="btn").close-btn
+    CoreButton(:onClick="galleryClick" text='X' variant="btn" aria-label="Close full gallery view").close-btn
 </template>
 
 <script>
@@ -25,6 +25,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '../sass/base/color';
+
 .overlay {
   position: fixed;
   top: 0;
@@ -52,6 +54,7 @@ export default {
   opacity: 1;
 }
 .image {
+  outline: 3px solid nth($cl-text-hl, 3);
   max-width: 85vw;
   max-height: 90vh;
   cursor: e-resize;

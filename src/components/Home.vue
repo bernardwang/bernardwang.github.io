@@ -1,5 +1,6 @@
 <template lang="pug">
   div.w-100.v-100.ph-page.relative
+    SkipNav
     Grid(v-if="showGrid")
     Navbar(:index="sectionIndex" @toggle="toggleGrid" @update="updateIndex")
     main(role="main")#home
@@ -18,6 +19,7 @@ import About from './About'
 import Work from './Work'
 import Contact from './Contact'
 import ContactLinks from './ContactLinks'
+import SkipNav from './SkipNav'
 import _ from 'lodash'
 
 export default {
@@ -29,7 +31,8 @@ export default {
     About,
     Work,
     Contact,
-    ContactLinks
+    ContactLinks,
+    SkipNav
   },
   data () {
     return {

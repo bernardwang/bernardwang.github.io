@@ -5,8 +5,6 @@
         h4.mb0 Information
         ul
           li.w-100
-            p.mv1 Phone: #[a(href="tel:973-216-9810" alt="phone") +1-973-216-9810]
-          li.w-100
             p.mv1 Email: #[a(href="mailto:bw.vbnm@gmail.com" target="_blank" alt="email") bw.vbnm@gmail.com]
           li.w-100
             p.mv1 © Bernard Wang {{ new Date().getFullYear() }}
