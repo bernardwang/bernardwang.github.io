@@ -75,7 +75,7 @@
     "ora": "^1.1.0",
     "phantomjs-prebuilt": "^2.1.14",
     "postcss-loader": "^2.0.5",
-    "pug": "^2.0.0-rc.1",
+    "pug": "^3.0.1",
     "rimraf": "^2.6.0",
     "sass-loader": "^6.0.5",
     "selenium-server": "^3.0.1",
