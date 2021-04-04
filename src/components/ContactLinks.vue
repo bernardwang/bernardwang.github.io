@@ -5,7 +5,7 @@
         h4.mb0 Information
         ul
           li.w-100
-            p.mv1 Email: #[a(href="mailto:bw.vbnm@gmail.com" target="_blank" alt="email") bw.vbnm@gmail.com]
+            p.mv1 email: #[a(href="mailto:hello@bernard.wang" target="_blank" alt="email") hello@bernard.wang]
           li.w-100
             p.mv1 © Bernard Wang {{ new Date().getFullYear() }}
       div.fl.w-100.w-third-ns.mb3.mb0-l

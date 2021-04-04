@@ -7,9 +7,9 @@
           p.mt0 Interested in my resume? Email me to get a copy!
         div.fl.w-100.w-80-ns
           div.fl.w-100.w-50-ns
-            p.mt0 I'm excited to create experiences that are accessible, empathetic, and mission driven. Specifically, I care about web accessibility and tech for social good, and in the past I've applied these interests in government and civic tech.
+            p.mt0 I'm excited to create experiences that are accessible, empathetic, and mission driven. In the past I've worked in civic tech and in the federal health space, most recently with the #[a(href="http://design.cms.gov" target="_blank" alt="CMS.gov Design System") CMS.gov Design System].
           div.fl.w-100.w-50-ns
-            p.mt0 Most recently, I worked on the #[a(href="http://design.cms.gov" target="_blank" alt="CMS Design System") CMS Design System] which is used by teams across CMS products including healthcare.gov and medicare.gov.
+            p.mt0 Currently, I'm working to improve Wikipedia's web experience at the #[a(href="https://wikimediafoundation.org" target="_blank" alt="Wikimedia Foundation") Wikimedia Foundation].
             p.mt0 Check out more of my work on my #[a(href="https://github.com/bernardwang" target="_blank" alt="github") Github]!
       div.ml-fifth.w-100-ns.mt3
         CoreButton(:onClick="btnClick" :text="btnText()" variant="link")
